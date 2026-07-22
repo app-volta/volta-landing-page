@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5fcf4;
+    color: black;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ===========================
+   Barra de Navegação
+=========================== */
+
+.nav {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+
+    width: 92%;
+    max-width: 1200px;
+    min-height: 78px;
+    margin: 20px auto;
+    padding: 14px 28px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #94d28d;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px #063300;
+}
+
+.nav-logo img {
+    display: block;
+    width: auto;
+    height: 48px;
+    background: transparent;
+    border-radius: 0;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links a {
+    padding: 9px 8px;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #337d29;
+}
+
+#link_login,
+#link_registrar {
+    padding: 10px 16px;
+    color: white;
+    background: #337d29;
+    border-radius: 9px;
+}
+
+#link_login:hover,
+#link_registrar:hover {
+    color: white;
+    background: #0d510a;
+}
+
+/* ===========================
+   Painel inicial
+=========================== */
+
+#div_painel {
+    width: 90%;
+    max-width: 1120px;
+    min-height: 620px;
+    margin: 0 auto;
+    padding: 150px 0 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+}
+
+#div_painel img:first-child {
+    width: 39%;
+    max-width: 370px;
+    height: auto;
+}
+
+#div_painel img:last-child {
+    width: 55%;
+    max-width: 620px;
+    height: auto;
+    padding: 14px;
+    background: white;
+    border: 1px solid #94d28d;
+    border-radius: 22px;
+    box-shadow: 0 20px 46px rgba(31, 111, 82, 0.12);
+}
+
+/* ===========================
+   Sobre nós
+=========================== */
+
+#div_sobre_nos {
+    padding: 96px 8%;
+    color: black;
+    background: #3b8952;
+}
+
+#div_sobre_nos h2 {
+    display: block;
+    margin-bottom: 16px;
+    color: #f5fcf4;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+    text-align: center;
+}
+
+#div_sobre_nos_conteudo {
+    max-width: 1120px;
+    margin: 34px auto 0;
+
+    display: flex;
+    align-items: center;
+    gap: 58px;
+}
+
+#div_sobre_nos p {
+    color: #f5fcf4;
+    font-size: 25px;
+    line-height: 1.75;
+    text-align: left;
+}
+
+#div_sobre_nos img {
+    width: 48%;
+    max-width: 500px;
+    border-radius: 18px;
+}
+
+/* ===========================
+   Empresas
+=========================== */
+
+#div_empresas {
+    padding: 96px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: white;
+    border-top: 1px solid #b8d7c6;
+}
+
+#div_empresas > img {
+    display: none;
+}
+
+#div_empresas h2 {
+    margin-bottom: 36px;
+}
+
+#div_empresas h2{
+    color:#3b8952;
+    display: block;
+    margin-bottom: 32px;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+    text-align: center;
+}
+
+/* ===========================
+   Cooperativas
+=========================== */
+
+#div_cooperativas {
+    padding: 96px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #f5fcf4;
+    border-top: 1px solid #b8d7c6;
+}
+
+#div_cooperativas h2{
+    color:#3b8952;
+    display: block;
+    margin-bottom: 32px;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+    text-align: center;
+}
+
+#div_cooperativas > img {
+    display: none;
+}
+
+
+/* ===========================
+   Cards
+=========================== */
+
+.texto {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.div_topicos_e,
+.div_topicos_c {
+    min-height: 190px;
+    padding: 28px 24px;
+
+    background: white;
+    border: 1px solid #b8d7c6;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(31, 111, 82, 0.08);
+    transition: 0.2s;
+}
+
+.div_topicos_e:hover,
+.div_topicos_c:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 32px rgba(31, 111, 82, 0.15);
+}
+
+.div_topicos_e h3,
+.div_topicos_c h3 {
+    margin-bottom: 12px;
+    color: #0f684b;
+    font-size: 19px;
+    text-align: left;
+}
+
+.div_topicos_e p,
+.div_topicos_c p {
+    color: #3b8952;
+    font-size: 15px;
+    line-height: 1.65;
+    text-align: left;
+}
+
+.div_topicos_e:hover {
+    background: #337d29;
+    border-color: #337d29;
+}
+
+.div_topicos_e:hover h3,
+.div_topicos_e:hover p {
+    color: white;
+}
+
+.div_topicos_c:hover {
+    background: #4E97F5;
+    border-color: #4E97F5;
+}
+
+.div_topicos_c:hover h3,
+.div_topicos_c:hover p {
+    color: white;
+}
+
+/* ===========================
+   Nossa Equipe
+=========================== */
+#div_equipe {
+    padding: 80px 0px;
+
+    background: white;
+    border-top: 1px solid #b8d7c6;
+    text-align: center;
+    overflow: hidden;
+}
+
+#div_equipe h2{
+    color:#3b8952;
+    display: block;
+    margin-bottom: 32px;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+    text-align: center;
+}
+
+#div_equipe p{
+    color: #3b8952;
+    font-size: 15px;
+}
+
+
+.div_membro img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border: 2px solid #3b8952;
+    border-radius: 50%;
+}
+
+
+
+.div_equipe_conteudo{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.div_equipe_membros {
+    display: inline-flex;
+    align-items: center;
+    gap: 58px;
+    width: max-content;
+    padding: 20px 0;
+
+    animation: mover_equipe 20s linear infinite;
+}
+
+
+.div_equipe_membros:hover{
+    animation-play-state: paused;
+}
+
+@keyframes mover_equipe {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 29px));
+    }
+}
+
+/* ===========================
+   Rodapé
+=========================== */
+
+footer {
+    padding: 58px 24px 25px;
+    color: white;
+    background: #3b8952;
+}
+
+#footer-container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+#footer-logo img {
+    display: block;
+    width: auto;
+    height: 50px;
+    margin-bottom: 16px;
+}
+
+#footer-logo p,
+#footer-contato p {
+    color: #d8ebe0;
+    line-height: 1.67;
+}
+
+#footer-social,
+#footer-links,
+#footer-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer h3 {
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+footer a {
+    color: #d8ebe0;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+footer a:hover {
+    color: #90ce85;
+    text-decoration: none;
+}
+
+.footer-copy {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    color: #d8ebe0;
+    font-size: 14px;
+    text-align: center;
+}
+
+footer hr {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
