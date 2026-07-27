@@ -120,7 +120,8 @@ img {
     max-width: 620px;
     height: auto;
     
-  
+    background-color: #f5fcf4;
+    border-radius: 20px;
 }
 
 
@@ -158,7 +159,7 @@ img {
 }
 
 #div_sobre_nos p {
-    color: #f5fcf4;
+    color: white;
     font-size: 25px;
     line-height: 1.75;
     text-align: left;
@@ -181,12 +182,8 @@ img {
     align-items: center;
 
     background: white;
-    border-top: 1px solid #b8d7c6;
 }
 
-#div_empresas > img {
-    display: none;
-}
 
 #div_empresas h2 {
     margin-bottom: 36px;
@@ -226,9 +223,6 @@ img {
     text-align: center;
 }
 
-#div_cooperativas > img {
-    display: none;
-}
 
 
 /* ===========================
