@@ -93,9 +93,17 @@ img {
    Painel inicial
 =========================== */
 
+
 #div_painel {
+    background-image: url(src/fundo_intro.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
     width: 90%;
-    max-width: 1120px;
+    width: 100%;
     min-height: 620px;
     margin: 0 auto;
     padding: 150px 0 80px;
@@ -106,31 +114,28 @@ img {
     gap: 56px;
 }
 
-#div_painel img:first-child {
-    width: 39%;
-    max-width: 370px;
-    height: auto;
-}
 
-#div_painel img:last-child {
+#div_painel img {
     width: 55%;
     max-width: 620px;
     height: auto;
-    padding: 14px;
-    background: white;
-    border: 1px solid #94d28d;
-    border-radius: 22px;
-    box-shadow: 0 20px 46px rgba(31, 111, 82, 0.12);
+    
+  
 }
+
+
 
 /* ===========================
    Sobre nós
 =========================== */
 
 #div_sobre_nos {
-    padding: 96px 8%;
+    padding: 96px;
     color: black;
     background: #3b8952;
+    border-top-right-radius: 67px;
+    border-bottom-right-radius: 67px;
+
 }
 
 #div_sobre_nos h2 {
