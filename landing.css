@@ -98,7 +98,6 @@ img {
     width: 100%;
     margin: 0 auto;
     padding: 150px 0 80px;
-    border-radius: 24px;
 
     background-image: url(src/fundo_intro.jpg);
     background-attachment: fixed;
@@ -114,7 +113,7 @@ img {
     overflow: hidden;
     position: relative;
 
-    margin-bottom: -50px; /* painel "vaza" um pouco pra baixo */
+    margin-bottom: -67px;
 }
 
 #div_painel img {
@@ -137,7 +136,6 @@ img {
     color: black;
     background: #3b8952;
     border-top-right-radius: 67px;
-    border-bottom-right-radius: 67px;
     border-top-left-radius: 40px;
 
     position: relative;
@@ -228,6 +226,11 @@ img {
     border-top: none;
 
     position: relative;
+
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 35%, #f5fcf4 75%), url(src/cooperativas.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #div_cooperativas h2 {
@@ -388,17 +391,6 @@ img {
     }
 }
 
-#div_equipe::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background-color: #3b8952;
-    border-top-right-radius: 50% 100%;
-    border-top-left-radius: 50% 100%;
-}
 
 /* ===========================
    Rodapé
