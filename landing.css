@@ -49,7 +49,7 @@ img {
 .nav-logo img {
     display: block;
     width: auto;
-    height: 48px;
+    max-height: 48px;
     background: transparent;
     border-radius: 0;
     gap: 20px;
@@ -169,8 +169,8 @@ img {
 }
 
 #div_sobre_nos img {
-    width: 48%;
-    max-width: 500px;
+    max-width: 45%;
+    height: auto;
     border-radius: 18px;
 }
 
@@ -234,7 +234,7 @@ img {
 }
 
 #div_cooperativas h2 {
-    color: #3b8952;
+    color: #90ce85;
     display: block;
     margin-bottom: 32px;
     font-size: 52px;
@@ -314,8 +314,8 @@ img {
 }
 
 .div_topicos_c:hover {
-    background: #4E97F5;
-    border-color: #4E97F5;
+    background: #337d29;
+    border-color: #337d29;
 }
 
 .div_topicos_c:hover h3,
@@ -354,8 +354,8 @@ img {
 }
 
 .div_membro img {
-    width: 130px;
-    height: 130px;
+    max-width: 130px;
+    height: auto;
     object-fit: cover;
     border: 2px solid #3b8952;
     border-radius: 50%;
@@ -416,7 +416,7 @@ footer {
 #footer-logo img {
     display: block;
     width: auto;
-    height: 70px;
+    max-height: 70px;
     margin-bottom: 16px;
 }
 
@@ -465,4 +465,140 @@ footer hr {
     margin: 0 auto;
     border: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+/* ===========================
+   Responsividade
+=========================== */
+
+@media screen and (max-width: 768px) {
+    .nav {
+        width: 94%;
+        padding: 12px 18px;
+    }
+
+    .nav-links {
+        gap: 4px;
+    }
+
+    .link_pagina {
+        display: none;
+    }
+
+    .nav-logo img {
+        max-height: 40px;
+    }
+
+    #link_login,
+    #link_registrar {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    #div_painel {
+        flex-direction: column;
+        padding: 130px 20px 60px;
+        gap: 25px;
+    }
+
+    #div_painel img {
+        width: 85%;
+        padding: 20px;
+    }
+
+        #div_sobre_nos {
+        padding: 60px 25px;
+    }
+
+    #div_sobre_nos_conteudo {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #div_sobre_nos p {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    #div_sobre_nos img {
+        max-width: 85%;
+    }
+
+    #div_sobre_nos h2 {
+        font-size: 38px;
+    }
+
+    #div_empresas h2,
+    #div_cooperativas h2,
+    #div_equipe h2 {
+        font-size: 36px;
+    }
+
+
+    #footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .texto {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .texto {
+        grid-template-columns: 1fr;
+    }
+
+    .div_topicos_e,
+    .div_topicos_c {
+        min-height: auto;
+    }
+
+    .div_equipe_membros {
+        gap: 30px;
+    }
+
+    .div_membro {
+        width: 150px;
+        flex-shrink: 0;
+    }
+
+    .div_membro img {
+        max-width: 100px;
+    }
+
+    .div_membro h3 {
+        font-size: 16px;
+    }
+
+    .div_membro p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #div_empresas h2,
+    #div_cooperativas h2,
+    #div_equipe h2 {
+        font-size: 30px;
+    }
+
+    #footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #footer-logo img {
+        margin: 0 auto 16px;
+    }
+
+    #footer-social,
+    #footer-links,
+    #footer-contato {
+        align-items: center;
+    }
 }
