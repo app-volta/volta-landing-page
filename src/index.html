@@ -4,36 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="src/logo.png" type="image/x-icon">
+    <link rel="icon" href="assets/img/content/logo.png" type="image/x-icon">
     <title>VOLTA</title>
-    <link rel="stylesheet" href="landing.css">
-    <script src="landing.js" defer></script>
+    <link rel="stylesheet" href="css/landing.css">
+    
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Icone menu-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
-
     <nav class="nav">
+        <div class="menu">
+            <input type="checkbox" id="menu">
 
-        <div class="nav-logo">
-            <img src="src/Logo_VOLTA.png" alt="VOLTA Logo">
+            <div class="nav-logo">
+                <img src="assets/img/content/Logo_VOLTA.png" alt="VOLTA Logo">
+                <label for="menu" class="material-symbols-outlined" aria-label="Abrir menu">menu</label>
+            </div>
+
+            <div class="nav-links">
+                <a class="link_pagina" href="#div_sobre_nos">Sobre</a>
+                <a class="link_pagina" href="#div_empresas">Empresas</a>
+                <a class="link_pagina" href="#div_cooperativas">Cooperativas</a>
+                <a class="link_pagina" href="#div_equipe">Equipe</a>
+                <a class="link_pagina" href="#footer">Contato</a>
+                <a href="#login" id="link_login">Login</a>
+                
+            </div> 
         </div>
-
-        <div class="nav-links">
-            <a class="link_pagina" href="#div_sobre_nos">Sobre</a>
-            <a class="link_pagina" href="#div_empresas">Empresas</a>
-            <a class="link_pagina" href="#div_cooperativas">Cooperativas</a>
-            <a class="link_pagina" href="#div_equipe">Equipe</a>
-            <a class="link_pagina" href="#footer">Contato</a>
-            <a href="#login" id="link_login">Login</a>
-            <a href="#registrar" id="link_registrar">Registrar</a>
-        </div> 
-
     </nav>
 
     <div id="div_painel">
-        <img src="src/Logo_VOLTA.png" alt="Logo VOLTA">
+        <img src="assets/img/content/Logo_VOLTA.png" alt="Logo VOLTA">
+        
     </div>
 
 
@@ -44,7 +49,7 @@
             <p>O Volta é uma plataforma que conecta empresas com cooperativas da região, de forma rápida e prática e com interface e funcionalidades simples. Podendo acompanhar o desempenho de suas coletas e conversar com as cooperativas por um chat seguro integrado em nossa plataforma.
             <br>
             Nosso objetivo é deixar a comunicação entre empresas e cooperativas mais simples, e deixar o trabalho de separação de resíduos nas cooperativas mais simples, fácil e menos cansativo.</p>
-            <img src="src/sobre_nos.png" alt="Sobre Nós">
+            <img src="assets/img/content/sobre_nos.png" alt="Sobre Nós">
         </div>  
         
     </div>
@@ -115,113 +120,113 @@
         <div class="div_equipe_conteudo">
             <div class="div_equipe_membros">
                 <div class="div_membro">
-                    <img src="src/arthur.png" alt="Membro 1">
+                    <img src="assets/img/time/arthur.png" alt="Membro 1">
                     <h3>Arthur Rosano</h3>
                     <p>Desenvolvedor Back-end</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/gustavo_souza.png" alt="Membro 2">
+                    <img src="assets/img/time/gustavo_souza.png" alt="Membro 2">
                     <h3>Gustavo Souza</h3>
                     <p>Desenvolvedor Back-end</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/gustavo_azenha.png" alt="Membro 3">
+                    <img src="assets/img/time/gustavo_azenha.png" alt="Membro 3">
                     <h3>Gustavo Azenha</h3>
                     <p>Designer UI/UX</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/Lucca_Davi_Begliomini.png" alt="Membro 4">
+                    <img src="assets/img/time/Lucca_Davi_Begliomini.png" alt="Membro 4">
                     <h3>Lucca Begliomini</h3>
                     <p>Desenvolvedor Front-end</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/miguel_lapa.png" alt="Membro 5">
+                    <img src="assets/img/time/miguel_lapa.png" alt="Membro 5">
                     <h3>Miguel Sperandio</h3>
                     <p>Dados</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/breno.jpg" alt="Membro 6">
+                    <img src="assets/img/time/breno.jpg" alt="Membro 6">
                     <h3>Breno Santos</h3>
                     <p>Desenvolvedor Front-end</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/carlos.jpg" alt="Membro 7">
+                    <img src="assets/img/time/carlos.jpg" alt="Membro 7">
                     <h3>Carlos Eduardo</h3>
                     <p>Desenvolvedor Front-end</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/davi.png" alt="Membro 8">
+                    <img src="assets/img/time/davi.png" alt="Membro 8">
                     <h3>Davi Liu</h3>
                     <p>Desenvolvedor Back-end</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/enzo.jpg" alt="Membro 9">
+                    <img src="assets/img/time/enzo.jpg" alt="Membro 9">
                     <h3>Enzo Herreira</h3>
                     <p>Desenvolvedor Back-end</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/gabriel_peotta.png" alt="Membro 10">
+                    <img src="assets/img/time/gabriel_peotta.png" alt="Membro 10">
                     <h3>Gabriel Peotta</h3>
                     <p>Dados</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/lucas.png" alt="Membro 11">
+                    <img src="assets/img/time/lucas.png" alt="Membro 11">
                     <h3>Lucas Fabiano</h3>
                     <p>Dados</p>
                 </div>
 <!--=======================================================COPIA_IDENTICA=====================================================================================================-->
                 <div class="div_membro">
-                    <img src="src/arthur.png" alt="Membro 1">
+                    <img src="assets/img/time/arthur.png" alt="Membro 1">
                     <h3>Arthur Rosano</h3>
                     <p>Desenvolvedor Back-end</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/gustavo_souza.png" alt="Membro 2">
+                    <img src="assets/img/time/gustavo_souza.png" alt="Membro 2">
                     <h3>Gustavo Souza</h3>
                     <p>Desenvolvedor Back-end</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/gustavo_azenha.png" alt="Membro 3">
+                    <img src="assets/img/time/gustavo_azenha.png" alt="Membro 3">
                     <h3>Gustavo Azenha</h3>
                     <p>Designer UI/UX</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/Lucca_Davi_Begliomini.png" alt="Membro 4">
+                    <img src="assets/img/time/Lucca_Davi_Begliomini.png" alt="Membro 4">
                     <h3>Lucca Begliomini</h3>
                     <p>Desenvolvedor Front-end</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/miguel_lapa.png" alt="Membro 5">
+                    <img src="assets/img/time/miguel_lapa.png" alt="Membro 5">
                     <h3>Miguel Sperandio</h3>
                     <p>Dados</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/breno.jpg" alt="Membro 6">
+                    <img src="assets/img/time/breno.jpg" alt="Membro 6">
                     <h3>Breno Santos</h3>
                     <p>Desenvolvedor Front-end</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/carlos.jpg" alt="Membro 7">
+                    <img src="assets/img/time/carlos.jpg" alt="Membro 7">
                     <h3>Carlos Eduardo</h3>
                     <p>Desenvolvedor Front-end</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/davi.png" alt="Membro 8">
+                    <img src="assets/img/time/davi.png" alt="Membro 8">
                     <h3>Davi Liu</h3>
                     <p>Desenvolvedor Back-end</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/enzo.jpg" alt="Membro 9">
+                    <img src="assets/img/time/enzo.jpg" alt="Membro 9">
                     <h3>Enzo Herreira</h3>
                     <p>Desenvolvedor Back-end</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/gabriel_peotta.png" alt="Membro 10">
+                    <img src="assets/img/time/gabriel_peotta.png" alt="Membro 10">
                     <h3>Gabriel Peotta</h3>
                     <p>Dados</p>
                 </div>
                 <div class="div_membro">
-                    <img src="src/lucas.png" alt="Membro 11">
+                    <img src="assets/img/time/lucas.png" alt="Membro 11">
                     <h3>Lucas Fabiano</h3>
                     <p>Dados</p>
                 </div>
@@ -236,7 +241,7 @@
         <div id="footer-container">
 
             <div id="footer-logo">
-                <img src="src/Logo_VOLTA.png" alt="Volta">
+                <img src="assets/img/content/Logo_VOLTA.png" alt="Volta">
                 <p>Conectando empresas e cooperativas para um descarte inteligente e sustentável.</p>
             </div>
 
@@ -251,17 +256,10 @@
             <div id="footer-links">
                 <h3>Navegação</h3>
                 <a href="#div_sobre_nos">Sobre</a>
-                <a href="#div_solucao">Solução</a>
-                <a href="#div_como_funciona">Como Funciona</a>
+                <a href="#div_cooperativas">Cooperativas</a>
+                <a href="#div_empresas">Como Funciona</a>
             </div>
 
-            <div id="footer-contato">
-                <h3>Contato</h3>
-
-                <p>contato@volta.com</p>
-                <p>(11) 99999-9999</p>
-                <p>São Paulo - SP</p>
-            </div>
 
         </div>
         <br>

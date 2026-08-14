@@ -24,68 +24,84 @@ img {
 =========================== */
 
 .nav {
+    width: 100%;
     position: fixed;
-    z-index: 1000;
+    top: 0;
     left: 0;
-    right: 0;
-
-    width: 92%;
-    max-width: 1200px;
-    min-height: 78px;
-    margin: 20px auto;
-    padding: 14px 28px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 25px;
-
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid #94d28d;
-    border-radius: 18px;
-    box-shadow: 0 12px 35px #063300;
+    z-index: 1000;
 }
 
-.nav-logo img {
-    display: block;
-    width: auto;
-    max-height: 48px;
-    background: transparent;
-    border-radius: 0;
+.menu{
+    width: 100%;
+    height: fit-content;
+    padding: 0 40px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.96);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 20px;
 }
 
+.nav-logo img {
+    width: 120px;
+    max-width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    padding: 15px 0;
+}
+
+#menu{
+    display: none;
+}
+
+.nav-logo label{
+    display: none;
+}
+
 .nav-links {
+    width: fit-content;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+
 }
 
 .nav-links a {
-    padding: 9px 8px;
+    width: 100%;
+    padding: 10px 18px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5mm;
+    font-size: 16px;
     color: black;
-    font-size: 15px;
-    font-weight: 600;
     text-decoration: none;
+    font-weight: 500;
     transition: 0.2s;
+
 }
 
 .nav-links a:hover {
-    color: #337d29;
+    background-color: #337d29;
+    color: white;
 }
 
-#link_login,
-#link_registrar {
+#link_login {
     padding: 10px 16px;
     color: white;
     background: #337d29;
-    border-radius: 9px;
+    border-radius: 3px;
 }
 
-#link_login:hover,
-#link_registrar:hover {
+#link_login:hover {
     color: white;
     background: #0d510a;
 }
@@ -96,10 +112,11 @@ img {
 
 #div_painel {
     width: 100%;
+    height: 100vh;
     margin: 0 auto;
     padding: 150px 0 80px;
 
-    background-image: url(src/fundo_intro.jpg);
+    background-image: url(../assets/img/backgrounds/fundo_intro.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -113,7 +130,6 @@ img {
     overflow: hidden;
     position: relative;
 
-    margin-bottom: -67px;
 }
 
 #div_painel img {
@@ -140,6 +156,8 @@ img {
 
     position: relative;
     z-index: 2;
+
+    margin-top: 60px;
 }
 
 #div_sobre_nos h2 {
@@ -200,17 +218,7 @@ img {
     text-align: center;
 }
 
-#div_empresas::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background-color: #f5fcf4;
-    border-top-right-radius: 50% 100%;
-    border-top-left-radius: 50% 100%;
-}
+
 
 /* ===========================
    Cooperativas
@@ -227,7 +235,7 @@ img {
 
     position: relative;
 
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 35%, #f5fcf4 75%), url(src/cooperativas.png);
+    background-image: url(../assets/img/backgrounds/cooperativas.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -243,17 +251,6 @@ img {
     text-align: center;
 }
 
-#div_cooperativas::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background-color: white;
-    border-top-right-radius: 50% 100%;
-    border-top-left-radius: 50% 100%;
-}
 
 /* ===========================
    Cards
@@ -418,6 +415,8 @@ footer {
     width: auto;
     max-height: 70px;
     margin-bottom: 16px;
+    background-color: #063300;
+    border-radius: 10px;
 }
 
 #footer-logo p,
@@ -473,28 +472,7 @@ footer hr {
 =========================== */
 
 @media screen and (max-width: 768px) {
-    .nav {
-        width: 94%;
-        padding: 12px 18px;
-    }
-
-    .nav-links {
-        gap: 4px;
-    }
-
-    .link_pagina {
-        display: none;
-    }
-
-    .nav-logo img {
-        max-height: 40px;
-    }
-
-    #link_login,
-    #link_registrar {
-        padding: 8px 12px;
-        font-size: 13px;
-    }
+    
 
     #div_painel {
         flex-direction: column;
@@ -548,7 +526,44 @@ footer hr {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
+
+    .menu{
+        flex-direction: column;
+    }
+
+    .menu .nav-logo{
+        width: 100%;
+    }
+
+    .menu .nav-logo label{
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        line-height: 1;
+        color: #337d29;
+    }
+
+    .menu .nav-links{
+        width: 100%;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.25s;
+    }
+
+    .menu .nav-links a{
+        width: 100%;
+        padding: 15px;
+        border-radius: 0;
+        border-top:  0.5mm solid #90ce85;
+    }
+
+    #menu:checked ~ .nav-links{
+        max-height: 600px;
+        padding-bottom: 15px;
+    }
+
     .texto {
         grid-template-columns: 1fr;
     }
