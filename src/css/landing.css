@@ -148,16 +148,11 @@ img {
 =========================== */
 
 #div_sobre_nos {
-    padding: 96px;
-    color: black;
-    background: #3b8952;
-    border-top-right-radius: 67px;
-    border-top-left-radius: 40px;
-
     position: relative;
-    z-index: 2;
-
     margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #div_sobre_nos h2 {
@@ -168,6 +163,14 @@ img {
     font-weight: 800;
     line-height: 1.1;
     text-align: center;
+}
+
+#sobre_nos_texto{
+    background-color: #3b8952;
+    padding: 96px;
+    border-radius: 40px;
+    z-index: 2;
+
 }
 
 #div_sobre_nos_conteudo {
@@ -181,15 +184,19 @@ img {
 
 #div_sobre_nos p {
     color: white;
+    height: auto;
     font-size: 25px;
     line-height: 1.75;
     text-align: left;
 }
 
 #div_sobre_nos img {
-    max-width: 45%;
-    height: auto;
+    max-width: 646px;
+    max-height: 473px;
     border-radius: 18px;
+    z-index: 1;
+    position: relative;
+    right: 40px;
 }
 
 /* ===========================
@@ -396,7 +403,7 @@ img {
 footer {
     padding: 58px 24px 25px;
     color: white;
-    background: #3b8952;
+    background: #3B8952;
 }
 
 #footer-container {
@@ -415,7 +422,7 @@ footer {
     width: auto;
     max-height: 70px;
     margin-bottom: 16px;
-    background-color: #063300;
+    
     border-radius: 10px;
 }
 
@@ -473,61 +480,6 @@ footer hr {
 
 @media screen and (max-width: 768px) {
     
-
-    #div_painel {
-        flex-direction: column;
-        padding: 130px 20px 60px;
-        gap: 25px;
-    }
-
-    #div_painel img {
-        width: 85%;
-        padding: 20px;
-    }
-
-        #div_sobre_nos {
-        padding: 60px 25px;
-    }
-
-    #div_sobre_nos_conteudo {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    #div_sobre_nos p {
-        font-size: 18px;
-        text-align: left;
-    }
-
-    #div_sobre_nos img {
-        max-width: 85%;
-    }
-
-    #div_sobre_nos h2 {
-        font-size: 38px;
-    }
-
-    #div_empresas h2,
-    #div_cooperativas h2,
-    #div_equipe h2 {
-        font-size: 36px;
-    }
-
-
-    #footer-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .texto {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 650px) {
-
     .menu{
         flex-direction: column;
     }
@@ -564,6 +516,65 @@ footer hr {
         padding-bottom: 15px;
     }
 
+
+    #div_painel {
+        flex-direction: column;
+        padding: 130px 20px 60px;
+        gap: 25px;
+    }
+
+    #div_painel img {
+        width: 85%;
+        padding: 20px;
+    }
+
+    
+
+    #div_empresas h2,
+    #div_cooperativas h2,
+    #div_equipe h2 {
+        font-size: 36px;
+    }
+
+
+    #footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 1142px) {
+    #div_sobre_nos {
+        padding: 60px 25px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #div_sobre_nos p {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    #div_sobre_nos img {
+        max-width: 100%;
+        left: 5px;
+    }
+
+    #div_sobre_nos h2 {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .texto {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 650px) {
+  
     .texto {
         grid-template-columns: 1fr;
     }
