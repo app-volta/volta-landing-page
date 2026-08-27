@@ -1,0 +1,12 @@
+# Build do Maven
+target/
+
+# Arquivos de configuração do IntelliJ
+.idea/
+*.iml
+
+# Configuração do Smart Tomcat (gerada localmente)
+.smarttomcat/
+
+# Credenciais do banco
+db.properties
