@@ -1,8 +1,12 @@
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Belanosima", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 html {
@@ -10,13 +14,54 @@ html {
 }
 
 body {
-    background: #f5fcf4;
     color: black;
     overflow-x: hidden;
 }
 
 img {
     max-width: 100%;
+}
+
+/* ===========================
+   Tamanhos de fonte
+=========================== */
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 3.22rem; font-weight: 400; line-height: 1.1; }
+h3 { font-size: 2.2rem; }
+p  { font-size: 1rem; line-height: 1.6; }
+
+/* Texto de destaque (parágrafos grandes) */
+.texto-hero-inicio,
+.sobre-item-content p,
+#objetivo-conteudo p,
+#dashboard .hero-content p {
+    font-size: 1.5rem;
+}
+
+/* Texto pequeno */
+#equipe p,
+.footer-copy {
+    font-size: 0.875rem;
+}
+
+
+/* ===========================
+   Cores
+=========================== */
+
+:root {
+    /* Paleta principal */
+    --verde-medio: #3B8952;
+    --verde-floresta: #0F684B;
+    --verde-petroleo: #03484C;
+    --verde-gelo: #F5FCF4;
+    --verde-principal: #337D29;
+    --verde-escuro: #063300;
+
+    /* Tons claros derivados da paleta */
+    --verde-claro: color-mix(in srgb, var(--verde-medio) 30%, white);
+    --verde-suave: color-mix(in srgb, var(--verde-medio) 15%, white);
 }
 
 /* ===========================
@@ -29,6 +74,7 @@ img {
     top: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 2px 12px color-mix(in srgb, var(--verde-escuro) 12%, transparent);
 }
 
 .menu{
@@ -50,14 +96,14 @@ img {
 }
 
 .nav-logo img {
-    width: 120px;
+    width: 100px;
     max-width: 100%;
     padding: 15px;
     box-sizing: border-box;
     padding: 15px 0;
 }
 
-#menu{
+#menu-toggle{
     display: none;
 }
 
@@ -70,7 +116,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .nav-links a {
@@ -80,188 +125,320 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5mm;
-    font-size: 16px;
-    color: black;
+    font-size: 1rem;
+    color: var(--verde-escuro);
     text-decoration: none;
     font-weight: 500;
-    transition: 0.2s;
-
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
-    background-color: #337d29;
-    color: white;
+    color: var(--verde-principal);
+    position: relative;
+    top: -5px;
+    transition: 0.3s;
+    font-weight: bold;
 }
 
-#link_login {
+#link-login {
     padding: 10px 16px;
     color: white;
-    background: #337d29;
+    background: var(--verde-principal);
     border-radius: 3px;
 }
 
-#link_login:hover {
+#link-login:hover {
     color: white;
-    background: #0d510a;
+    background: var(--verde-escuro);
 }
 
 /* ===========================
    Painel inicial
 =========================== */
 
-#div_painel {
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    padding: 150px 0 80px;
-
-    background-image: url(../assets/img/backgrounds/fundo_intro.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+.hero-inicio {
+    max-width: 100vw;
+    max-height: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 56px;
-
-    overflow: hidden;
     position: relative;
-
+    overflow: hidden;
 }
 
-#div_painel img {
-    width: 55%;
-    max-width: 620px;
+.hero-shape-inicio {
+    position: absolute;
+    top: 0;
+    right: -73px;
+    top: 40px;
+    width: 70%;
+    height: 100vh;
+    z-index: 0;
+}
+
+.container-inicio {
+    width: 70%;
+    padding: 150px 5px 80px 40px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: relative;
+    top: -10px;
+}
+
+.logo-hero-inicio {
+    max-width: 70%;
     height: auto;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
+    max-height: 100vh;
+    margin-bottom: 20px;
+}
+
+.titulo-hero-inicio {
+    color: var(--verde-floresta);
+    margin-bottom: 10px;
+    max-width: 500px;
+}
+
+.texto-hero-inicio {
+    color: var(--verde-medio);
+}
+
+.celular-inicio {
+    max-width: 25%;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    right: 15%;
+    top: 55%;
+    transform: translateY(-50%);
 }
 
 /* ===========================
    Sobre nós
 =========================== */
 
-#div_sobre_nos {
-    position: relative;
+#sobre-nos {
+    background: white;
+    padding: 60px 0;
     margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-bottom: 500px;
 }
 
-#div_sobre_nos h2 {
-    display: block;
-    margin-bottom: 16px;
-    color: #f5fcf4;
-    font-size: 52px;
-    font-weight: 800;
-    line-height: 1.1;
+#sobre-nos h2 {
+    color: var(--verde-medio);
     text-align: center;
+    margin-bottom: 16px;
 }
 
-#sobre_nos_texto{
-    background-color: #3b8952;
-    padding: 96px;
-    border-radius: 40px;
-    z-index: 2;
-
-}
-
-#div_sobre_nos_conteudo {
-    max-width: 1120px;
-    margin: 34px auto 0;
-
+.sobre-item {
+    min-height: 500px;
     display: flex;
     align-items: center;
-    gap: 58px;
+    position: relative;
+    overflow: hidden;
 }
 
-#div_sobre_nos p {
-    color: white;
-    height: auto;
-    font-size: 25px;
+.sobre-item-content p {
     line-height: 1.75;
+    color: black;
     text-align: left;
 }
 
-#div_sobre_nos img {
-    max-width: 646px;
+.imagem-esquerda 
+.sobre-item-shape {
+    position: absolute;
+    top: 0;
+    left: -80px;
+    width: 55%;
+    height: 100%;
+    z-index: 0;
+}
+
+.imagem-esquerda 
+.celular-sobre {
+    position: absolute;
+    z-index: 1;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 400px;
     max-height: 473px;
     border-radius: 18px;
-    z-index: 1;
-    position: relative;
-    right: 40px;
 }
+
+.imagem-esquerda .container {
+    width: 45%;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: 8%;
+}
+
+.imagem-direita .container {
+    width: 45%;
+    z-index: 1;
+    margin-left: 8%;
+}
+
+.imagem-direita .celular-sobre {
+    position: absolute;
+    z-index: 1;
+    right: 12%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 400px;
+    max-height: 473px;
+    border-radius: 18px;
+}
+
 
 /* ===========================
    Empresas
 =========================== */
 
-#div_empresas {
+#empresas {
     padding: 96px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    background: white;
-
     position: relative;
+    top: -40px;
     z-index: 1;
 }
 
-#div_empresas h2 {
-    color: #3b8952;
+#empresas h2 {
+    color: var(--verde-medio);
     display: block;
     margin-bottom: 32px;
-    font-size: 52px;
-    font-weight: 800;
-    line-height: 1.1;
     text-align: center;
+    
 }
 
+#slider-titulo-empresa, #slider-titulo-coop{
+    color: var(--verde-medio);
+    background-color: var(--verde-gelo);
+    padding: 6px 7px;
+    border-radius: 5px;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 15px;
+}
 
 
 /* ===========================
    Cooperativas
 =========================== */
 
-#div_cooperativas {
+#cooperativas {
     padding: 96px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    background: #f5fcf4;
     border-top: none;
 
     position: relative;
+    top: -40px;
 
-    background-image: url(../assets/img/backgrounds/cooperativas.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#div_cooperativas h2 {
-    color: #90ce85;
+#cooperativas h2 {
+    color: white;
     display: block;
     margin-bottom: 32px;
-    font-size: 52px;
-    font-weight: 800;
-    line-height: 1.1;
     text-align: center;
 }
 
 
 /* ===========================
-   Cards
+   Como Funciona
 =========================== */
+
+.como-funciona-hero {
+    position: relative;
+    max-width: 100%;
+    height: 50%;
+    bottom: 500px;
+}
+
+.como-funciona-shape {
+    position: absolute;
+    top: 100px;
+    
+    right: 0;
+    min-width: 90%;
+    
+    
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.btn-avancar-voltar {
+    background-color: var(--verde-gelo);
+    color: var(--verde-floresta);
+    padding: 5px;
+    border: none;
+    box-shadow: 2px 2px var(--verde-claro);
+    border-radius: 50%;
+
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-avancar-voltar:hover {
+    background-color: var(--verde-floresta);
+    color: var(--verde-gelo);
+    transition: 0.3s;
+    box-shadow: 2px 2px var(--verde-floresta);
+}
+
+.slider-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    transition: transform 0.4s ease;
+}
+
+.card-empresa,
+.card-coop {
+    max-width: 33%;
+    height: 300px;
+    background-color: var(--verde-gelo);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 5.5px 3.1px var(--verde-claro);
+
+    display: flex;
+    align-items: center;
+
+    padding: 5%;
+}
+
+.card-empresa p {
+    padding: 12px;
+    text-align: left;
+}
 
 .texto {
     width: 100%;
@@ -273,65 +450,170 @@ img {
     gap: 22px;
 }
 
-.div_topicos_e,
-.div_topicos_c {
+.slider-track {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+}
+
+.topico-cooperativa {
     min-height: 190px;
     padding: 28px 24px;
 
     background: white;
-    border: 1px solid #b8d7c6;
+    border: 1px solid var(--verde-claro);
     border-radius: 18px;
-    box-shadow: 0 8px 24px rgba(31, 111, 82, 0.08);
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--verde-floresta) 8%, transparent);
     transition: 0.2s;
 }
 
-.div_topicos_e:hover,
-.div_topicos_c:hover {
+.topico-cooperativa:hover {
     transform: translateY(-6px);
-    box-shadow: 0 15px 32px rgba(31, 111, 82, 0.15);
+    box-shadow: 0 15px 32px color-mix(in srgb, var(--verde-floresta) 15%, transparent);
+    background: var(--verde-principal);
+    border-color: var(--verde-principal);
 }
 
-.div_topicos_e h3,
-.div_topicos_c h3 {
+.topico-cooperativa h3 {
     margin-bottom: 12px;
-    color: #0f684b;
-    font-size: 19px;
+    color: var(--verde-floresta);
+    font-size: 1.3rem;
     text-align: left;
 }
 
-.div_topicos_e p,
-.div_topicos_c p {
-    color: #3b8952;
-    font-size: 15px;
+.topico-cooperativa p {
+    color: var(--verde-medio);
+    font-size: 1rem;
     line-height: 1.65;
     text-align: left;
 }
 
-.div_topicos_e:hover {
-    background: #337d29;
-    border-color: #337d29;
-}
-
-.div_topicos_e:hover h3,
-.div_topicos_e:hover p {
+.topico-cooperativa:hover h3,
+.topico-cooperativa:hover p {
     color: white;
 }
 
-.div_topicos_c:hover {
-    background: #337d29;
-    border-color: #337d29;
+.card{
+    position: relative;
+    bottom: -300px;
 }
 
-.div_topicos_c:hover h3,
-.div_topicos_c:hover p {
-    color: white;
+/* ===========================
+    Dashboard
+=========================== */
+#dashboard{
+    background-color: var(--verde-gelo);
+    width: 100vw;
+    position: relative;
+}
+
+#dashboard h2 {
+    background: linear-gradient(180deg, var(--verde-principal), var(--verde-escuro));
+    -webkit-background-clip: text; /* Recorta o fundo no formato das letras */
+    -webkit-text-fill-color: transparent; /* Torna a cor original do texto transparente para o degradê aparecer */
+    display: block;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.hero{
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: white;
+}
+
+.hero-shape{
+    position: absolute;
+    top: 0;
+    right: -100px;
+    width: 70%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-content{
+    width: 70%;
+    padding: 80px 5px;
+    z-index: 1;
+    margin-left: 20px;
+}
+
+.hero-content p{
+    margin-left: 40px;
+}
+
+.celular-dashboard{
+    max-width: 30%;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.celular-dashboard::before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* ===========================
+   Objetivos
+=========================== */
+#objetivo{
+    background-color: var(--verde-suave);
+    position: relative;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+}
+
+#objetivo-texto h2 {
+    color: var(--verde-medio);
+    display: block;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+#objetivo-conteudo{
+    max-width: 1120px;
+    margin: 34px auto 0;
+    display: flex;
+    align-items: center;
+    gap: 58px;
+}
+
+#objetivo-conteudo p{
+    color: black;
+    height: auto;
+    line-height: 1.75;
+    text-align: left;
+}
+
+#objetivo-texto{
+    padding: 96px;
+    border-radius: 40px;
+    z-index: 2;
 }
 
 /* ===========================
    Nossa Equipe
 =========================== */
 
-#div_equipe {
+#equipe {
     padding: 80px 0px;
 
     background: white;
@@ -342,50 +624,51 @@ img {
     position: relative;
 }
 
-#div_equipe h2 {
-    color: #3b8952;
+#equipe h2 {
+    color: var(--verde-medio);
     display: block;
     margin-bottom: 32px;
-    font-size: 52px;
-    font-weight: 800;
-    line-height: 1.1;
     text-align: center;
 }
 
-#div_equipe p {
-    color: #3b8952;
-    font-size: 15px;
+#equipe p {
+    color: var(--verde-medio);
 }
 
-.div_membro img {
+#equipe .nome-equipe{
+    color: black;
+    font-size: 1.5rem;
+}
+
+.membro img {
     max-width: 130px;
     height: auto;
     object-fit: cover;
-    border: 2px solid #3b8952;
+    border: 2px solid var(--verde-medio);
     border-radius: 50%;
 }
 
-.div_equipe_conteudo {
+.equipe-conteudo {
     width: 100%;
     position: relative;
     overflow: hidden;
 }
 
-.div_equipe_membros {
+.equipe-membros {
     display: inline-flex;
     align-items: center;
     gap: 58px;
     width: max-content;
     padding: 20px 0;
 
-    animation: mover_equipe 20s linear infinite;
+    animation: mover-equipe 20s linear infinite;
 }
 
-.div_equipe_membros:hover {
+.equipe-membros:hover {
     animation-play-state: paused;
 }
 
-@keyframes mover_equipe {
+@keyframes mover-equipe {
     0% {
         transform: translateX(0);
     }
@@ -403,7 +686,7 @@ img {
 footer {
     padding: 58px 24px 25px;
     color: white;
-    background: #3B8952;
+    background: var(--verde-principal);
 }
 
 #footer-container {
@@ -422,13 +705,13 @@ footer {
     width: auto;
     max-height: 70px;
     margin-bottom: 16px;
-    
+
     border-radius: 10px;
 }
 
 #footer-logo p,
 #footer-contato p {
-    color: #d8ebe0;
+    color: var(--verde-suave);
     line-height: 1.67;
 }
 
@@ -442,17 +725,17 @@ footer {
 
 footer h3 {
     margin-bottom: 4px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 footer a {
-    color: #d8ebe0;
+    color: var(--verde-suave);
     text-decoration: none;
     transition: 0.2s;
 }
 
 footer a:hover {
-    color: #90ce85;
+    color: white;
     text-decoration: none;
 }
 
@@ -460,8 +743,7 @@ footer a:hover {
     width: 100%;
     max-width: 1120px;
     margin: 0 auto;
-    color: #d8ebe0;
-    font-size: 14px;
+    color: var(--verde-suave);
     text-align: center;
 }
 
@@ -479,7 +761,8 @@ footer hr {
 =========================== */
 
 @media screen and (max-width: 768px) {
-    
+    /* ---------- Menu ---------- */
+
     .menu{
         flex-direction: column;
     }
@@ -491,9 +774,9 @@ footer hr {
     .menu .nav-logo label{
         display: block;
         cursor: pointer;
-        font-size: 30px;
+        font-size: 1.875rem;
         line-height: 1;
-        color: #337d29;
+        color: var(--verde-principal);
     }
 
     .menu .nav-links{
@@ -508,34 +791,30 @@ footer hr {
         width: 100%;
         padding: 15px;
         border-radius: 0;
-        border-top:  0.5mm solid #90ce85;
+        border-top:  0.5mm solid var(--verde-claro);
     }
 
-    #menu:checked ~ .nav-links{
+    .nav-links a:hover{
+        background-color: var(--verde-principal);
+        color: white;
+        top: 0px;
+    }
+
+    #menu-toggle:checked ~ .nav-links{
         max-height: 600px;
         padding-bottom: 15px;
     }
 
-
-    #div_painel {
+    #painel {
         flex-direction: column;
         padding: 130px 20px 60px;
         gap: 25px;
     }
 
-    #div_painel img {
+    #painel img {
         width: 85%;
         padding: 20px;
     }
-
-    
-
-    #div_empresas h2,
-    #div_cooperativas h2,
-    #div_equipe h2 {
-        font-size: 36px;
-    }
-
 
     #footer-container {
         grid-template-columns: 1fr 1fr;
@@ -544,7 +823,44 @@ footer hr {
 }
 
 @media screen and (max-width: 1142px) {
-    #div_sobre_nos {
+    /* ---------- Sobre nós ---------- */
+
+    .sobre-item {
+        flex-direction: column;
+        min-height: auto;
+        padding: 40px 25px;
+        text-align: center;
+    }
+
+    
+    .imagem-esquerda .celular-sobre,
+    .imagem-direita .celular-sobre {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 85%;
+        margin: 0 auto 24px;
+    }
+
+    .imagem-esquerda .container,
+    .imagem-direita .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .imagem-direita {
+        flex-direction: column-reverse;
+    }
+
+    .sobre-item-content p {
+        text-align: center;
+    }
+
+    /* ---------- Objetivo ---------- */
+
+    #objetivo {
         padding: 60px 25px;
         display: flex;
         justify-content: center;
@@ -552,18 +868,39 @@ footer hr {
         gap: 30px;
     }
 
-    #div_sobre_nos p {
-        font-size: 18px;
+    #objetivo-texto {
+        width: 100%;
+        padding: 40px 25px;
+        border-radius: 30px;
+        z-index: 2;
+    }
+
+    #objetivo-conteudo {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #objetivo h2 {
+        text-align: center;
+    }
+
+    #objetivo p {
+        line-height: 1.6;
         text-align: left;
     }
 
-    #div_sobre_nos img {
+    #objetivo img {
+        width: 100%;
         max-width: 100%;
-        left: 5px;
-    }
-
-    #div_sobre_nos h2 {
-        font-size: 38px;
+        height: auto;
+        position: relative;
+        right: auto;
+        left: auto;
+        border-radius: 18px;
     }
 }
 
@@ -571,47 +908,139 @@ footer hr {
     .texto {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
-@media screen and (max-width: 650px) {
-  
-    .texto {
-        grid-template-columns: 1fr;
+    /* ---------- Hero inicial ---------- */
+    .hero-inicio {
+        flex-direction: column;
     }
 
-    .div_topicos_e,
-    .div_topicos_c {
+    .container-inicio {
+        width: 100%;
+        padding: 50px 24px 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .celular-inicio {
+        display: none;
+        position: static;
+        transform: none;
+        max-width: 60%;
+        margin: 0 auto 32px;
+    }
+
+    .hero-shape-inicio {
+        display: none;
+    }
+
+    /* ---------- Como funciona ---------- */
+    #sobre-nos {
+        margin-bottom: 0;
+    }
+
+    .como-funciona-hero {
+        bottom: 0;
+        height: auto;
+    }
+
+    .como-funciona-shape {
+        display: none;
+    }
+
+    .card {
+        bottom: 0;
+    }
+
+    #empresas,
+    #cooperativas {
+        top: 0;
+        padding: 48px 16px;
+    }
+
+    #empresas {
+        background: white;
+    }
+
+    #cooperativas {
+        background: linear-gradient(180deg, var(--verde-medio), var(--verde-escuro));
+    }
+
+    #empresas h2,
+    #cooperativas h2 {
+        margin-bottom: 20px;
+    }
+
+    #slider-titulo-empresa,
+    #slider-titulo-coop {
+        width: 100%;
+    }
+
+    .slider {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .slider-track {
+        order: 1;
+        flex: 0 0 100%;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .card-empresa,
+    .card-coop {
+        flex: none;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        min-height: 140px;
+        padding: 20px;
+    }
+
+    .btn-avancar-voltar {
+        order: 2;
+        width: 48px;
+        height: 48px;
+    }
+
+    /* ---------- Dashboard ---------- */
+    #dashboard {
+        width: 100%;
+    }
+
+    .hero {
+        flex-direction: column;
         min-height: auto;
+        padding: 48px 24px;
     }
 
-    .div_equipe_membros {
-        gap: 30px;
+    .hero-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 0 32px;
+        text-align: center;
     }
 
-    .div_membro {
-        width: 150px;
-        flex-shrink: 0;
+    .hero-content p {
+        margin-left: 0;
     }
 
-    .div_membro img {
-        max-width: 100px;
+    .celular-dashboard {
+        position: static;
+        transform: none;
+        max-width: 60%;
     }
 
-    .div_membro h3 {
-        font-size: 16px;
-    }
-
-    .div_membro p {
-        font-size: 13px;
+    .hero-shape {
+        display: none;
     }
 }
+
+
 
 @media screen and (max-width: 480px) {
-    #div_empresas h2,
-    #div_cooperativas h2,
-    #div_equipe h2 {
-        font-size: 30px;
-    }
+    /* ---------- Footer ---------- */
 
     #footer-container {
         grid-template-columns: 1fr;
@@ -626,5 +1055,39 @@ footer hr {
     #footer-links,
     #footer-contato {
         align-items: center;
+    }
+}
+
+/* ===========================
+   Tamanhos de fonte
+=========================== */
+
+@media screen and (max-width: 1142px) {
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 1.25rem; }
+
+    .topico-cooperativa h3 { font-size: 1.25rem; }
+
+    .texto-hero-inicio,
+    .sobre-item-content p,
+    #objetivo-conteudo p,
+    #dashboard .hero-content p {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.875rem; }
+    h3 { font-size: 1.125rem; }
+
+    .topico-cooperativa h3 { font-size: 1.125rem; }
+
+    .texto-hero-inicio,
+    .sobre-item-content p,
+    #objetivo-conteudo p,
+    #dashboard .hero-content p {
+        font-size: 1.125rem;
     }
 }

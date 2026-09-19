@@ -5,223 +5,344 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/content/logo.png" type="image/x-icon">
-    <title>VOLTA</title>
-    <link rel="stylesheet" href="css/landing.css">
-    
+    <title>Volta - Gestão de resíduos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/landing.css">
+    <!--JS-->
+    <script src="./js/main.js" defer></script>
+
     <!--Icone menu-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!--Fonte Belanosima-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <nav class="nav">
         <div class="menu">
-            <input type="checkbox" id="menu">
+            <input type="checkbox" id="menu-toggle">
 
             <div class="nav-logo">
-                <img src="assets/img/content/Logo_VOLTA.png" alt="VOLTA Logo">
-                <label for="menu" class="material-symbols-outlined" aria-label="Abrir menu">menu</label>
+                <a href="#painel">
+                    <img src="assets/img/content/Logo_VOLTA.png" alt="VOLTA Logo">
+                </a>
+                
+                <label for="menu-toggle" class="material-symbols-outlined" aria-label="Abrir menu">menu</label>
             </div>
 
             <div class="nav-links">
-                <a class="link_pagina" href="#div_sobre_nos">Sobre</a>
-                <a class="link_pagina" href="#div_empresas">Empresas</a>
-                <a class="link_pagina" href="#div_cooperativas">Cooperativas</a>
-                <a class="link_pagina" href="#div_equipe">Equipe</a>
-                <a class="link_pagina" href="#footer">Contato</a>
-                <a href="#login" id="link_login">Login</a>
+                <a class="link-pagina" href="#sobre-nos">Sobre</a>
+                <a class="link-pagina" href="#empresas">Empresas</a>
+                <a class="link-pagina" href="#cooperativas">Cooperativas</a>
+                <a class="link-pagina" href="#equipe">Equipe</a>
+                <a class="link-pagina" href="#footer">Contato</a>
+                <a href="#login" id="link-login">Login</a>
                 
             </div> 
         </div>
     </nav>
 
-    <div id="div_painel">
-        <img src="assets/img/content/Logo_VOLTA.png" alt="Logo VOLTA">
-        
-    </div>
+    <div id="painel">
+       <section class="hero-inicio">
+            <svg class="hero-shape-inicio"  viewBox="0 0 1442 1151" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M653 666.501C651 560.501 1441.5 666.001 1441.5 666.001V1144C1441.5 1144 1214.42 1188.93 1127.5 1035C1076.5 944.686 991.5 902.516 867 859.604C742.5 816.692 655 772.501 653 666.501Z" fill="url(#paint0_linear_468_58)"/>
+            <path d="M656.5 682C656.5 682 640.5 648.931 677 618.226C713.5 587.52 785.65 568.128 820 531.5C855.797 493.329 886.63 443.654 883 379.5C878.568 301.177 868 272 767 215.5C666 159 623.197 148.679 526 123.5C312.034 68.0709 0 65.9998 0 65.9998H1441.5V682H656.5Z" fill="url(#paint1_linear_468_58)"/>
+            <g opacity="0.3">
+                <rect width="315.563" height="26.4538" transform="matrix(0.696932 -0.717138 0.716546 0.69754 1132.17 690.35)" fill="url(#paint2_linear_468_58)"/>
+                <path d="M1400.44 433.29L1383.37 496.647L1337.62 452.12L1400.44 433.29Z" fill="#05ED47"/>
+            </g>
+            <path d="M898.458 240.001L865 193.255L937.245 118.919L977.783 158.38L898.458 240.001Z" fill="url(#paint3_linear_468_58)"/>
+            <path d="M1038.68 55.066L1004.14 188.547L906.299 93.3199L1038.68 55.066Z" fill="#1AAE5F"/>
+            <defs>
+            <linearGradient id="paint0_linear_468_58" x1="605.08" y1="721.501" x2="1521.94" y2="76.1286" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1AAE5F"/>
+                <stop offset="1" stop-color="#063300"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear_468_58" x1="605.08" y1="712.705" x2="1486.8" y2="55.7979" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1AAE5F"/>
+                <stop offset="1" stop-color="#063300"/>
+            </linearGradient>
+            <linearGradient id="paint2_linear_468_58" x1="264.403" y1="13.242" x2="-1.268e-05" y2="13.2392" gradientUnits="userSpaceOnUse">
+                <stop offset="0.177885" stop-color="#0AEE55"/>
+                <stop offset="0.615385" stop-color="#204D1C" stop-opacity="0.1"/>
+            </linearGradient>
+            <linearGradient id="paint3_linear_468_58" x1="957.514" y1="138.649" x2="807.87" y2="293.706" gradientUnits="userSpaceOnUse">
+                <stop offset="0.173077" stop-color="#1AAE5F"/>
+                <stop offset="0.384715" stop-color="#0F8748" stop-opacity="0.1"/>
+            </linearGradient>
+            </defs>
+            </svg>
 
 
-    <div id="div_sobre_nos">
-        <div id="sobre_nos_texto">
-            <h2>Sobre Nós</h2>
-            <br>
-            <div id="div_sobre_nos_conteudo">
-                <p>O Volta é uma plataforma que conecta empresas com cooperativas da região, de forma rápida e prática e com interface e funcionalidades simples. Podendo acompanhar o desempenho de suas coletas e conversar com as cooperativas por um chat seguro integrado em nossa plataforma.
-                <br>
-                Nosso objetivo é deixar a comunicação entre empresas e cooperativas mais simples, e deixar o trabalho de separação de resíduos nas cooperativas mais simples, fácil e menos cansativo.</p>
+            <div class="container-inicio">
+                <div class="hero-content-inicio">
+                    <div class="container-inicio">
+                        <img class="logo-hero-inicio" src="assets/img/content/Logo_VOLTA.png" alt="VOLTA">
+                        <h1 class="titulo-hero-inicio">Sua plataforma de gestão de resíduos.</h1>
+                        <p class="texto-hero-inicio">Conectando empresas e cooperativas.</p>
+                    </div>
+                </div>
             </div>
-        </div> 
-        <img src="assets/img/content/sobre_nos.png" alt="Sobre Nós">
-        
+
+            <img class="celular-inicio" src="assets/img/content/celular_inicio.png" alt="Tela do app VOLTA">
+        </section>
+            
     </div>
 
-    <div id="div_empresas" class="card">
-        <h2>Como Funciona</h2>
-            <div class="texto">
-                <div class="div_topicos_e">
-                    <h3>Se cadastre</h3>
-                    <p>Cadastre sua empresa em nossa plataforma.</p>
+
+    <div id="sobre-nos">
+        <h2>Sobre Nós</h2>
+
+        <section class="sobre-item imagem-esquerda">
+            <svg class="sobre-item-shape" width="534" height="775" viewBox="0 0 534 775" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 3.99321V763.493C77.4502 790.241 180.763 763.012 208.59 739.418C269.115 687.306 326.339 757.464 391.208 727.466C450.511 700.042 483.87 670.417 511.54 611.229C547.556 534.188 537.166 470.867 501.431 393.696C478.43 344.023 448.897 326.287 413.383 284.63C357.397 218.96 301.5 256.993 263.049 122.676C224.599 -11.6421 58.8248 -4.61437 0 3.99321Z" fill="#EBFEE9"/>
+            </svg>
+            <img class="celular-sobre" src="/src/assets/img/content/celular_sobre_nos.png" alt="Sobre Nós">
+            <div class="container">
+                <div class="sobre-item-content">
+                    <p>O Volta é uma plataforma que conecta empresas com cooperativas da região, de forma rápida e prática e com interface e funcionalidades simples.</p>
                 </div>
-                <div class="div_topicos_e">
-                    <h3>Procure cooperativas</h3>
-                    <p>Use o mapa para procurar cooperativas próximasda sua região.</p>
+            </div>
+        </section>
+
+        <section class="sobre-item imagem-direita">
+            <div class="container">
+                <div class="sobre-item-content">
+                    <p>É possível conversar com as cooperativas por um <span style="color: #3B8952;">chat integrado</span> na plataforma para deixar a comunicação mais simples e segura.</p>
                 </div>
-                <div class="div_topicos_e">
-                    <h3>Analise</h3>
-                    <p>Visualize as informações da cooperativa escolhida, e veja se é a cooperativa ideal para você.</p>
+            </div>
+            <img class="celular-sobre" src="/src/assets/img/content/celular_mensagens.png" alt="">
+        </section>
+    </div>
+
+
+    <section class="como-funciona-hero">
+        <svg class="como-funciona-shape"  viewBox="0 0 1439 1487" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M937.489 581.639C869.073 366.285 585.794 -119.087 0 26.9269V720.652C145.478 646.645 453 793.927 508.337 1073.19C563.675 1352.44 986.093 1648.64 1439 1382.22V653.146C1317.64 724.486 1047.44 810.061 937.489 581.639Z" fill="url(#paint0_linear_1070_824)"/>
+            <defs>
+            <linearGradient id="paint0_linear_1070_824" x1="6.77595e-07" y1="42.427" x2="1664" y2="1623.43" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#3B8952"/>
+            <stop offset="1" stop-color="#063300"/>
+            </linearGradient>
+            </defs>
+        </svg>
+        <div id="empresas" class="card">
+            <h2 id="como-funciona-titulo">Como Funciona</h2>
+            <h3 id="slider-titulo-empresa"></h3>
+            <div class="slider">
+                <button id="btn-voltar" class="btn-avancar-voltar"><i class="fa-solid fa-left-long"></i></button>
+                <div class="slider-track">
+                    <div class="card-empresa">
+                        <!-- <img src="" alt="">   -->
+                        <p id="bloco-um"></p>
+                    </div>
+                    <div class="card-empresa">
+                        <!-- <img src="" alt=""> -->
+                        <p id="bloco-dois"></p>
+                    </div>
+                    <div class="card-empresa">
+                        <!-- <img src="" alt=""> -->
+                        <p id="bloco-tres"></p>
+                    </div>
                 </div>
-                <div class="div_topicos_e">
-                    <h3>Contate</h3>
-                    <p>Marque uma coleta com a cooperativa escolhida em nosso chat.</p>
+                <button id="btn-avancar" class="btn-avancar-voltar"><i class="fa-solid fa-right-long"></i></button>
+            </div>
+            
+        </div>
+
+        <div id="cooperativas" class="card">
+            <h2>Para cooperativas</h2>
+            <h3 id="slider-titulo-coop"></h3>
+
+            <div class="slider">
+                <button id="btn-voltar-coop" class="btn-avancar-voltar"><i class="fa-solid fa-left-long"></i></button>
+                <div class="slider-track">
+                    <div class="card-coop">
+                        <!-- <img src="" alt="">   -->
+                        <p id="bloco-um-coop"></p>
+                    </div>
+                    <div class="card-coop">
+                        <!-- <img src="" alt=""> -->
+                        <p id="bloco-dois-coop"></p>
+                    </div>
+                    <div class="card-coop">
+                        <!-- <img src="" alt=""> -->
+                        <p id="bloco-tres-coop"></p>
+                    </div>
                 </div>
-                <div class="div_topicos_e">
-                    <h3>Registre</h3>
-                    <p>Cadastre as informações dos resíduos para que a cooperativa possa ter acesso.</p>
+                <button id="btn-avancar-coop" class="btn-avancar-voltar"><i class="fa-solid fa-right-long"></i></button>
+            </div>    
+            
+        
+        </div>
+    </section>
+
+    <div id="dashboard">
+        
+        <section class="hero">
+            <svg class="hero-shape" width="1159" height="809" viewBox="0 0 1159 809" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M428.221 255.372C488.22 129.372 703.92 -66.4283 1158.72 22.3717V684.372C1158.72 684.372 1006.83 629.59 907.22 637.372C766.44 648.368 720.625 767.865 582.22 795.872C367.792 839.262 107.22 761.372 33.2204 684.372C-40.7794 607.372 12.7205 482.872 155.22 482.872C297.72 482.872 368.221 381.372 428.221 255.372Z" fill="url(#paint0_linear_980_204)"/>
+                <defs>
+                    <linearGradient id="paint0_linear_980_204" x1="592.87" y1="-5.6035e-07" x2="592.721" y2="995.372" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#14AF41"/>
+                        <stop offset="1" stop-color="#08491B"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Acompanhe Dashboards</h2>
+                    <p>
+                        Com o desempenho e histórico
+                        de coletas passadas, e o status
+                        das coletas atuais.
+                        <br>
+                        E tenha acesso a um painel
+                        de métricas ESG, relacionado
+                        com as coletas.
+                    </p>
                 </div>
-                <div class="div_topicos_e">
-                    <h3>Agende</h3>
-                    <p>Deixe a coleta agendada no calendário integrado na plataforma.</p>
-                </div>
-                <div class="div_topicos_e">
-                    <h3>Aguarde</h3>
-                    <p>Aguarde até a data definida para a coleta.</p>
-                </div>
+            </div>
+            <img class="celular-dashboard" src="/src/assets/img/content/celular_dashboard.jpeg" alt="">
+        </section>
+    </div>
+
+    <div id="objetivo">
+        <div id="objetivo-texto">
+            <h2>Nosso objetivo</h2>
+            <div id="objetivo-conteudo">
+                <p>
+                    Nosso objetivo com a plataforma, 
+                    é fazer com que a conexão e
+                    comunicação entre cooperativas
+                    e empresas seja mais fácil e
+                    rápida, e fazer com que as
+                    empresas consigam escolher as
+                    melhores cooperativas.
+                    <br>
+                    E também buscamos facilitar os
+                    processos de coleta e triagem,
+                    usando relatórios completos com
+                    as informações necessárias para
+                    deixar a separação menos complexa.
+                </p>
+            
+
+                <img src="/src/assets/img/content/nosso_objetivo.png" alt="">
+            </div>
         </div>
     </div>
-
-    <div id="div_cooperativas" class="card">
-        <h2>Para cooperativas</h2>
-                
-            <div class="texto">
-                <div class="div_topicos_c">
-                    <h3>Se cadastre</h3>
-                    <p>Cadastre sua cooperativa em nossa plataforma.</p>
-                </div>                
-                <div class="div_topicos_c">
-                    <h3>Se identifique</h3>
-                    <p>Informe qual(is) o tipo(s) de resíduo(s)sua cooperativa é especializada.</p>
-                </div>
-                <div class="div_topicos_c">                    
-                    <h3>Aguarde</h3>
-                    <p>Aguarde que uma empresa escolha e contate sua cooperativa.</p>
-                </div>
-                <div class="div_topicos_c">
-                    <h3>Agende</h3>                    
-                    <p>Marque uma data com a empresa e agende-a no calendário da plataforma.</p>
-                </div>
-                <div class="div_topicos_c">
-                    <h3>Colete</h3>
-                    <p>Cumpra a coleta na data marcada.</p>                
-                </div>
-            </div>
-    </div>
     
-    <div id="div_equipe">
+    <div id="equipe">
         <h2>Nossa Equipe</h2>
-        <div class="div_equipe_conteudo">
-            <div class="div_equipe_membros">
+        <div class="equipe-conteudo">
+            <div class="equipe-membros">
                 
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/gustavo_souza.png" alt="Membro 2">
-                    <h3>Gustavo Souza</h3>
+                    <p class="nome-equipe">Gustavo Souza</p>
                     <p>Desenvolvedor Back-end</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/gustavo_azenha.png" alt="Membro 3">
-                    <h3>Gustavo Azenha</h3>
+                    <p class="nome-equipe">Gustavo Azenha</p>
                     <p>Designer UI/UX</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/Lucca_Davi_Begliomini.png" alt="Membro 4">
-                    <h3>Lucca Begliomini</h3>
+                    <p class="nome-equipe">Lucca Begliomini</p>
                     <p>Desenvolvedor Front-end</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/miguel_lapa.png" alt="Membro 5">
-                    <h3>Miguel Sperandio</h3>
+                    <p class="nome-equipe">Miguel Sperandio</p>
                     <p>Dados</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/breno.jpg" alt="Membro 6">
-                    <h3>Breno Santos</h3>
+                    <p class="nome-equipe">Breno Santos</p>
                     <p>Desenvolvedor Front-end</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/carlos.jpg" alt="Membro 7">
-                    <h3>Carlos Eduardo</h3>
+                    <p class="nome-equipe">Carlos Eduardo</p>
                     <p>Desenvolvedor Front-end</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/davi.png" alt="Membro 8">
-                    <h3>Davi Liu</h3>
+                    <p class="nome-equipe">Davi Liu</p>
                     <p>Desenvolvedor Back-end</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/enzo.jpg" alt="Membro 9">
-                    <h3>Enzo Herreira</h3>
+                    <p class="nome-equipe">Enzo Herreira</p>
                     <p>Desenvolvedor Back-end</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/gabriel_peotta.png" alt="Membro 10">
-                    <h3>Gabriel Peotta</h3>
+                    <p class="nome-equipe">Gabriel Peotta</p>
                     <p>Dados</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/lucas.png" alt="Membro 11">
-                    <h3>Lucas Fabiano</h3>
+                    <p class="nome-equipe">Lucas Fabiano</p>
                     <p>Dados</p>
                 </div>
 <!--=======================================================COPIA_IDENTICA=====================================================================================================-->
                 
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/gustavo_souza.png" alt="Membro 2">
-                    <h3>Gustavo Souza</h3>
+                    <p class="nome-equipe">Gustavo Souza</p>
                     <p>Desenvolvedor Back-end</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/gustavo_azenha.png" alt="Membro 3">
-                    <h3>Gustavo Azenha</h3>
+                    <p class="nome-equipe">Gustavo Azenha</p>
                     <p>Designer UI/UX</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/Lucca_Davi_Begliomini.png" alt="Membro 4">
-                    <h3>Lucca Begliomini</h3>
+                    <p class="nome-equipe">Lucca Begliomini</p>
                     <p>Desenvolvedor Front-end</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/miguel_lapa.png" alt="Membro 5">
-                    <h3>Miguel Sperandio</h3>
+                    <p class="nome-equipe">Miguel Sperandio</p>
                     <p>Dados</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/breno.jpg" alt="Membro 6">
-                    <h3>Breno Santos</h3>
+                    <p class="nome-equipe">Breno Santos</p>
                     <p>Desenvolvedor Front-end</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/carlos.jpg" alt="Membro 7">
-                    <h3>Carlos Eduardo</h3>
+                    <p class="nome-equipe">Carlos Eduardo</p>
                     <p>Desenvolvedor Front-end</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/davi.png" alt="Membro 8">
-                    <h3>Davi Liu</h3>
+                    <p class="nome-equipe">Davi Liu</p>
                     <p>Desenvolvedor Back-end</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/enzo.jpg" alt="Membro 9">
-                    <h3>Enzo Herreira</h3>
+                    <p class="nome-equipe">Enzo Herreira</p>
                     <p>Desenvolvedor Back-end</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/gabriel_peotta.png" alt="Membro 10">
-                    <h3>Gabriel Peotta</h3>
+                    <p class="nome-equipe">Gabriel Peotta</p>
                     <p>Dados</p>
                 </div>
-                <div class="div_membro">
+                <div class="membro">
                     <img src="assets/img/time/lucas.png" alt="Membro 11">
-                    <h3>Lucas Fabiano</h3>
+                    <p class="nome-equipe">Lucas Fabiano</p>
                     <p>Dados</p>
                 </div>
                 
@@ -230,7 +351,7 @@
         
     </div>
 
-    <footer id="footer" class="footer">
+    <footer id="footer">
 
         <div id="footer-container">
 
@@ -242,16 +363,18 @@
             <div  id="footer-social">
                 <h3>Visite nossas redes sociais</h3>
                 <a href="https://www.instagram.com/volta.gestao_reciclaveis/" target="_blank" rel="noopener noreferrer">
-                    <i class="fa fa-instagram" style="font-size:24px"></i>
+                    <i class="fa-brands fa-instagram" style="font-size:24px"></i>
                 </a>
             </div>
 
 
             <div id="footer-links">
                 <h3>Navegação</h3>
-                <a href="#div_sobre_nos">Sobre</a>
-                <a href="#div_cooperativas">Cooperativas</a>
-                <a href="#div_empresas">Como Funciona</a>
+                <a href="#sobre-nos">Sobre</a>
+                <a href="#cooperativas">Cooperativas</a>
+                <a href="#empresas">Como Funciona</a>
+                <a href="#equipe">Nossa equipe</a>
+
             </div>
 
 
@@ -262,7 +385,7 @@
         <div class="footer-copy">
             © 2026 VOLTA • Todos os direitos reservados.
         </div>
-
+        
     </footer>
 </body>
 
