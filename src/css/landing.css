@@ -659,9 +659,6 @@ p  { font-size: 1rem; line-height: 1.6; }
     animation: mover-equipe 20s linear infinite;
 }
 
-.equipe-membros:hover {
-    animation-play-state: paused;
-}
 
 @keyframes mover-equipe {
     0% {
