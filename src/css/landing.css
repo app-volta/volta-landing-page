@@ -48,9 +48,10 @@ p  { font-size: 1rem; line-height: 1.6; }
 
 :root {
     --verde-medio: #3B8952;
-    --verde-floresta: #0F684B;
-    --verde-petroleo: #03484C;
+    --verde-floresta: #0D510A;
+    --verde-petroleo: #0F684B;
     --verde-gelo: #F5FCF4;
+    --verde-esbranquicado: #D8EBE0;
     --verde-principal: #337D29;
     --verde-escuro: #063300;
     

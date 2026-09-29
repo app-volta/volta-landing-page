@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Belanosima", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--verde-esbranquicado);
+}
+
+
+body {
+    color: black;
+    display: flex;
+    align-items: center;
+}
+/*CORES*/
+:root {
+    --verde-medio: #3B8952;
+    --verde-floresta: #0D510A;
+    --verde-petroleo: #0F684B;
+    --verde-gelo: #F5FCF4;
+    --verde-esbranquicado: #D8EBE0;
+    --verde-principal: #337D29;
+    --verde-escuro: #063300;
+    
+    --verde-claro: color-mix(in srgb, var(--verde-medio) 30%, white);
+    --verde-suave: color-mix(in srgb, var(--verde-medio) 15%, white);
+}
+/*FORMS*/
+
+#container{
+    position: relative;
+    max-width: 100% ;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#Logo-VOLTA{
+    position: relative;
+    z-index: 1;
+    max-width: 20%;
+    height: auto;
+    margin-top: 20px;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+form {
+    position: relative;
+    bottom: -0px;
+    z-index: 1;
+    min-width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--verde-gelo);
+    border-radius: 8px;
+}label {
+    display: block;
+    margin-top: 20px;
+    font-weight:500;
+}
+input[type="text"],
+input[type="email"],
+.input-senha {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 2px solid var(--verde-esbranquicado);
+    border-radius: 4px;
+}
+
+p{
+    margin-top: 15px;
+    text-align: center;
+}
+
+a{
+    color: var(--verde-floresta);
+}
+
+a:hover{
+    color: var(--verde-escuro);
+    transition: 0.3s;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: var(--verde-principal);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: var(--verde-floresta);
+}
+
+.shape {
+    position: absolute;
+    bottom: -250px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}

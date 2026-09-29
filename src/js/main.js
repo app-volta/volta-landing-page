@@ -102,7 +102,7 @@ const lista_bloco_dois_coop = [
 
     "Preencha os campos com as informações pedidas.",
 
-    "Essa informação fica visível para empresas, para que elas posam fazer as melhores escolhas para elas.",
+    "Essa informação fica visível para empresas, para que elas possam fazer as melhores escolhas para elas.",
 
     "Converse com a empresa sobre o agendamento da coleta.",
 
@@ -114,9 +114,9 @@ const lista_bloco_tres_coop = [
 
     "Aceite os Termos e Condições e conclua o cadastro.",
 
-    "",
+    "Adicione também fotos e a localização da sua cooperativa.",
 
-    "Agende a coleta quanto estiver tudo certo.",
+    "Agende a coleta quando estiver tudo certo.",
 
     "Tudo pronto."
 
