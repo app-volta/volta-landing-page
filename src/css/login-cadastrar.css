@@ -15,8 +15,11 @@ html {
 
 body {
     color: black;
+    min-height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 /*CORES*/
 :root {
@@ -35,8 +38,10 @@ body {
 
 #container{
     position: relative;
-    max-width: 100% ;
-    height: auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,24 +52,30 @@ body {
 #Logo-VOLTA{
     position: relative;
     z-index: 1;
-    max-width: 20%;
+    width: 180px;
+    max-width: 60%;
     height: auto;
-    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 h1 {
-    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    color: var(--verde-floresta);
 }
+
 form {
     position: relative;
-    bottom: -0px;
     z-index: 1;
-    min-width: 40%;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 420px;
     padding: 20px;
     background: var(--verde-gelo);
     border-radius: 8px;
-}label {
+}
+
+label {
     display: block;
     margin-top: 20px;
     font-weight:500;
@@ -112,7 +123,7 @@ button:hover {
 
 .shape {
     position: absolute;
-    bottom: -250px;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: auto;
