@@ -1,0 +1,122 @@
+/* ===== Voltinha: mascote 3D fixo no canto da página ===== */
+#voltinha {
+    position: fixed;
+    right: 18px;
+    bottom: 12px;
+    width: 170px;
+    height: 230px;
+    z-index: 900;              /* abaixo do menu (1000) */
+    pointer-events: none;      /* só o boneco e o botão recebem clique */
+    transition: transform .45s cubic-bezier(.5, -0.3, .3, 1.4), opacity .3s ease;
+}
+#voltinha-stage {
+    position: absolute;
+    inset: 0;
+}
+#voltinha-stage canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+    touch-action: none;
+    cursor: grab;
+}
+#voltinha-stage canvas.dragging { cursor: grabbing; }
+
+/* versão 2D, aparece se o navegador não tiver 3D */
+#voltinha-fallback {
+    position: absolute;
+    inset: 10px 20px 0;
+    display: grid;
+    place-items: end center;
+}
+#voltinha-fallback svg { height: 100%; width: auto; }
+/* quando o 3D carrega, o JS põe o atributo hidden: esconde o desenho 2D */
+#voltinha-fallback[hidden] { display: none; }
+
+/* balão de fala */
+#voltinha-fala {
+    position: absolute;
+    right: 140px;
+    bottom: 160px;
+    width: max-content;
+    max-width: 190px;
+    padding: 7px 11px 6px;
+    background: var(--verde-gelo, #F5FCF4);
+    color: var(--verde-escuro, #063300);
+    border: 2px solid var(--verde-medio, #3B8952);
+    border-radius: 12px 12px 3px 12px;
+    font-family: "Belanosima", sans-serif;
+    font-size: 13px;
+    line-height: 1.25;
+    box-shadow: 0 6px 18px color-mix(in srgb, var(--verde-escuro, #063300) 18%, transparent);
+    opacity: 0;
+    transform: translateY(8px) scale(.9);
+    transform-origin: bottom right;
+    transition: opacity .25s ease, transform .25s ease;
+    pointer-events: none;
+    cursor: pointer;
+}
+#voltinha-fala.visivel { opacity: 1; transform: none; pointer-events: auto; }
+#voltinha-fala.pop { animation: voltinha-pop .3s ease; }
+@keyframes voltinha-pop { from { transform: translateY(6px) scale(.95); } to { transform: none; } }
+#voltinha-fala-texto { margin: 0; line-height: 1.25; font-size: inherit; }
+#voltinha-fala-cont {
+    display: block;
+    margin-top: 2px;
+    text-align: right;
+    font-size: 10px;
+    color: var(--verde-medio, #3B8952);
+}
+#voltinha-fala-cont:empty { display: none; }
+
+/* botão de esconder */
+#voltinha-fechar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 50%;
+    background: var(--verde-principal, #337D29);
+    color: #fff;
+    cursor: pointer;
+    pointer-events: auto;
+    opacity: .0;
+    transition: opacity .2s ease, background .2s ease;
+}
+#voltinha-fechar .material-symbols-outlined { font-size: 18px; }
+#voltinha:hover #voltinha-fechar,
+#voltinha-fechar:focus-visible { opacity: 1; }
+#voltinha-fechar:hover { background: var(--verde-escuro, #063300); }
+
+/* minimizado: o boneco sai de cena e fica só uma bolinha */
+#voltinha.minimizado #voltinha-stage,
+#voltinha.minimizado #voltinha-fala { opacity: 0; transform: translateY(60px) scale(.6); pointer-events: none; }
+#voltinha.minimizado #voltinha-stage canvas { pointer-events: none; }
+#voltinha #voltinha-stage { transition: opacity .3s ease, transform .4s ease; transform-origin: bottom center; }
+#voltinha.minimizado #voltinha-fechar {
+    top: auto; bottom: 8px; width: 48px; height: 48px; opacity: 1;
+    box-shadow: 0 4px 14px color-mix(in srgb, var(--verde-escuro, #063300) 30%, transparent);
+}
+#voltinha-fechar .voltinha-icone { display: none; width: 36px; height: 44px; }
+#voltinha.minimizado #voltinha-fechar .voltinha-icone { display: block; }
+#voltinha.minimizado #voltinha-fechar .material-symbols-outlined { display: none; }
+#voltinha.minimizado #voltinha-fechar {
+    width: 56px; height: 56px; right: 8px;
+    background: var(--verde-gelo, #F5FCF4);
+    border: 2px solid var(--verde-medio, #3B8952);
+    transition: transform .2s ease;
+}
+#voltinha.minimizado #voltinha-fechar:hover { background: #fff; transform: translateY(-3px) rotate(-6deg); }
+
+/* no toque não existe hover: o botão fica sempre visível */
+@media (hover: none) { #voltinha-fechar { opacity: .85; } }
+
+@media (max-width: 600px) {
+    #voltinha { width: 112px; height: 150px; right: 6px; bottom: 6px; }
+    #voltinha-fala { right: 88px; bottom: 108px; max-width: 150px; font-size: 12px; }
+}
