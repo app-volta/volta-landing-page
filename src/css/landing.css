@@ -129,10 +129,7 @@ p  { font-size: 1rem; line-height: 1.6; }
 
 .nav-links a:hover {
     color: var(--verde-principal);
-    position: relative;
-    top: -5px;
     transition: 0.3s;
-    font-weight: bold;
 }
 
 #link-login {
@@ -537,6 +534,8 @@ p  { font-size: 1rem; line-height: 1.6; }
     padding: 80px 5px;
     z-index: 1;
     margin-left: 20px;
+    position: relative;
+    top: -50px;
 }
 
 .hero-content p{
@@ -801,6 +800,7 @@ footer hr {
         flex-direction: column;
         padding: 130px 20px 60px;
         gap: 25px;
+        margin-bottom: 100px;
     }
 
     #painel img {
@@ -1012,6 +1012,7 @@ footer hr {
         margin-left: 0;
         padding: 0 0 32px;
         text-align: center;
+        top:0px
     }
 
     .hero-content p {
