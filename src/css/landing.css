@@ -48,12 +48,13 @@ p  { font-size: 1rem; line-height: 1.6; }
 
 :root {
     --verde-medio: #3B8952;
-    --verde-floresta: #0D510A;
+    --verde-floresta: #0B4828;
     --verde-petroleo: #0F684B;
     --verde-gelo: #F5FCF4;
     --verde-esbranquicado: #D8EBE0;
-    --verde-principal: #337D29;
+    --verde-principal: #1BA463;
     --verde-escuro: #063300;
+    --verde-destaque: #5DA753;
     
     --verde-claro: color-mix(in srgb, var(--verde-medio) 30%, white);
     --verde-suave: color-mix(in srgb, var(--verde-medio) 15%, white);
@@ -193,7 +194,7 @@ p  { font-size: 1rem; line-height: 1.6; }
 }
 
 .texto-hero-inicio {
-    color: var(--verde-medio);
+    color: var(--verde-destaque);
 }
 
 .celular-inicio {
@@ -304,17 +305,6 @@ p  { font-size: 1rem; line-height: 1.6; }
     display: block;
     margin-bottom: 32px;
     text-align: center;
-    
-}
-
-#slider-titulo-empresa, #slider-titulo-coop{
-    color: var(--verde-medio);
-    background-color: var(--verde-gelo);
-    padding: 6px 7px;
-    border-radius: 5px;
-    width: 60%;
-    text-align: center;
-    margin-bottom: 15px;
 }
 
 
@@ -360,12 +350,39 @@ p  { font-size: 1rem; line-height: 1.6; }
 .como-funciona-shape {
     position: absolute;
     top: 100px;
-    
     right: 0;
     min-width: 90%;
-    
-    
 }
+
+.card {
+    position: relative;
+    bottom: -300px;
+}
+
+
+/* ===========================
+   Contador "1 de 7"
+=========================== */
+
+.slider-contador {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 8px;
+    padding-right: 24px;
+
+    text-align: right;
+    font-weight: 500;
+    color: var(--verde-principal);
+}
+
+#cooperativas .slider-contador {
+    color: white;
+}
+
+
+/* ===========================
+   Slider (caixa branca)
+=========================== */
 
 .slider {
     display: flex;
@@ -374,14 +391,18 @@ p  { font-size: 1rem; line-height: 1.6; }
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
+    background-color: #FFFFFF;
+    border: 1px solid var(--verde-destaque);
+    border-radius: 26px;
+    padding: 24px;
 }
 
 .btn-avancar-voltar {
-    background-color: var(--verde-gelo);
+    background-color: transparent;
     color: var(--verde-floresta);
     padding: 5px;
     border: none;
-    box-shadow: 2px 2px var(--verde-claro);
+    box-shadow: none;
     border-radius: 50%;
 
     width: 60px;
@@ -389,15 +410,19 @@ p  { font-size: 1rem; line-height: 1.6; }
     flex-shrink: 0;
 
     cursor: pointer;
-
     transition: 0.3s;
 }
 
 .btn-avancar-voltar:hover {
-    background-color: var(--verde-floresta);
-    color: var(--verde-gelo);
-    transition: 0.3s;
-    box-shadow: 2px 2px var(--verde-floresta);
+    background-color: var(--verde-principal);
+    color: #FFFFFF;
+}
+
+/* Contorno quando navega pelo teclado (Tab) */
+.btn-avancar-voltar:focus-visible,
+.bolinha:focus-visible {
+    outline: 3px solid var(--verde-claro);
+    outline-offset: 2px;
 }
 
 .slider-viewport {
@@ -405,32 +430,135 @@ p  { font-size: 1rem; line-height: 1.6; }
     width: 100%;
 }
 
+/* Título em cima, texto embaixo */
 .slider-track {
+    flex: 1;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
     display: flex;
-    flex-direction: row;
-    gap: 22px;
+    flex-direction: column;
+    gap: 16px;
     transition: transform 0.4s ease;
 }
 
-.card-empresa,
-.card-coop {
-    max-width: 33%;
-    height: 300px;
-    background-color: var(--verde-gelo);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 5.5px 3.1px var(--verde-claro);
+
+/* ===========================
+   Título com ícone
+=========================== */
+
+.slider-titulo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    color: var(--verde-floresta);
+    font-size: 2rem;
+    text-align: left;
+}
+
+.slider-icone {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+
+    background-color: var(--verde-principal);
+    color: #FFFFFF;
+
+    display: grid;
+    place-items: center;
+    font-size: 1rem;
+}
+
+
+/* ===========================
+   Caixas verdes de texto
+=========================== */
+
+/* Empresa: uma caixa ocupando a largura toda */
+.card-empresa {
+    width: 100%;
+    min-height: 140px;
+    background-color: var(--verde-principal);
+    color: #FFFFFF;
+    border-radius: 18px;
 
     display: flex;
     align-items: center;
-
-    padding: 5%;
+    padding: 24px 28px;
 }
 
 .card-empresa p {
-    padding: 12px;
     text-align: left;
+    font-size: 1.15rem;
+    line-height: 1.5;
 }
+
+/* Cooperativa: três caixas lado a lado */
+.blocos-coop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.card-coop {
+    min-height: 180px;
+    background-color: var(--verde-principal);
+    color: #FFFFFF;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    padding: 24px;
+
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+
+/* ===========================
+   Bolinhas
+=========================== */
+
+.slider-bolinhas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.bolinha {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--verde-floresta);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.bolinha[aria-current="true"] {
+    background-color: var(--verde-claro);
+    transform: scale(1.4);
+}
+
+/* Na cooperativa o fundo é escuro: bolinhas brancas */
+#cooperativas .bolinha {
+    background-color: color-mix(in srgb, white 40%, transparent);
+}
+
+#cooperativas .bolinha[aria-current="true"] {
+    background-color: white;
+}
+
+
+/* ===========================
+   Tópicos
+=========================== */
 
 .texto {
     width: 100%;
@@ -439,16 +567,6 @@ p  { font-size: 1rem; line-height: 1.6; }
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.slider-track {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-
-    display: flex;
-    flex-direction: row;
     gap: 22px;
 }
 
@@ -489,10 +607,6 @@ p  { font-size: 1rem; line-height: 1.6; }
     color: white;
 }
 
-.card{
-    position: relative;
-    bottom: -300px;
-}
 
 /* ===========================
     Dashboard
@@ -962,15 +1076,11 @@ footer hr {
         margin-bottom: 20px;
     }
 
-    #slider-titulo-empresa,
-    #slider-titulo-coop {
-        width: 100%;
-    }
-
     .slider {
         flex-wrap: wrap;
         justify-content: center;
         gap: 16px;
+        padding: 16px;
     }
 
     .slider-track {
@@ -978,6 +1088,10 @@ footer hr {
         flex: 0 0 100%;
         flex-direction: column;
         gap: 16px;
+    }
+
+    .slider-titulo {
+        font-size: 1.4rem;
     }
 
     .card-empresa,
@@ -988,6 +1102,16 @@ footer hr {
         height: auto;
         min-height: 140px;
         padding: 20px;
+    }
+
+    .card-empresa p,
+    .card-coop {
+        font-size: 1rem;
+    }
+
+    /* As três caixas da cooperativa ficam uma embaixo da outra */
+    .blocos-coop {
+        grid-template-columns: 1fr;
     }
 
     .btn-avancar-voltar {
