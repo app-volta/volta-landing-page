@@ -28,70 +28,70 @@ let index_coop = 0;
 // LISTAS — EMPRESA (cada posição das listas é um passo)
 
 const lista_titulo_empresa = [
-    "Cadastre-se",
-    "Procure cooperativas",
-    "Analise",
-    "Contate",
-    "Registre",
-    "Agende",
-    "Aguarde"
+  "Cadastre-se",
+  "Procure cooperativas",
+  "Analise",
+  "Contate",
+  "Registre",
+  "Agende",
+  "Aguarde",
 ];
 
 const lista_icone_empresa = [
-    "fa-right-to-bracket",
-    "fa-map-location-dot",
-    "fa-magnifying-glass",
-    "fa-comments",
-    "fa-file-pen",
-    "fa-calendar-check",
-    "fa-hourglass-half"
+  "fa-right-to-bracket",
+  "fa-map-location-dot",
+  "fa-magnifying-glass",
+  "fa-comments",
+  "fa-file-pen",
+  "fa-calendar-check",
+  "fa-hourglass-half",
 ];
 
 const lista_bloco_um = [
-    "Comece a criar sua conta.",
-    "Acesse o mapa de cooperativas.",
-    "Acesse o menu de cooperativas salvas.",
-    "Acesse o chat privado da cooperativa.",
-    "Clique na opção “Criar nova coleta”, na página inicial.",
-    "Clique em “Agendar”.",
-    "Agora é só esperar a data da coleta."
+  "Comece a criar sua conta.",
+  "Acesse o mapa de cooperativas.",
+  "Acesse o menu de cooperativas salvas.",
+  "Acesse o chat privado da cooperativa.",
+  "Clique na opção “Criar nova coleta”, na página inicial.",
+  "Clique em “Agendar”.",
+  "Agora é só esperar a data da coleta.",
 ];
 
 // LISTAS — COOPERATIVA
 
 const lista_titulo_coop = [
-    "Cadastre-se",
-    "Se identifique",
-    "Aguarde e converse",
-    "Confirme"
+  "Cadastre-se",
+  "Se identifique",
+  "Aguarde e converse",
+  "Confirme",
 ];
 
 const lista_icone_coop = [
-    "fa-right-to-bracket",
-    "fa-id-card",
-    "fa-comments",
-    "fa-circle-check"
+  "fa-right-to-bracket",
+  "fa-id-card",
+  "fa-comments",
+  "fa-circle-check",
 ];
 
 const lista_bloco_um_coop = [
-    "Comece a criar sua conta de cooperativa.",
-    "Informe qual tipo de resíduo sua cooperativa é especializada.",
-    "Espere que uma empresa escolha e contate sua cooperativa.",
-    "Aguarde a empresa agendar a coleta."
+  "Comece a criar sua conta de cooperativa.",
+  "Informe qual tipo de resíduo sua cooperativa é especializada.",
+  "Espere que uma empresa escolha e contate sua cooperativa.",
+  "Aguarde a empresa agendar a coleta.",
 ];
 
 const lista_bloco_dois_coop = [
-    "Preencha os campos com as informações pedidas.",
-    "Essa informação fica visível para empresas, para que elas possam fazer as melhores escolhas para elas.",
-    "Converse com a empresa sobre o agendamento da coleta.",
-    "Confirme o agendamento."
+  "Preencha os campos com as informações pedidas.",
+  "Essa informação fica visível para empresas, para que elas possam fazer as melhores escolhas para elas.",
+  "Converse com a empresa sobre o agendamento da coleta.",
+  "Confirme o agendamento.",
 ];
 
 const lista_bloco_tres_coop = [
-    "Aceite os Termos e Condições e conclua o cadastro.",
-    "Adicione também fotos e a localização da sua cooperativa.",
-    "Agende a coleta quando estiver tudo certo.",
-    "Tudo pronto."
+  "Aceite os Termos e Condições e conclua o cadastro.",
+  "Adicione também fotos e a localização da sua cooperativa.",
+  "Agende a coleta quando estiver tudo certo.",
+  "Tudo pronto.",
 ];
 
 //FUNÇÕES
@@ -101,68 +101,65 @@ const lista_bloco_tres_coop = [
 // titulos: lista de títulos (usada para a quantidade e para o aria-label)
 // tipo: "empresa" ou "coop", para saber qual índice mudar no clique
 function criar_bolinhas(container, titulos, tipo) {
-    titulos.forEach((titulo, i) => {
-        const bolinha = document.createElement("button");
-        bolinha.className = "bolinha";
-        bolinha.setAttribute("aria-label", `Ir para o passo ${i + 1}: ${titulo}`);
+  titulos.forEach((titulo, i) => {
+    const bolinha = document.createElement("button");
+    bolinha.className = "bolinha";
+    bolinha.setAttribute("aria-label", `Ir para o passo ${i + 1}: ${titulo}`);
 
-        bolinha.addEventListener("click", () => {
-            if (tipo == "empresa") {
-                index = i;
-            } else {
-                index_coop = i;
-            }
-            ajustar_slider();
-        });
-
-        container.appendChild(bolinha);
+    bolinha.addEventListener("click", () => {
+      if (tipo == "empresa") {
+        index = i;
+      } else {
+        index_coop = i;
+      }
+      ajustar_slider();
     });
+
+    container.appendChild(bolinha);
+  });
 }
 
 // Marca a bolinha do passo atual
 function marcar_bolinha(container, posicao) {
-    container.querySelectorAll(".bolinha").forEach((bolinha, i) => {
-        bolinha.setAttribute("aria-current", i == posicao ? "true" : "false");
-    });
+  container.querySelectorAll(".bolinha").forEach((bolinha, i) => {
+    bolinha.setAttribute("aria-current", i == posicao ? "true" : "false");
+  });
 }
 
 // Atualiza o conteúdo dos dois sliders
 function ajustar_slider() {
+  // Empresa
+  titulo_empresa.innerText = lista_titulo_empresa[index];
+  icone_empresa.className = `fa-solid ${lista_icone_empresa[index]}`;
+  div_um.innerText = lista_bloco_um[index];
+  atual_empresa.innerText = index + 1;
+  marcar_bolinha(bolinhas_empresa, index);
 
-    // Empresa
-    titulo_empresa.innerText = lista_titulo_empresa[index];
-    icone_empresa.className = `fa-solid ${lista_icone_empresa[index]}`;
-    div_um.innerText = lista_bloco_um[index];
-    atual_empresa.innerText = index + 1;
-    marcar_bolinha(bolinhas_empresa, index);
-
-    // Cooperativa
-    titulo_coop.innerText = lista_titulo_coop[index_coop];
-    icone_coop.className = `fa-solid ${lista_icone_coop[index_coop]}`;
-    div_um_coop.innerText = lista_bloco_um_coop[index_coop];
-    div_dois_coop.innerText = lista_bloco_dois_coop[index_coop];
-    div_tres_coop.innerText = lista_bloco_tres_coop[index_coop];
-    atual_coop.innerText = index_coop + 1;
-    marcar_bolinha(bolinhas_coop, index_coop);
+  // Cooperativa
+  titulo_coop.innerText = lista_titulo_coop[index_coop];
+  icone_coop.className = `fa-solid ${lista_icone_coop[index_coop]}`;
+  div_um_coop.innerText = lista_bloco_um_coop[index_coop];
+  div_dois_coop.innerText = lista_bloco_dois_coop[index_coop];
+  div_tres_coop.innerText = lista_bloco_tres_coop[index_coop];
+  atual_coop.innerText = index_coop + 1;
+  marcar_bolinha(bolinhas_coop, index_coop);
 }
 
-// Avança ou volta o slider (circular: do último volta pro primeiro)
+// Avança ou volta o slider
 function mudar_slider(btn) {
+  if (btn == "avancar") {
+    index = (index + 1) % lista_titulo_empresa.length;
+  } else if (btn == "voltar") {
+    index =
+      (index - 1 + lista_titulo_empresa.length) % lista_titulo_empresa.length;
+  } else if (btn == "avancar_coop") {
+    index_coop = (index_coop + 1) % lista_titulo_coop.length;
+  } else if (btn == "voltar_coop") {
+    index_coop =
+      (index_coop - 1 + lista_titulo_coop.length) % lista_titulo_coop.length;
+  }
 
-    if (btn == "avancar") {
-        index = (index + 1) % lista_titulo_empresa.length;
-
-    } else if (btn == "voltar") {
-        index = (index - 1 + lista_titulo_empresa.length) % lista_titulo_empresa.length;
-
-    } else if (btn == "avancar_coop") {
-        index_coop = (index_coop + 1) % lista_titulo_coop.length;
-
-    } else if (btn == "voltar_coop") {
-        index_coop = (index_coop - 1 + lista_titulo_coop.length) % lista_titulo_coop.length;
-    }
-
-    ajustar_slider();
+  ajustar_slider();
 }
 
 //EVENTOS
@@ -175,7 +172,15 @@ criar_bolinhas(bolinhas_coop, lista_titulo_coop, "coop");
 
 ajustar_slider();
 
-btn_avancar.addEventListener("click", () => { mudar_slider("avancar") });
-btn_voltar.addEventListener("click", () => { mudar_slider("voltar") });
-btn_avancar_coop.addEventListener("click", () => { mudar_slider("avancar_coop") });
-btn_voltar_coop.addEventListener("click", () => { mudar_slider("voltar_coop") });
+btn_avancar.addEventListener("click", () => {
+  mudar_slider("avancar");
+});
+btn_voltar.addEventListener("click", () => {
+  mudar_slider("voltar");
+});
+btn_avancar_coop.addEventListener("click", () => {
+  mudar_slider("avancar_coop");
+});
+btn_voltar_coop.addEventListener("click", () => {
+  mudar_slider("voltar_coop");
+});

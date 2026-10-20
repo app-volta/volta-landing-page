@@ -1,63 +1,73 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Belanosima", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Belanosima", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    color: black;
-    overflow-x: hidden;
+  color: black;
+  overflow-x: hidden;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 /* ===========================
    Tamanhos de fonte
 =========================== */
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 3.22rem; font-weight: 400; line-height: 1.1; }
-h3 { font-size: 2.2rem; }
-p  { font-size: 1rem; line-height: 1.6; }
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 3.22rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+h3 {
+  font-size: 2.2rem;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
 .texto-hero-inicio,
 .sobre-item-content p,
 #objetivo-conteudo p,
 #dashboard .hero-content p {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 #equipe p,
 .footer-copy {
-    font-size: 0.875rem;
+  font-size: 0.875rem;
 }
-
 
 /* ===========================
    Cores
 =========================== */
 
 :root {
-    --verde-medio: #3B8952;
-    --verde-floresta: #0B4828;
-    --verde-petroleo: #0F684B;
-    --verde-gelo: #F5FCF4;
-    --verde-esbranquicado: #D8EBE0;
-    --verde-principal: #1BA463;
-    --verde-escuro: #063300;
-    --verde-destaque: #5DA753;
-    
-    --verde-claro: color-mix(in srgb, var(--verde-medio) 30%, white);
-    --verde-suave: color-mix(in srgb, var(--verde-medio) 15%, white);
+  --verde-medio: #3b8952;
+  --verde-floresta: #0b4828;
+  --verde-petroleo: #0f684b;
+  --verde-gelo: #f5fcf4;
+  --verde-esbranquicado: #d8ebe0;
+  --verde-principal: #1ba463;
+  --verde-escuro: #063300;
+  --verde-destaque: #5da753;
+
+  --verde-claro: color-mix(in srgb, var(--verde-medio) 30%, white);
+  --verde-suave: color-mix(in srgb, var(--verde-medio) 15%, white);
 }
 
 /* ===========================
@@ -65,84 +75,85 @@ p  { font-size: 1rem; line-height: 1.6; }
 =========================== */
 
 .nav {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 12px color-mix(in srgb, var(--verde-escuro) 12%, transparent);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px
+    color-mix(in srgb, var(--verde-escuro) 12%, transparent);
 }
 
-.menu{
-    width: 100%;
-    height: fit-content;
-    padding: 0 40px;
-    box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.96);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.menu {
+  width: 100%;
+  height: fit-content;
+  padding: 0 40px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.96);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav-logo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .nav-logo img {
-    width: 100px;
-    max-width: 100%;
-    padding: 15px;
-    box-sizing: border-box;
-    padding: 15px 0;
+  width: 100px;
+  max-width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  padding: 15px 0;
 }
 
-#menu-toggle{
-    display: none;
+#menu-toggle {
+  display: none;
 }
 
-.nav-logo label{
-    display: none;
+.nav-logo label {
+  display: none;
 }
 
 .nav-links {
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-links a {
-    width: 100%;
-    padding: 10px 18px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    color: var(--verde-escuro);
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
+  width: 100%;
+  padding: 10px 18px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--verde-escuro);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: var(--verde-principal);
-    transition: 0.3s;
+  color: var(--verde-principal);
+  transition: 0.3s;
 }
 
 #link-login {
-    padding: 10px 16px;
-    color: white;
-    background: var(--verde-principal);
-    border-radius: 3px;
+  padding: 10px 16px;
+  color: white;
+  background: var(--verde-principal);
+  border-radius: 3px;
 }
 
 #link-login:hover {
-    color: white;
-    background: var(--verde-escuro);
+  color: white;
+  background: var(--verde-escuro);
 }
 
 /* ===========================
@@ -150,328 +161,345 @@ p  { font-size: 1rem; line-height: 1.6; }
 =========================== */
 
 .hero-inicio {
-    max-width: 100vw;
-    max-height: auto;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+  max-width: 100vw;
+  max-height: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-shape-inicio {
-    position: absolute;
-    top: 0;
-    right: -73px;
-    top: 40px;
-    width: 70%;
-    height: 100vh;
-    z-index: 0;
+  position: absolute;
+  top: 0;
+  right: -250px;
+  top: 40px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
 }
 
 .container-inicio {
-    width: 70%;
-    padding: 150px 5px 80px 40px;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  width: 70%;
+  padding: 150px 5px 80px 40px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-    position: relative;
-    top: -10px;
+  position: relative;
+  top: -10px;
 }
 
 .logo-hero-inicio {
-    max-width: 70%;
-    height: auto;
-    max-height: 100vh;
-    margin-bottom: 20px;
+  max-width: 70%;
+  height: auto;
+  max-height: 100vh;
+  margin-bottom: 20px;
 }
 
 .titulo-hero-inicio {
-    color: var(--verde-floresta);
-    margin-bottom: 10px;
-    max-width: 500px;
+  color: var(--verde-floresta);
+  margin-bottom: 10px;
+  max-width: 500px;
 }
 
 .texto-hero-inicio {
-    color: var(--verde-destaque);
+  color: var(--verde-destaque);
 }
 
 .celular-inicio {
-    max-width: 25%;
-    height: auto;
-    position: absolute;
-    z-index: 1;
-    right: 15%;
-    top: 55%;
-    transform: translateY(-50%);
+  max-width: 25%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  right: 15%;
+  top: 55%;
+  transform: translateY(-50%);
 }
 
 /* ===========================
-   Sobre nós
+   O que é o VOLTA
 =========================== */
 
 #sobre-nos {
-    background: white;
-    padding: 60px 0;
-    margin-top: 60px;
-    margin-bottom: 500px;
-}
-
-#sobre-nos h2 {
-    color: var(--verde-medio);
-    text-align: center;
-    margin-bottom: 16px;
+  background: white;
+  padding: 60px 0;
+  margin-top: 60px;
+  margin-bottom: 500px;
 }
 
 .sobre-item {
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+  min-height: 560px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+}
+
+/* Coluna da esquerda: título, conteúdo e palavras-chave */
+.sobre-item .container {
+  width: 45%;
+  z-index: 1;
+}
+
+.sobre-item h2 {
+  color: var(--verde-medio);
+  text-align: left;
+  margin-bottom: 16px;
 }
 
 .sobre-item-content p {
-    line-height: 1.75;
-    color: black;
-    text-align: left;
+  line-height: 1.75;
+  color: black;
+  text-align: left;
 }
 
-.imagem-esquerda 
+.palavras-chaves{
+  background-color: var(--verde-principal);
+  color: white;
+  border-radius: 21.54px;
+  width: 40%;
+  padding: 5px;
+  text-align: center;
+}
+
+.sobre-palavras {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Coluna da direita: SVG de fundo e as duas imagens */
+.sobre-visual {
+  position: relative;
+  width: 50%;
+  height: 520px;
+}
+
 .sobre-item-shape {
-    position: absolute;
-    top: 0;
-    left: -80px;
-    width: 55%;
-    height: 100%;
-    z-index: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
-.imagem-esquerda 
-.celular-sobre {
-    position: absolute;
-    z-index: 1;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 400px;
-    max-height: 473px;
-    border-radius: 18px;
+.sobre-item-shape svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
-.imagem-esquerda .container {
-    width: 45%;
-    z-index: 1;
-    margin-left: auto;
-    margin-right: 8%;
+/* Imagem maior, atrás, dentro da área do SVG */
+.sobre-img-fundo {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  width: 300px;
+  height: auto;
+  border-radius: 18px;
+  z-index: 1;
 }
 
-.imagem-direita .container {
-    width: 45%;
-    z-index: 1;
-    margin-left: 8%;
+/* Imagem menor, na frente, um pouco para a esquerda e para baixo */
+.sobre-img-frente {
+  position: absolute;
+  top: 110px;
+  right: 230px;
+  width: 260px;
+  height: auto;
+  border-radius: 18px;
+  z-index: 2;
 }
-
-.imagem-direita .celular-sobre {
-    position: absolute;
-    z-index: 1;
-    right: 12%;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 400px;
-    max-height: 473px;
-    border-radius: 18px;
-}
-
 
 /* ===========================
    Empresas
 =========================== */
 
 #empresas {
-    padding: 96px 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 96px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    position: relative;
-    top: -40px;
-    z-index: 1;
+  position: relative;
+  top: -40px;
+  z-index: 1;
 }
 
 #empresas h2 {
-    color: var(--verde-medio);
-    display: block;
-    margin-bottom: 32px;
-    text-align: center;
+  color: var(--verde-medio);
+  display: block;
+  margin-bottom: 32px;
+  text-align: center;
 }
-
 
 /* ===========================
    Cooperativas
 =========================== */
 
 #cooperativas {
-    padding: 96px 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 96px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    border-top: none;
+  border-top: none;
 
-    position: relative;
-    top: -40px;
+  position: relative;
+  top: -40px;
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #cooperativas h2 {
-    color: white;
-    display: block;
-    margin-bottom: 32px;
-    text-align: center;
+  color: white;
+  display: block;
+  margin-bottom: 32px;
+  text-align: center;
 }
-
 
 /* ===========================
    Como Funciona
 =========================== */
 
 .como-funciona-hero {
-    position: relative;
-    max-width: 100%;
-    height: 50%;
-    bottom: 500px;
+  position: relative;
+  max-width: 100%;
+  height: 50%;
+  bottom: 500px;
 }
 
 .como-funciona-shape {
-    position: absolute;
-    top: 100px;
-    right: 0;
-    min-width: 90%;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  min-width: 90%;
 }
 
 .card {
-    position: relative;
-    bottom: -300px;
+  position: relative;
+  bottom: -300px;
 }
-
 
 /* ===========================
    Contador "1 de 7"
 =========================== */
 
 .slider-contador {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto 8px;
-    padding-right: 24px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 8px;
+  padding-right: 24px;
 
-    text-align: right;
-    font-weight: 500;
-    color: var(--verde-principal);
+  text-align: right;
+  font-weight: 500;
+  color: var(--verde-principal);
 }
 
 #cooperativas .slider-contador {
-    color: white;
+  color: white;
 }
-
 
 /* ===========================
    Slider (caixa branca)
 =========================== */
 
 .slider {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    background-color: #FFFFFF;
-    border: 1px solid var(--verde-destaque);
-    border-radius: 26px;
-    padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid var(--verde-destaque);
+  border-radius: 26px;
+  padding: 24px;
 }
 
 .btn-avancar-voltar {
-    background-color: transparent;
-    color: var(--verde-floresta);
-    padding: 5px;
-    border: none;
-    box-shadow: none;
-    border-radius: 50%;
+  background-color: transparent;
+  color: var(--verde-floresta);
+  padding: 5px;
+  border: none;
+  box-shadow: none;
+  border-radius: 50%;
 
-    width: 60px;
-    height: 60px;
-    flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
 
-    cursor: pointer;
-    transition: 0.3s;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .btn-avancar-voltar:hover {
-    background-color: var(--verde-principal);
-    color: #FFFFFF;
+  background-color: var(--verde-principal);
+  color: #ffffff;
 }
 
 /* Contorno quando navega pelo teclado (Tab) */
 .btn-avancar-voltar:focus-visible,
 .bolinha:focus-visible {
-    outline: 3px solid var(--verde-claro);
-    outline-offset: 2px;
+  outline: 3px solid var(--verde-claro);
+  outline-offset: 2px;
 }
 
 .slider-viewport {
-    overflow: hidden;
-    width: 100%;
+  overflow: hidden;
+  width: 100%;
 }
 
 /* Título em cima, texto embaixo */
 .slider-track {
-    flex: 1;
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
 
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    transition: transform 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.4s ease;
 }
-
 
 /* ===========================
    Título com ícone
 =========================== */
 
 .slider-titulo {
-    display: flex;
-    align-items: center;
-    gap: 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 
-    color: var(--verde-floresta);
-    font-size: 2rem;
-    text-align: left;
+  color: var(--verde-floresta);
+  font-size: 2rem;
+  text-align: left;
 }
 
 .slider-icone {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-    border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
 
-    background-color: var(--verde-principal);
-    color: #FFFFFF;
+  background-color: var(--verde-principal);
+  color: #ffffff;
 
-    display: grid;
-    place-items: center;
-    font-size: 1rem;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
 }
-
 
 /* ===========================
    Caixas verdes de texto
@@ -479,242 +507,378 @@ p  { font-size: 1rem; line-height: 1.6; }
 
 /* Empresa: uma caixa ocupando a largura toda */
 .card-empresa {
-    width: 100%;
-    min-height: 140px;
-    background-color: var(--verde-principal);
-    color: #FFFFFF;
-    border-radius: 18px;
+  width: 100%;
+  min-height: 140px;
+  background-color: var(--verde-principal);
+  color: #ffffff;
+  border-radius: 18px;
 
-    display: flex;
-    align-items: center;
-    padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  padding: 24px 28px;
 }
 
 .card-empresa p {
-    text-align: left;
-    font-size: 1.15rem;
-    line-height: 1.5;
+  text-align: left;
+  font-size: 1.15rem;
+  line-height: 1.5;
 }
 
 /* Cooperativa: três caixas lado a lado */
 .blocos-coop {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
 .card-coop {
-    min-height: 180px;
-    background-color: var(--verde-principal);
-    color: #FFFFFF;
-    border-radius: 18px;
+  min-height: 180px;
+  background-color: var(--verde-principal);
+  color: #ffffff;
+  border-radius: 18px;
 
-    display: flex;
-    align-items: center;
-    padding: 24px;
+  display: flex;
+  align-items: center;
+  padding: 24px;
 
-    font-size: 1.05rem;
-    line-height: 1.5;
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
-
 
 /* ===========================
    Bolinhas
 =========================== */
 
 .slider-bolinhas {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
 }
 
 .bolinha {
-    width: 12px;
-    height: 12px;
-    padding: 0;
-    border: none;
-    border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
 
-    background-color: var(--verde-floresta);
-    cursor: pointer;
-    transition: transform 0.2s;
+  background-color: var(--verde-floresta);
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
 .bolinha[aria-current="true"] {
-    background-color: var(--verde-claro);
-    transform: scale(1.4);
+  background-color: var(--verde-claro);
+  transform: scale(1.4);
 }
 
 /* Na cooperativa o fundo é escuro: bolinhas brancas */
 #cooperativas .bolinha {
-    background-color: color-mix(in srgb, white 40%, transparent);
+  background-color: color-mix(in srgb, white 40%, transparent);
 }
 
 #cooperativas .bolinha[aria-current="true"] {
-    background-color: white;
+  background-color: white;
 }
-
 
 /* ===========================
    Tópicos
 =========================== */
 
 .texto {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
 
 .topico-cooperativa {
-    min-height: 190px;
-    padding: 28px 24px;
+  min-height: 190px;
+  padding: 28px 24px;
 
-    background: white;
-    border: 1px solid var(--verde-claro);
-    border-radius: 18px;
-    box-shadow: 0 8px 24px color-mix(in srgb, var(--verde-floresta) 8%, transparent);
-    transition: 0.2s;
+  background: white;
+  border: 1px solid var(--verde-claro);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px
+    color-mix(in srgb, var(--verde-floresta) 8%, transparent);
+  transition: 0.2s;
 }
 
 .topico-cooperativa:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 32px color-mix(in srgb, var(--verde-floresta) 15%, transparent);
-    background: var(--verde-principal);
-    border-color: var(--verde-principal);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 32px
+    color-mix(in srgb, var(--verde-floresta) 15%, transparent);
+  background: var(--verde-principal);
+  border-color: var(--verde-principal);
 }
 
 .topico-cooperativa h3 {
-    margin-bottom: 12px;
-    color: var(--verde-floresta);
-    font-size: 1.3rem;
-    text-align: left;
+  margin-bottom: 12px;
+  color: var(--verde-floresta);
+  font-size: 1.3rem;
+  text-align: left;
 }
 
 .topico-cooperativa p {
-    color: var(--verde-medio);
-    font-size: 1rem;
-    line-height: 1.65;
-    text-align: left;
+  color: var(--verde-medio);
+  font-size: 1rem;
+  line-height: 1.65;
+  text-align: left;
 }
 
 .topico-cooperativa:hover h3,
 .topico-cooperativa:hover p {
-    color: white;
+  color: white;
 }
-
 
 /* ===========================
     Dashboard
 =========================== */
-#dashboard{
-    background-color: var(--verde-gelo);
-    width: 100vw;
-    position: relative;
+#dashboard {
+  background-color: var(--verde-gelo);
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
 }
 
 #dashboard h2 {
-    background: linear-gradient(180deg, var(--verde-principal), var(--verde-escuro));
-    -webkit-background-clip: text; /* Recorta o fundo no formato das letras */
-    -webkit-text-fill-color: transparent; /* Torna a cor original do texto transparente para o degradê aparecer */
-    display: block;
-    margin-bottom: 32px;
-    text-align: center;
+  background: linear-gradient(
+    180deg,
+    var(--verde-principal),
+    var(--verde-escuro)
+  );
+  -webkit-background-clip: text; /* Recorta o fundo no formato das letras */
+  -webkit-text-fill-color: transparent; /* Torna a cor original do texto transparente para o degradê aparecer */
+  display: block;
+  margin-bottom: 32px;
+  margin-left: 40px;
 }
 
-.hero{
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    background: white;
+.hero {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: white;
 }
 
-.hero-shape{
-    position: absolute;
-    top: 0;
-    right: -100px;
-    width: 70%;
-    height: 100%;
-    z-index: 0;
+.hero-shape {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  z-index: 0;
 }
 
-.hero-content{
-    width: 70%;
-    padding: 80px 5px;
-    z-index: 1;
-    margin-left: 20px;
-    position: relative;
-    top: -50px;
+.hero-content {
+  width: 70%;
+  padding: 80px 5px;
+  z-index: 1;
+  margin-left: 20px;
+  position: relative;
+  top: -200px;
 }
+
+
 
 .hero-content p{
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
-.celular-dashboard{
-    max-width: 30%;
-    height: auto;
-    position: absolute;
-    z-index: 1;
-    right: 15%;
-    top: 50%;
-    transform: translateY(-50%);
+.hero-content hr{
+  width: 400px;
+  margin-left: 40px;
+  color: var(--verde-escuro);
+
 }
 
-.celular-dashboard::before{
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+.celular-dashboard {
+  max-width: 30%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
+.celular-dashboard::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 /* ===========================
    Objetivos
 =========================== */
-#objetivo{
-    background-color: var(--verde-suave);
-    position: relative;
-    margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top-right-radius: 100px;
-    border-top-left-radius: 100px;
+#objetivo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
 }
 
 #objetivo-texto h2 {
-    color: var(--verde-medio);
-    display: block;
-    margin-bottom: 32px;
-    text-align: center;
+  color: var(--verde-medio);
+  display: block;
+  margin-bottom: 32px;
+  text-align: left;
 }
 
-#objetivo-conteudo{
-    max-width: 1120px;
-    margin: 34px auto 0;
-    display: flex;
-    align-items: center;
-    gap: 58px;
+#objetivo-conteudo {
+  max-width: 1120px;
+  margin: 34px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 58px;
 }
 
-#objetivo-conteudo p{
-    color: black;
-    height: auto;
-    line-height: 1.75;
-    text-align: left;
+#objetivo-conteudo img{
+  width: 20%;
+  height: auto;
+  position: relative;
+  bottom: -20px;
 }
 
-#objetivo-texto{
-    padding: 96px;
-    border-radius: 40px;
-    z-index: 2;
+#objetivo-conteudo p {
+  color: black;
+  height: auto;
+  line-height: 1.75;
+  text-align: left;
+}
+
+
+#objetivo-texto {
+  padding: 96px;
+  border-radius: 40px;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 72px;
+  align-items: center;
+}
+
+#objetivo-texto > h2 {
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: 24px;
+}
+
+#objetivo-texto > #objetivo-conteudo {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+#objetivo-texto > img {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: 30px;
+  position: relative;
+  bottom: auto;
+}
+
+/* ===========================
+   Voltinha
+=========================== */
+#voltinha {
+  position: relative;
+  overflow: hidden;
+  padding: 140px 8% 96px;
+  color: white;
+}
+
+#voltinha > h2 {
+  position: relative;
+  color: white;
+  margin-bottom: 48px;
+  text-align: left;
+}
+
+.voltinha-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.mascote-conteudo {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(220px, 340px) 1fr;
+  align-items: center;
+  column-gap: 72px;
+}
+
+.mascote-conteudo > img {
+  width: 100%;
+  height: auto;
+}
+
+.mascote-texto {
+  position: relative;
+  color: white;
+}
+
+.mascote-texto > p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.mascote-palavras-chaves {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.mascote-palavras-chaves p {
+  background-color: white;
+  color: var(--verde-floresta);
+  border-radius: 30px;
+  padding: 10px 22px;
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  #voltinha {
+    padding: 100px 24px 72px;
+  }
+
+  .mascote-conteudo {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+
+  .mascote-conteudo > img {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .mascote-texto > p {
+    font-size: 1.125rem;
+  }
 }
 
 /* ===========================
@@ -722,457 +886,462 @@ p  { font-size: 1rem; line-height: 1.6; }
 =========================== */
 
 #equipe {
-    padding: 80px 0px;
+  padding: 80px 0px;
 
-    background: white;
-    border-top: none;
-    text-align: center;
-    overflow: hidden;
+  background: white;
+  border-top: none;
+  text-align: center;
+  overflow: hidden;
 
-    position: relative;
+  position: relative;
 }
 
 #equipe h2 {
-    color: var(--verde-medio);
-    display: block;
-    margin-bottom: 32px;
-    text-align: center;
+  color: var(--verde-medio);
+  display: block;
+  margin-bottom: 32px;
+  text-align: center;
 }
 
 #equipe p {
-    color: var(--verde-medio);
+  color: var(--verde-medio);
 }
 
-#equipe .nome-equipe{
-    color: black;
-    font-size: 1.5rem;
+#equipe .nome-equipe {
+  color: black;
+  font-size: 1.5rem;
 }
 
 .membro img {
-    max-width: 130px;
-    height: auto;
-    object-fit: cover;
-    border: 2px solid var(--verde-medio);
-    border-radius: 50%;
+  max-width: 130px;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid var(--verde-medio);
+  border-radius: 50%;
 }
 
 .equipe-conteudo {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .equipe-membros {
-    display: inline-flex;
-    align-items: center;
-    gap: 58px;
-    width: max-content;
-    padding: 20px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 58px;
+  width: max-content;
+  padding: 20px 0;
 
-    animation: mover-equipe 20s linear infinite;
+  animation: mover-equipe 20s linear infinite;
 }
-
 
 @keyframes mover-equipe {
-    0% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
 
-    100% {
-        transform: translateX(calc(-50% - 29px));
-    }
+  100% {
+    transform: translateX(calc(-50% - 29px));
+  }
 }
-
 
 /* ===========================
    Rodapé
 =========================== */
 
 footer {
-    padding: 58px 24px 25px;
-    color: white;
-    background: var(--verde-principal);
+  padding: 58px 24px 25px;
+  color: white;
+  background: var(--verde-principal);
 }
 
 #footer-container {
-    width: 100%;
-    max-width: 1120px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
 
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: 40px;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
 }
 
 #footer-logo img {
-    display: block;
-    width: auto;
-    max-height: 70px;
-    margin-bottom: 16px;
+  display: block;
+  width: auto;
+  max-height: 70px;
+  margin-bottom: 16px;
 
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 #footer-logo p,
 #footer-contato p {
-    color: var(--verde-suave);
-    line-height: 1.67;
+  color: var(--verde-suave);
+  line-height: 1.67;
 }
 
 #footer-social,
 #footer-links,
 #footer-contato {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 footer h3 {
-    margin-bottom: 4px;
-    font-size: 1rem;
+  margin-bottom: 4px;
+  font-size: 1rem;
 }
 
 footer a {
-    color: var(--verde-suave);
-    text-decoration: none;
-    transition: 0.2s;
+  color: var(--verde-suave);
+  text-decoration: none;
+  transition: 0.2s;
 }
 
 footer a:hover {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .footer-copy {
-    width: 100%;
-    max-width: 1120px;
-    margin: 0 auto;
-    color: var(--verde-suave);
-    text-align: center;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  color: var(--verde-suave);
+  text-align: center;
 }
 
 footer hr {
-    width: 100%;
-    max-width: 1120px;
-    margin: 0 auto;
-    border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
-
 
 /* ===========================
    Responsividade
 =========================== */
 
 @media screen and (max-width: 768px) {
-    /* ---------- Menu ---------- */
+  /* ---------- Menu ---------- */
 
-    .menu{
-        flex-direction: column;
-    }
+  .menu {
+    flex-direction: column;
+  }
 
-    .menu .nav-logo{
-        width: 100%;
-    }
+  .menu .nav-logo {
+    width: 100%;
+  }
 
-    .menu .nav-logo label{
-        display: block;
-        cursor: pointer;
-        font-size: 1.875rem;
-        line-height: 1;
-        color: var(--verde-principal);
-    }
+  .menu .nav-logo label {
+    display: block;
+    cursor: pointer;
+    font-size: 1.875rem;
+    line-height: 1;
+    color: var(--verde-principal);
+  }
 
-    .menu .nav-links{
-        width: 100%;
-        flex-direction: column;
-        max-height: 0;
-        overflow: hidden;
-        transition: 0.25s;
-    }
+  .menu .nav-links {
+    width: 100%;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.25s;
+  }
 
-    .menu .nav-links a{
-        width: 100%;
-        padding: 15px;
-        border-radius: 0;
-        border-top:  0.5mm solid var(--verde-claro);
-    }
+  .menu .nav-links a {
+    width: 100%;
+    padding: 15px;
+    border-radius: 0;
+    border-top: 0.5mm solid var(--verde-claro);
+  }
 
-    .nav-links a:hover{
-        background-color: var(--verde-principal);
-        color: white;
-        top: 0px;
-    }
+  .nav-links a:hover {
+    background-color: var(--verde-principal);
+    color: white;
+    top: 0px;
+  }
 
-    #menu-toggle:checked ~ .nav-links{
-        max-height: 600px;
-        padding-bottom: 15px;
-    }
+  #menu-toggle:checked ~ .nav-links {
+    max-height: 600px;
+    padding-bottom: 15px;
+  }
 
-    #painel {
-        flex-direction: column;
-        padding: 130px 20px 60px;
-        gap: 25px;
-        margin-bottom: 100px;
-    }
+  #painel {
+    flex-direction: column;
+    padding: 130px 20px 60px;
+    gap: 25px;
+    margin-bottom: 100px;
+  }
 
-    #painel img {
-        width: 85%;
-        padding: 20px;
-    }
+  #painel img {
+    width: 85%;
+    padding: 20px;
+  }
 
-    #footer-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
+  #footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
 }
 
 @media screen and (max-width: 1142px) {
-    /* ---------- Sobre nós ---------- */
+  /* ---------- O que é o VOLTA ---------- */
 
-    .sobre-item {
-        flex-direction: column;
-        min-height: auto;
-        padding: 40px 25px;
-        text-align: center;
-    }
+  .sobre-item {
+    flex-direction: column;
+    min-height: auto;
+    padding: 40px 25px;
+  }
 
-    
-    .imagem-esquerda .celular-sobre,
-    .imagem-direita .celular-sobre {
-        position: relative;
-        left: auto;
-        right: auto;
-        top: auto;
-        transform: none;
-        width: 85%;
-        margin: 0 auto 24px;
-    }
+  .sobre-item .container,
+  .sobre-visual {
+    width: 100%;
+  }
 
-    .imagem-esquerda .container,
-    .imagem-direita .container {
-        width: 100%;
-        margin: 0;
-    }
+  .sobre-item h2,
+  .sobre-item-content p {
+    text-align: center;
+  }
 
-    .imagem-direita {
-        flex-direction: column-reverse;
-    }
+  .sobre-palavras {
+    align-items: center;
+  }
 
-    .sobre-item-content p {
-        text-align: center;
-    }
+  .sobre-visual {
+    height: 420px;
+  }
 
-    /* ---------- Objetivo ---------- */
+  .sobre-img-fundo {
+    width: 220px;
+    top: 0;
+    right: 20px;
+  }
 
-    #objetivo {
-        padding: 60px 25px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 30px;
-    }
+  .sobre-img-frente {
+    width: 170px;
+    top: 170px;
+    right: 120px;
+  }
 
-    #objetivo-texto {
-        width: 100%;
-        padding: 40px 25px;
-        border-radius: 30px;
-        z-index: 2;
-    }
+  /* ---------- Objetivo ---------- */
 
-    #objetivo-conteudo {
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
+  #objetivo {
+    padding: 60px 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+  }
 
-    #objetivo h2 {
-        text-align: center;
-    }
+  #objetivo-texto {
+    width: 100%;
+    padding: 40px 25px;
+    border-radius: 30px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 
-    #objetivo p {
-        line-height: 1.6;
-        text-align: left;
-    }
+  #objetivo-conteudo {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
 
-    #objetivo img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        position: relative;
-        right: auto;
-        left: auto;
-        border-radius: 18px;
-    }
+  #objetivo h2 {
+    text-align: center;
+  }
+
+  #objetivo p {
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  #objetivo img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    right: auto;
+    left: auto;
+    border-radius: 18px;
+  }
 }
 
 @media screen and (max-width: 900px) {
-    .texto {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .texto {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    /* ---------- Hero inicial ---------- */
-    .hero-inicio {
-        flex-direction: column;
-    }
+  /* ---------- Hero inicial ---------- */
+  .hero-inicio {
+    flex-direction: column;
+  }
 
-    .container-inicio {
-        width: 100%;
-        padding: 50px 24px 20px;
-        align-items: center;
-        text-align: center;
-    }
+  .container-inicio {
+    width: 100%;
+    padding: 50px 24px 20px;
+    align-items: center;
+    text-align: center;
+  }
 
-    .celular-inicio {
-        display: none;
-        position: static;
-        transform: none;
-        max-width: 60%;
-        margin: 0 auto 32px;
-    }
+  .celular-inicio {
+    display: none;
+    position: static;
+    transform: none;
+    max-width: 60%;
+    margin: 0 auto 32px;
+  }
 
-    .hero-shape-inicio {
-        display: none;
-    }
+  .hero-shape-inicio {
+    display: none;
+  }
 
-    /* ---------- Como funciona ---------- */
-    #sobre-nos {
-        margin-bottom: 0;
-    }
+  /* ---------- Como funciona ---------- */
+  #sobre-nos {
+    margin-bottom: 0;
+  }
 
-    .como-funciona-hero {
-        bottom: 0;
-        height: auto;
-    }
+  .como-funciona-hero {
+    bottom: 0;
+    height: auto;
+  }
 
-    .como-funciona-shape {
-        display: none;
-    }
+  .como-funciona-shape {
+    display: none;
+  }
 
-    .card {
-        bottom: 0;
-    }
+  .card {
+    bottom: 0;
+  }
 
-    #empresas,
-    #cooperativas {
-        top: 0;
-        padding: 48px 16px;
-    }
+  #empresas,
+  #cooperativas {
+    top: 0;
+    padding: 48px 16px;
+  }
 
-    #empresas {
-        background: white;
-    }
+  #empresas {
+    background: white;
+  }
 
-    #cooperativas {
-        background: linear-gradient(180deg, var(--verde-medio), var(--verde-escuro));
-    }
+  #cooperativas {
+    background: linear-gradient(
+      180deg,
+      var(--verde-medio),
+      var(--verde-escuro)
+    );
+  }
 
-    #empresas h2,
-    #cooperativas h2 {
-        margin-bottom: 20px;
-    }
+  #empresas h2,
+  #cooperativas h2 {
+    margin-bottom: 20px;
+  }
 
-    .slider {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
-        padding: 16px;
-    }
+  .slider {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+  }
 
-    .slider-track {
-        order: 1;
-        flex: 0 0 100%;
-        flex-direction: column;
-        gap: 16px;
-    }
+  .slider-track {
+    order: 1;
+    flex: 0 0 100%;
+    flex-direction: column;
+    gap: 16px;
+  }
 
-    .slider-titulo {
-        font-size: 1.4rem;
-    }
+  .slider-titulo {
+    font-size: 1.4rem;
+  }
 
-    .card-empresa,
-    .card-coop {
-        flex: none;
-        width: 100%;
-        max-width: none;
-        height: auto;
-        min-height: 140px;
-        padding: 20px;
-    }
+  .card-empresa,
+  .card-coop {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    min-height: 140px;
+    padding: 20px;
+  }
 
-    .card-empresa p,
-    .card-coop {
-        font-size: 1rem;
-    }
+  .card-empresa p,
+  .card-coop {
+    font-size: 1rem;
+  }
 
-    /* As três caixas da cooperativa ficam uma embaixo da outra */
-    .blocos-coop {
-        grid-template-columns: 1fr;
-    }
+  /* As três caixas da cooperativa ficam uma embaixo da outra */
+  .blocos-coop {
+    grid-template-columns: 1fr;
+  }
 
-    .btn-avancar-voltar {
-        order: 2;
-        width: 48px;
-        height: 48px;
-    }
+  .btn-avancar-voltar {
+    order: 2;
+    width: 48px;
+    height: 48px;
+  }
 
-    /* ---------- Dashboard ---------- */
-    #dashboard {
-        width: 100%;
-    }
+  /* ---------- Dashboard ---------- */
+  #dashboard {
+    width: 100%;
+  }
 
-    .hero {
-        flex-direction: column;
-        min-height: auto;
-        padding: 48px 24px;
-    }
+  .hero {
+    flex-direction: column;
+    min-height: auto;
+    padding: 48px 24px;
+  }
 
-    .hero-content {
-        width: 100%;
-        margin-left: 0;
-        padding: 0 0 32px;
-        text-align: center;
-        top:0px
-    }
+  .hero-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 0 32px;
+    text-align: center;
+    top: 0px;
+  }
 
-    .hero-content p {
-        margin-left: 0;
-    }
+  .hero-content p {
+    margin-left: 0;
+  }
 
-    .celular-dashboard {
-        position: static;
-        transform: none;
-        max-width: 60%;
-    }
+  .celular-dashboard {
+    position: static;
+    transform: none;
+    max-width: 60%;
+  }
 
-    .hero-shape {
-        display: none;
-    }
+  .hero-shape {
+    display: none;
+  }
 }
 
-
-
 @media screen and (max-width: 480px) {
-    /* ---------- Footer ---------- */
+  /* ---------- Footer ---------- */
 
-    #footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+  #footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-    #footer-logo img {
-        margin: 0 auto 16px;
-    }
+  #footer-logo img {
+    margin: 0 auto 16px;
+  }
 
-    #footer-social,
-    #footer-links,
-    #footer-contato {
-        align-items: center;
-    }
+  #footer-social,
+  #footer-links,
+  #footer-contato {
+    align-items: center;
+  }
 }
 
 /* ===========================
@@ -1180,31 +1349,27 @@ footer hr {
 =========================== */
 
 @media screen and (max-width: 1142px) {
-    h1 { font-size: 2.25rem; }
-    h2 { font-size: 2.5rem; }
-    h3 { font-size: 1.25rem; }
+  /* TESTE H1: mesmo tamanho em todos os breakpoints. Original: 2.25rem
+  h1 {
+    font-size: 2.25rem;
+  }
+  */
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
 
-    .topico-cooperativa h3 { font-size: 1.25rem; }
+  .topico-cooperativa h3 {
+    font-size: 1.25rem;
+  }
 
-    .texto-hero-inicio,
-    .sobre-item-content p,
-    #objetivo-conteudo p,
-    #dashboard .hero-content p {
-        font-size: 1.25rem;
-    }
+  .texto-hero-inicio,
+  .sobre-item-content p,
+  #objetivo-conteudo p,
+  #dashboard .hero-content p {
+    font-size: 1.25rem;
+  }
 }
 
-@media screen and (max-width: 768px) {
-    h1 { font-size: 1.75rem; }
-    h2 { font-size: 1.875rem; }
-    h3 { font-size: 1.125rem; }
-
-    .topico-cooperativa h3 { font-size: 1.125rem; }
-
-    .texto-hero-inicio,
-    .sobre-item-content p,
-    #objetivo-conteudo p,
-    #dashboard .hero-content p {
-        font-size: 1.125rem;
-    }
-}

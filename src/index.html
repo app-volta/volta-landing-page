@@ -1,421 +1,670 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/img/content/logo.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/content/logo.png" type="image/x-icon" />
     <title>Volta - Gestão de resíduos</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!--CSS-->
-    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/landing.css" />
     <!--JS-->
     <script src="./js/main.js" defer></script>
 
     <!--Icone menu-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
     <!--Fonte Belanosima-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <nav class="nav">
-        <div class="menu">
-            <input type="checkbox" id="menu-toggle">
+      <div class="menu">
+        <input type="checkbox" id="menu-toggle" />
 
-            <div class="nav-logo">
-                <a href="#painel">
-                    <img src="assets/img/content/Logo_VOLTA.png" alt="VOLTA Logo">
-                </a>
-                
-                <label for="menu-toggle" class="material-symbols-outlined" aria-label="Abrir menu">menu</label>
-            </div>
+        <div class="nav-logo">
+          <a href="#painel">
+            <img src="assets/img/content/Logo_VOLTA.png" alt="VOLTA Logo" />
+          </a>
 
-            <div class="nav-links">
-                <a class="link-pagina" href="#sobre-nos">Sobre</a>
-                <a class="link-pagina" href="#empresas">Empresas</a>
-                <a class="link-pagina" href="#cooperativas">Cooperativas</a>
-                <a class="link-pagina" href="#equipe">Equipe</a>
-                <a class="link-pagina" href="#footer">Contato</a>
-                <a href="login.html" id="link-login">Login</a>
-                
-            </div> 
+          <label
+            for="menu-toggle"
+            class="material-symbols-outlined"
+            aria-label="Abrir menu"
+            >menu</label
+          >
         </div>
+
+        <div class="nav-links">
+          <a class="link-pagina" href="#sobre-nos">Sobre</a>
+          <a class="link-pagina" href="#empresas">Empresas</a>
+          <a class="link-pagina" href="#cooperativas">Cooperativas</a>
+          <a class="link-pagina" href="#equipe">Equipe</a>
+          <a class="link-pagina" href="#footer">Contato</a>
+          <a href="login.html" id="link-login">Login</a>
+        </div>
+      </div>
     </nav>
 
     <div id="painel">
-       <section class="hero-inicio">
-            <svg class="hero-shape-inicio" width="1442" height="1127" viewBox="0 0 1442 1127" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M777 700.5C777 700.5 661.5 631.705 698 601C734.5 570.294 756.15 516.628 790.5 480C826.296 441.829 912.63 413.654 909 349.5C904.568 271.177 693.914 198.491 538.5 139C346.524 65.5124 121.5 53.9998 20.5002 45.4998C-80.5 36.9998 282.5 45.4998 282.5 45.4998L1441.5 34.9998V651L1365 985.5C1365 985.5 1119.17 1031.76 972.5 960C812.87 881.895 777 700.5 777 700.5Z" fill="#D8FFD3"/>
-            <path d="M653 642.501C651 536.501 1441.5 642.001 1441.5 642.001V1120C1441.5 1120 1214.42 1164.93 1127.5 1011C1076.5 920.685 991.5 878.516 867 835.604C742.5 792.692 655 748.501 653 642.501Z" fill="url(#paint0_linear_468_58)"/>
-            <path d="M656.5 658C656.5 658 640.5 624.931 677 594.226C713.5 563.52 785.65 544.128 820 507.5C855.797 469.329 886.63 419.654 883 355.5C878.568 277.177 868 248 767 191.5C666 135 623.197 124.679 526 99.4998C312.034 44.0709 0 41.9998 0 41.9998H1441.5V658H656.5Z" fill="url(#paint1_linear_468_58)"/>
-            <g opacity="0.3">
-            <rect width="315.563" height="26.4538" transform="matrix(0.696932 -0.717138 0.716546 0.69754 1132.17 690.35)" fill="url(#paint2_linear_468_58)"/>
-            <path d="M1400.44 433.29L1383.37 496.647L1337.62 452.119L1400.44 433.29Z" fill="#05ED47"/>
-            </g>
-            <path d="M898.458 240.001L865 193.255L937.245 118.919L977.783 158.38L898.458 240.001Z" fill="url(#paint3_linear_468_58)"/>
-            <path d="M1038.68 55.066L1004.14 188.547L906.299 93.3199L1038.68 55.066Z" fill="#1AAE5F"/>
-            <defs>
-            <linearGradient id="paint0_linear_468_58" x1="605.08" y1="697.501" x2="1521.94" y2="52.1285" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#1AAE5F"/>
-            <stop offset="1" stop-color="#063300"/>
+      <section class="hero-inicio">
+        <svg
+          class="hero-shape-inicio"
+          viewBox="0 0 1443 917"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M811.456 681.5C811.456 681.5 773.956 667 760.456 649C746.956 631 778.455 539.5 827.956 492.5C877.456 445.5 918.585 426.654 914.955 362.5C910.523 284.178 684.455 211.414 554.455 169C424.455 126.586 91.4553 88.6368 11.9554 92C-67.5445 95.3632 284.456 86.9999 284.456 86.9999L1442.46 76.5V692.5V903.5C1442.46 903.5 1148.62 947.262 1001.96 875.5C842.326 797.396 811.456 681.5 811.456 681.5Z"
+            fill="#D8FFD3"
+          />
+          <path
+            d="M767.5 731.5C742.045 709.5 702 661.5 751.5 609C801 556.5 795 574.5 835.5 533.5C865.518 503.112 892.5 459 886 395.5C877.377 311.257 811 261.5 738.5 224.5C666 187.5 606.963 170.332 519.5 145.5C322.742 89.6374 0 93 0 93V0H241H1308.5L1372 0.5L1407.5 0L1442.46 0.5V698V890.5C1442.46 890.5 1349.42 908.011 1201.96 890.5C1121.96 881 1075.27 874.584 976.455 840C886.455 808.5 792.955 753.5 767.5 731.5Z"
+            fill="url(#paint0_linear_468_58)"
+          />
+          <g opacity="0.3">
+            <rect
+              width="315.563"
+              height="26.4538"
+              transform="matrix(0.696932 -0.717138 0.716546 0.69754 1106.59 521.309)"
+              fill="url(#paint1_linear_468_58)"
+            />
+            <path
+              d="M1374.86 264.249L1357.79 327.606L1312.04 283.079L1374.86 264.249Z"
+              fill="#05ED47"
+            />
+          </g>
+          <g opacity="0.3">
+            <rect
+              width="279.963"
+              height="26.4538"
+              transform="matrix(0.696932 -0.717138 0.716546 0.69754 1090.4 833.779)"
+              fill="url(#paint2_linear_468_58)"
+            />
+            <path
+              d="M1333.86 602.249L1316.79 665.606L1271.04 621.079L1333.86 602.249Z"
+              fill="#05ED47"
+            />
+          </g>
+          <g opacity="0.3">
+            <rect
+              width="141.345"
+              height="26.4538"
+              transform="matrix(0.696932 -0.717138 0.716546 0.69754 853.491 760.371)"
+              fill="url(#paint3_linear_468_58)"
+            />
+            <path
+              d="M1000.34 628.25L983.274 691.606L937.521 647.079L1000.34 628.25Z"
+              fill="#05ED47"
+            />
+          </g>
+          <g opacity="0.3">
+            <rect
+              width="161.924"
+              height="26.4538"
+              transform="matrix(0.696932 -0.717138 0.716546 0.69754 823.668 272.129)"
+              fill="url(#paint4_linear_468_58)"
+            />
+            <path
+              d="M984.857 125.249L967.793 188.606L922.039 144.079L984.857 125.249Z"
+              fill="#05ED47"
+            />
+          </g>
+          <defs>
+            <linearGradient
+              id="paint0_linear_468_58"
+              x1="607.035"
+              y1="730.206"
+              x2="1488.75"
+              y2="73.2985"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#1AAE5F" />
+              <stop offset="1" stop-color="#063300" />
             </linearGradient>
-            <linearGradient id="paint1_linear_468_58" x1="605.08" y1="688.705" x2="1486.8" y2="31.7979" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#1AAE5F"/>
-            <stop offset="1" stop-color="#063300"/>
+            <linearGradient
+              id="paint1_linear_468_58"
+              x1="264.403"
+              y1="13.242"
+              x2="-1.268e-05"
+              y2="13.2392"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.177885" stop-color="#0AEE55" />
+              <stop offset="0.615385" stop-color="#204D1C" stop-opacity="0.1" />
             </linearGradient>
-            <linearGradient id="paint2_linear_468_58" x1="264.403" y1="13.242" x2="-1.268e-05" y2="13.2392" gradientUnits="userSpaceOnUse">
-            <stop offset="0.177885" stop-color="#0AEE55"/>
-            <stop offset="0.615385" stop-color="#204D1C" stop-opacity="0.1"/>
+            <linearGradient
+              id="paint2_linear_468_58"
+              x1="234.574"
+              y1="13.242"
+              x2="-1.1255e-05"
+              y2="13.2398"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.177885" stop-color="#0AEE55" />
+              <stop
+                offset="0.615385"
+                stop-color="#16944B"
+                stop-opacity="0.18"
+              />
             </linearGradient>
-            <linearGradient id="paint3_linear_468_58" x1="957.514" y1="138.649" x2="807.87" y2="293.706" gradientUnits="userSpaceOnUse">
-            <stop offset="0.173077" stop-color="#1AAE5F"/>
-            <stop offset="0.384715" stop-color="#0F8748" stop-opacity="0.1"/>
+            <linearGradient
+              id="paint3_linear_468_58"
+              x1="118.43"
+              y1="13.242"
+              x2="-5.68994e-06"
+              y2="13.2415"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.177885" stop-color="#0AEE55" />
+              <stop offset="0.615385" stop-color="#16984E" />
             </linearGradient>
-            </defs>
-            </svg>
+            <linearGradient
+              id="paint4_linear_468_58"
+              x1="135.672"
+              y1="13.242"
+              x2="-6.51743e-06"
+              y2="13.2413"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.177885" stop-color="#0AEE55" />
+              <stop offset="0.615385" stop-color="#204D1C" stop-opacity="0.1" />
+            </linearGradient>
+          </defs>
+        </svg>
 
-
-
-
+        <div class="container-inicio">
+          <div class="hero-content-inicio">
             <div class="container-inicio">
-                <div class="hero-content-inicio">
-                    <div class="container-inicio">
-                        <img class="logo-hero-inicio" src="assets/img/content/Logo_VOLTA.png" alt="VOLTA">
-                        <h1 class="titulo-hero-inicio">Sua plataforma de gestão de resíduos.</h1>
-                        <p class="texto-hero-inicio">Conectando empresas e cooperativas.</p>
-                    </div>
-                </div>
+              <img
+                class="logo-hero-inicio"
+                src="assets/img/content/Logo_VOLTA.png"
+                alt="VOLTA"
+              />
+              <h1 class="titulo-hero-inicio">
+                Sua plataforma de gestão de resíduos.
+              </h1>
+              <p class="texto-hero-inicio">
+                Conectando empresas e cooperativas.
+              </p>
             </div>
+          </div>
+        </div>
 
-            <img class="celular-inicio" src="assets/img/content/celular_inicio.png" alt="Tela do app VOLTA">
-        </section>
-            
+        <img
+          class="celular-inicio"
+          src="assets/img/content/celular_inicio.png"
+          alt="Tela do app VOLTA"
+        />
+      </section>
     </div>
-
 
     <div id="sobre-nos">
-        <h2>Sobre Nós</h2>
+      <section class="sobre-item">
+        <div class="container">
+          <h2>Oque é o VOLTA</h2>
 
-        <section class="sobre-item imagem-esquerda">
-            <svg class="sobre-item-shape" width="534" height="775" viewBox="0 0 534 775" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 3.99321V763.493C77.4502 790.241 180.763 763.012 208.59 739.418C269.115 687.306 326.339 757.464 391.208 727.466C450.511 700.042 483.87 670.417 511.54 611.229C547.556 534.188 537.166 470.867 501.431 393.696C478.43 344.023 448.897 326.287 413.383 284.63C357.397 218.96 301.5 256.993 263.049 122.676C224.599 -11.6421 58.8248 -4.61437 0 3.99321Z" fill="#EBFEE9"/>
+          <div class="sobre-item-content">
+            <p>
+              O VOLTA é uma plataforma inteligente de gestão de resíduos. A
+              plataforma cria uma conexão entre empresas e cooperativas, de um
+              jeito mais prático.
+            </p>
+          </div>
+
+          <div class="sobre-palavras">
+            <p class="palavras-chaves">Chat Integrado</p>
+            <p class="palavras-chaves">Mapa de cooperativas próximas</p>
+            <p class="palavras-chaves">Registro por foto</p>
+          </div>
+        </div>
+
+        <div class="sobre-visual">
+          <div class="sobre-item-shape" aria-hidden="true">
+            <svg
+              viewBox="0 0 579 379"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M452.271 11.7612C500.927 32.6163 495.634 82.5796 504.245 101.485C512.856 120.39 550.839 160.625 568.212 206.512C585.026 250.92 585.446 283.547 545.724 322.342C521.33 346.166 459.088 371.557 459.088 371.557C401.797 383.558 363.316 381.457 302.347 362.252C250.307 336.793 178.494 368.611 122.719 353.956C71.7292 340.558 43.046 326.085 19.2545 297.169C-11.713 259.531 -2.77875 228.597 27.9467 190.895C47.7236 166.628 73.1169 157.963 103.652 137.612C151.79 105.529 199.852 124.11 232.912 58.4901C265.973 -7.12983 403.616 -9.09384 452.271 11.7612Z"
+                fill="#D8FFD3"
+              />
             </svg>
-            <img class="celular-sobre" src="assets/img/content/celular_sobre_nos.png" alt="Sobre Nós">
-            <div class="container">
-                <div class="sobre-item-content">
-                    <p>O Volta é uma plataforma que conecta empresas com cooperativas da região, de forma rápida e prática e com interface e funcionalidades simples.</p>
-                </div>
-            </div>
-        </section>
+          </div>
 
-        <section class="sobre-item imagem-direita">
-            <div class="container">
-                <div class="sobre-item-content">
-                    <p>É possível conversar com as cooperativas por um <span style="color: #3B8952;">chat integrado</span> na plataforma para deixar a comunicação mais simples e segura.</p>
-                </div>
-            </div>
-            <img class="celular-sobre" src="assets/img/content/celular_mensagens.png" alt="Tela de chat do app VOLTA">
-        </section>
+          <img
+            class="sobre-img-fundo"
+            src="assets/img/content/celular_sobre_nos.png"
+            alt="Tela Sobre nós do app VOLTA"
+          />
+          <img
+            class="sobre-img-frente"
+            src="assets/img/content/celular_mensagens.png"
+            alt="Tela de chat do app VOLTA"
+          />
+        </div>
+      </section>
     </div>
 
-
     <section class="como-funciona-hero">
-        <svg class="como-funciona-shape"  viewBox="0 0 1439 1487" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M937.489 581.639C869.073 366.285 585.794 -119.087 0 26.9269V720.652C145.478 646.645 453 793.927 508.337 1073.19C563.675 1352.44 986.093 1648.64 1439 1382.22V653.146C1317.64 724.486 1047.44 810.061 937.489 581.639Z" fill="url(#paint0_linear_1070_824)"/>
-            <defs>
-            <linearGradient id="paint0_linear_1070_824" x1="6.77595e-07" y1="42.427" x2="1664" y2="1623.43" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#3B8952"/>
-            <stop offset="1" stop-color="#063300"/>
-            </linearGradient>
-            </defs>
-        </svg>
-        <div id="empresas" class="card">
-            <h2 id="como-funciona-titulo">Como Funciona</h2>
+      <svg
+        class="como-funciona-shape"
+        viewBox="0 0 1439 1487"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M937.489 581.639C869.073 366.285 585.794 -119.087 0 26.9269V720.652C145.478 646.645 453 793.927 508.337 1073.19C563.675 1352.44 986.093 1648.64 1439 1382.22V653.146C1317.64 724.486 1047.44 810.061 937.489 581.639Z"
+          fill="url(#paint0_linear_1070_824)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1070_824"
+            x1="6.77595e-07"
+            y1="42.427"
+            x2="1664"
+            y2="1623.43"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#3B8952" />
+            <stop offset="1" stop-color="#063300" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <div id="empresas" class="card">
+        <h2 id="como-funciona-titulo">Como Funciona</h2>
 
-            <!-- Contador "1 de 7" -->
-            <p class="slider-contador" aria-live="polite">
-                <span id="slider-atual-empresa">1</span> de <span id="slider-total-empresa"></span>
-            </p>
+        <!-- Contador "1 de 7" -->
+        <p class="slider-contador" aria-live="polite">
+          <span id="slider-atual-empresa">1</span> de
+          <span id="slider-total-empresa"></span>
+        </p>
 
-            <div class="slider">
-                <button id="btn-voltar" class="btn-avancar-voltar" aria-label="Passo anterior">
-                    <i class="fa-solid fa-left-long" aria-hidden="true"></i>
-                </button>
+        <div class="slider">
+          <button
+            id="btn-voltar"
+            class="btn-avancar-voltar"
+            aria-label="Passo anterior"
+          >
+            <i class="fa-solid fa-left-long" aria-hidden="true"></i>
+          </button>
 
-                <div class="slider-track">
-                    <h3 class="slider-titulo">
-                        <span class="slider-icone" aria-hidden="true">
-                            <i id="slider-icone-empresa" class="fa-solid fa-right-to-bracket"></i>
-                        </span>
-                        <span id="slider-titulo-empresa"></span>
-                    </h3>
+          <div class="slider-track">
+            <h3 class="slider-titulo">
+              <span class="slider-icone" aria-hidden="true">
+                <i
+                  id="slider-icone-empresa"
+                  class="fa-solid fa-right-to-bracket"
+                ></i>
+              </span>
+              <span id="slider-titulo-empresa"></span>
+            </h3>
 
-                    <div class="card-empresa">
-                        <p id="bloco-um"></p>
-                    </div>
-                </div>
-
-                <button id="btn-avancar" class="btn-avancar-voltar" aria-label="Próximo passo">
-                    <i class="fa-solid fa-right-long" aria-hidden="true"></i>
-                </button>
+            <div class="card-empresa">
+              <p id="bloco-um"></p>
             </div>
+          </div>
 
-            <!-- Bolinhas: o JS cria uma para cada passo -->
-            <div id="slider-bolinhas-empresa" class="slider-bolinhas"></div>
+          <button
+            id="btn-avancar"
+            class="btn-avancar-voltar"
+            aria-label="Próximo passo"
+          >
+            <i class="fa-solid fa-right-long" aria-hidden="true"></i>
+          </button>
         </div>
 
-        <div id="cooperativas" class="card">
-            <h2>Para cooperativas</h2>
+        <!-- Bolinhas: o JS cria uma para cada passo -->
+        <div id="slider-bolinhas-empresa" class="slider-bolinhas"></div>
+      </div>
 
-            <!-- Contador "1 de 4" -->
-            <p class="slider-contador" aria-live="polite">
-                <span id="slider-atual-coop">1</span> de <span id="slider-total-coop"></span>
-            </p>
+      <div id="cooperativas" class="card">
+        <h2>Para cooperativas</h2>
 
-            <div class="slider">
-                <button id="btn-voltar-coop" class="btn-avancar-voltar" aria-label="Passo anterior">
-                    <i class="fa-solid fa-left-long" aria-hidden="true"></i>
-                </button>
+        <!-- Contador "1 de 4" -->
+        <p class="slider-contador" aria-live="polite">
+          <span id="slider-atual-coop">1</span> de
+          <span id="slider-total-coop"></span>
+        </p>
 
-                <div class="slider-track">
-                    <h3 class="slider-titulo">
-                        <span class="slider-icone" aria-hidden="true">
-                            <i id="slider-icone-coop" class="fa-solid fa-right-to-bracket"></i>
-                        </span>
-                        <span id="slider-titulo-coop"></span>
-                    </h3>
+        <div class="slider">
+          <button
+            id="btn-voltar-coop"
+            class="btn-avancar-voltar"
+            aria-label="Passo anterior"
+          >
+            <i class="fa-solid fa-left-long" aria-hidden="true"></i>
+          </button>
 
-                    <div class="blocos-coop">
-                        <div class="card-coop"><p id="bloco-um-coop"></p></div>
-                        <div class="card-coop"><p id="bloco-dois-coop"></p></div>
-                        <div class="card-coop"><p id="bloco-tres-coop"></p></div>
-                    </div>
-                </div>
+          <div class="slider-track">
+            <h3 class="slider-titulo">
+              <span class="slider-icone" aria-hidden="true">
+                <i
+                  id="slider-icone-coop"
+                  class="fa-solid fa-right-to-bracket"
+                ></i>
+              </span>
+              <span id="slider-titulo-coop"></span>
+            </h3>
 
-                <button id="btn-avancar-coop" class="btn-avancar-voltar" aria-label="Próximo passo">
-                    <i class="fa-solid fa-right-long" aria-hidden="true"></i>
-                </button>
+            <div class="blocos-coop">
+              <div class="card-coop"><p id="bloco-um-coop"></p></div>
+              <div class="card-coop"><p id="bloco-dois-coop"></p></div>
+              <div class="card-coop"><p id="bloco-tres-coop"></p></div>
             </div>
+          </div>
 
-            <!-- Bolinhas: o JS cria uma para cada passo -->
-            <div id="slider-bolinhas-coop" class="slider-bolinhas"></div>
+          <button
+            id="btn-avancar-coop"
+            class="btn-avancar-voltar"
+            aria-label="Próximo passo"
+          >
+            <i class="fa-solid fa-right-long" aria-hidden="true"></i>
+          </button>
         </div>
+
+        <!-- Bolinhas: o JS cria uma para cada passo -->
+        <div id="slider-bolinhas-coop" class="slider-bolinhas"></div>
+      </div>
     </section>
 
     <div id="dashboard">
-        
-        <section class="hero">
-            <svg class="hero-shape" width="1159" height="809" viewBox="0 0 1159 809" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M428.221 255.372C488.22 129.372 703.92 -66.4283 1158.72 22.3717V684.372C1158.72 684.372 1006.83 629.59 907.22 637.372C766.44 648.368 720.625 767.865 582.22 795.872C367.792 839.262 107.22 761.372 33.2204 684.372C-40.7794 607.372 12.7205 482.872 155.22 482.872C297.72 482.872 368.221 381.372 428.221 255.372Z" fill="url(#paint0_linear_980_204)"/>
-                <defs>
-                    <linearGradient id="paint0_linear_980_204" x1="592.87" y1="-5.6035e-07" x2="592.721" y2="995.372" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#14AF41"/>
-                        <stop offset="1" stop-color="#08491B"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-            <div class="container">
-                <div class="hero-content">
-                    <h2>Acompanhe Dashboards</h2>
-                    <p>
-                        Com o desempenho e histórico
-                        de coletas passadas, e o status
-                        das coletas atuais.
-                        <br>
-                        E tenha acesso a um painel
-                        de métricas ESG, relacionado
-                        com as coletas.
-                    </p>
-                </div>
-            </div>
-            <img class="celular-dashboard" src="assets/img/content/celular_dashboard.jpeg" alt="Tela de dashboard do app VOLTA">
-        </section>
+      <section class="hero">
+        <svg
+          class="hero-shape"
+          viewBox="0 0 1440 764"
+          preserveAspectRatio="xMidYMid slice"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M871 752.167C1076.26 735.238 1250.38 637.255 1440 579.338V0C1094.61 81.257 921.151 217.732 840.254 286.975C704.833 402.886 354.995 457.619 33.3702 457.619C21.6186 457.619 10.5027 457.786 0 458.11L0.899328 638.573C11.5835 643.614 22.4504 648.475 33.3704 653.107C200.389 723.941 387.031 792.083 871 752.167Z"
+            fill="#DDFFD8"
+          />
+          <path
+            d="M0 670.305C213.27 712.903 639.874 742.39 1033.78 670.305C1196.39 640.549 1341.24 569.586 1440 563.731V72C1077.78 115.745 876.956 204.711 798.324 271.515C667.015 383.072 512.727 472.937 200.87 472.937C129.694 472.937 53.1811 471.548 0 479.701V670.305Z"
+            fill="url(#paint0_linear_468_58)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_468_58"
+              x1="1158.65"
+              y1="45.4168"
+              x2="1158.6"
+              y2="926.69"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#14AF41" />
+              <stop offset="1" stop-color="#08491B" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <div class="container">
+          <div class="hero-content">
+            <h2>Acompanhe Dashboards</h2>
+            <p>
+              Dashboards mostram o desempenho e histórico de coletas passadas,
+              status das coletas atuais, resumos, e ocorrências recentes.
+            </p>
+            <hr />
+            <p>
+              E tenha acesso a um painele métricas ESG relacionado às coletas.
+            </p>
+          </div>
+        </div>
+        <img
+          class="celular-dashboard"
+          src="assets/img/content/celular_dashboard.jpeg"
+          alt="Tela de dashboard do app VOLTA"
+        />
+      </section>
     </div>
 
     <div id="objetivo">
-        <div id="objetivo-texto">
-            <h2>Nosso objetivo</h2>
-            <div id="objetivo-conteudo">
-                <p>
-                    Nosso objetivo com a plataforma 
-                    é fazer com que a conexão e
-                    comunicação entre cooperativas
-                    e empresas seja mais fácil e
-                    rápida, e fazer com que as
-                    empresas consigam escolher as
-                    melhores cooperativas.
-                    <br>
-                    E também buscamos facilitar os
-                    processos de coleta e triagem,
-                    usando relatórios completos com
-                    as informações necessárias para
-                    deixar a separação menos complexa.
-                </p>
-            
-
-                <img src="assets/img/content/nosso_objetivo.png" alt="Ilustração do objetivo do VOLTA">
-            </div>
+      <div id="objetivo-texto">
+        <h2>Nosso objetivo</h2>
+        <div id="objetivo-conteudo">
+          <p>
+            Nosso propósito é trazer umm maior praticidade e conforto para
+            empresas e cooperativas durante o processo de coleta e triagem.
+            Trazendo de volta,lucro com mais facilidade.
+          </p>
+          <p style="color: #5da753">
+            Tudo que VAI,
+            <img src="./assets/img/content/Logo_VOLTA.png" alt="Logo Volta" />
+          </p>
         </div>
+        <img
+          src="assets/img/content/nosso_objetivo.png"
+          alt="Ilustração do objetivo do VOLTA"
+        />
+      </div>
     </div>
-    
-    <div id="equipe">
-        <h2>Nossa Equipe</h2>
-        <div class="equipe-conteudo">
-            <div class="equipe-membros">
-                
-                <div class="membro">
-                    <img src="assets/img/time/gustavo_souza.png" alt="Membro 2">
-                    <p class="nome-equipe">Gustavo Souza</p>
-                    <p>Desenvolvedor Back-end</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/gustavo_azenha.png" alt="Membro 3">
-                    <p class="nome-equipe">Gustavo Azenha</p>
-                    <p>Designer UI/UX</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/Lucca_Davi_Begliomini.png" alt="Membro 4">
-                    <p class="nome-equipe">Lucca Begliomini</p>
-                    <p>Desenvolvedor Front-end</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/miguel_lapa.png" alt="Membro 5">
-                    <p class="nome-equipe">Miguel Sperandio</p>
-                    <p>Dados</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/breno.jpg" alt="Membro 6">
-                    <p class="nome-equipe">Breno Santos</p>
-                    <p>Desenvolvedor Front-end</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/carlos.jpg" alt="Membro 7">
-                    <p class="nome-equipe">Carlos Eduardo</p>
-                    <p>Desenvolvedor Front-end</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/davi.png" alt="Membro 8">
-                    <p class="nome-equipe">Davi Liu</p>
-                    <p>Desenvolvedor Back-end</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/enzo.jpg" alt="Membro 9">
-                    <p class="nome-equipe">Enzo Herreira</p>
-                    <p>Desenvolvedor Back-end</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/gabriel_peotta.png" alt="Membro 10">
-                    <p class="nome-equipe">Gabriel Peotta</p>
-                    <p>Dados</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/lucas.png" alt="Membro 11">
-                    <p class="nome-equipe">Lucas Fabiano</p>
-                    <p>Dados</p>
-                </div>
-<!--=======================================================COPIA_IDENTICA=====================================================================================================-->
-                
-                <div class="membro">
-                    <img src="assets/img/time/gustavo_souza.png" alt="Membro 2">
-                    <p class="nome-equipe">Gustavo Souza</p>
-                    <p>Desenvolvedor Back-end</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/gustavo_azenha.png" alt="Membro 3">
-                    <p class="nome-equipe">Gustavo Azenha</p>
-                    <p>Designer UI/UX</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/Lucca_Davi_Begliomini.png" alt="Membro 4">
-                    <p class="nome-equipe">Lucca Begliomini</p>
-                    <p>Desenvolvedor Front-end</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/miguel_lapa.png" alt="Membro 5">
-                    <p class="nome-equipe">Miguel Sperandio</p>
-                    <p>Dados</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/breno.jpg" alt="Membro 6">
-                    <p class="nome-equipe">Breno Santos</p>
-                    <p>Desenvolvedor Front-end</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/carlos.jpg" alt="Membro 7">
-                    <p class="nome-equipe">Carlos Eduardo</p>
-                    <p>Desenvolvedor Front-end</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/davi.png" alt="Membro 8">
-                    <p class="nome-equipe">Davi Liu</p>
-                    <p>Desenvolvedor Back-end</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/enzo.jpg" alt="Membro 9">
-                    <p class="nome-equipe">Enzo Herreira</p>
-                    <p>Desenvolvedor Back-end</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/gabriel_peotta.png" alt="Membro 10">
-                    <p class="nome-equipe">Gabriel Peotta</p>
-                    <p>Dados</p>
-                </div>
-                <div class="membro">
-                    <img src="assets/img/time/lucas.png" alt="Membro 11">
-                    <p class="nome-equipe">Lucas Fabiano</p>
-                    <p>Dados</p>
-                </div>
-                
-            </div>
+
+    <div id="voltinha">
+      <svg
+        class="voltinha-shape"
+        width="1440"
+        height="832"
+        viewBox="0 0 1440 832"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1440 3.31612C1223.67 216.67 247.532 -30.9573 0 3.31612V832H1440V3.31612Z"
+          fill="url(#paint0_linear_1574_210)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1574_210"
+            x1="648"
+            y1="455.5"
+            x2="49.5"
+            y2="-48.4999"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#0B4828" />
+            <stop offset="1" stop-color="#1BAE61" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <h2>Conheça o Voltinha</h2>
+      <div class="mascote-conteudo">
+        <img src="./assets/img/content/voltinha.png" alt="Voltinha" />
+        <div class="mascote-texto">
+          <p>
+            Voltinha é o mascote do VOLTA.E também é o seu assistente virtual da
+            plataforma! Ele te ajuda com o que você precisar.
+          </p>
+
+          <div class="mascote-palavras-chaves">
+            <p>Cadastro</p>
+            <p>Achar uma cooperativa</p>
+            <p>Agendar uma coleta</p>
+            <p>Registrar resíduos</p>
+            <p>Perguntas sobre o app</p>
+          </div>
         </div>
-        
+      </div>
+    </div>
+
+    <div id="equipe">
+      <h2>Nossa Equipe</h2>
+      <div class="equipe-conteudo">
+        <div class="equipe-membros">
+          <div class="membro">
+            <img src="assets/img/time/gustavo_souza.png" alt="Membro 2" />
+            <p class="nome-equipe">Gustavo Souza</p>
+            <p>Desenvolvedor Back-end</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/gustavo_azenha.png" alt="Membro 3" />
+            <p class="nome-equipe">Gustavo Azenha</p>
+            <p>Designer UI/UX</p>
+          </div>
+          <div class="membro">
+            <img
+              src="assets/img/time/Lucca_Davi_Begliomini.png"
+              alt="Membro 4"
+            />
+            <p class="nome-equipe">Lucca Begliomini</p>
+            <p>Desenvolvedor Front-end</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/miguel_lapa.png" alt="Membro 5" />
+            <p class="nome-equipe">Miguel Sperandio</p>
+            <p>Dados</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/breno.jpg" alt="Membro 6" />
+            <p class="nome-equipe">Breno Santos</p>
+            <p>Desenvolvedor Front-end</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/carlos.jpg" alt="Membro 7" />
+            <p class="nome-equipe">Carlos Eduardo</p>
+            <p>Desenvolvedor Front-end</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/davi.png" alt="Membro 8" />
+            <p class="nome-equipe">Davi Liu</p>
+            <p>Desenvolvedor Back-end</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/enzo.jpg" alt="Membro 9" />
+            <p class="nome-equipe">Enzo Herreira</p>
+            <p>Desenvolvedor Back-end</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/gabriel_peotta.png" alt="Membro 10" />
+            <p class="nome-equipe">Gabriel Peotta</p>
+            <p>Dados</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/lucas.png" alt="Membro 11" />
+            <p class="nome-equipe">Lucas Fabiano</p>
+            <p>Dados</p>
+          </div>
+          <!--=======================================================COPIA_IDENTICA=====================================================================================================-->
+
+          <div class="membro">
+            <img src="assets/img/time/gustavo_souza.png" alt="Membro 2" />
+            <p class="nome-equipe">Gustavo Souza</p>
+            <p>Desenvolvedor Back-end</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/gustavo_azenha.png" alt="Membro 3" />
+            <p class="nome-equipe">Gustavo Azenha</p>
+            <p>Designer UI/UX</p>
+          </div>
+          <div class="membro">
+            <img
+              src="assets/img/time/Lucca_Davi_Begliomini.png"
+              alt="Membro 4"
+            />
+            <p class="nome-equipe">Lucca Begliomini</p>
+            <p>Desenvolvedor Front-end</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/miguel_lapa.png" alt="Membro 5" />
+            <p class="nome-equipe">Miguel Sperandio</p>
+            <p>Dados</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/breno.jpg" alt="Membro 6" />
+            <p class="nome-equipe">Breno Santos</p>
+            <p>Desenvolvedor Front-end</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/carlos.jpg" alt="Membro 7" />
+            <p class="nome-equipe">Carlos Eduardo</p>
+            <p>Desenvolvedor Front-end</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/davi.png" alt="Membro 8" />
+            <p class="nome-equipe">Davi Liu</p>
+            <p>Desenvolvedor Back-end</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/enzo.jpg" alt="Membro 9" />
+            <p class="nome-equipe">Enzo Herreira</p>
+            <p>Desenvolvedor Back-end</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/gabriel_peotta.png" alt="Membro 10" />
+            <p class="nome-equipe">Gabriel Peotta</p>
+            <p>Dados</p>
+          </div>
+          <div class="membro">
+            <img src="assets/img/time/lucas.png" alt="Membro 11" />
+            <p class="nome-equipe">Lucas Fabiano</p>
+            <p>Dados</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer id="footer">
-
-        <div id="footer-container">
-
-            <div id="footer-logo">
-                <img src="assets/img/content/Logo_VOLTA_branco.png" alt="Volta">
-                <p>Conectando empresas e cooperativas para um descarte inteligente e sustentável.</p>
-            </div>
-
-            <div  id="footer-social">
-                <h3>Visite nossas redes sociais</h3>
-                <a href="https://www.instagram.com/volta.gestao_reciclaveis/" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-instagram" style="font-size:24px"></i>
-                </a>
-                <a href="https://github.com/app-volta" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-github" style="font-size:24px"></i>
-                </a>
-            </div>
-
-
-            <div id="footer-links">
-                <h3>Navegação</h3>
-                <a href="#sobre-nos">Sobre</a>
-                <a href="#cooperativas">Cooperativas</a>
-                <a href="#empresas">Como Funciona</a>
-                <a href="#equipe">Nossa equipe</a>
-
-            </div>
-
-
+      <div id="footer-container">
+        <div id="footer-logo">
+          <img src="assets/img/content/Logo_VOLTA_branco.png" alt="Volta" />
+          <p>
+            Conectando empresas e cooperativas para um descarte inteligente e
+            sustentável.
+          </p>
         </div>
-        <br>
-        <hr>
-        <br>
-        <div class="footer-copy">
-            © 2026 VOLTA • Todos os direitos reservados.
+
+        <div id="footer-social">
+          <h3>Visite nossas redes sociais</h3>
+          <a
+            href="https://www.instagram.com/volta.gestao_reciclaveis/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-instagram" style="font-size: 24px"></i>
+          </a>
+          <a
+            href="https://github.com/app-volta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-github" style="font-size: 24px"></i>
+          </a>
         </div>
-        
+
+        <div id="footer-links">
+          <h3>Navegação</h3>
+          <a href="#sobre-nos">Sobre</a>
+          <a href="#cooperativas">Cooperativas</a>
+          <a href="#empresas">Como Funciona</a>
+          <a href="#equipe">Nossa equipe</a>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <div class="footer-copy">
+        © 2026 VOLTA • Todos os direitos reservados.
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
