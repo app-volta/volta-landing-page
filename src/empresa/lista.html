@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- lang="pt-BR": idioma da página (ajuda leitores de tela) -->
+<html lang="pt-BR">
+<head>
+    <!-- Faz os acentos aparecerem corretamente -->
+    <meta charset="UTF-8">
+    <!-- Adapta a página à largura do celular (base da responsividade) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Texto que aparece na aba do navegador -->
+    <title>Empresas - Volta</title>
+    <!-- ../ sobe uma pasta (de empresa/ para src/) antes de entrar em css/ -->
+    <link rel="icon" href="../assets/img/content/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/app.css">
+    <!-- Fonte Belanosima (a mesma da landing) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- MENU: início (o back troca este bloco por um include) -->
+    <a class="pular-para-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <header>
+        <img class="logo-header" src="../assets/img/content/Logo_VOLTA_branco.png" alt="Volta">
+
+        <!-- nav = marco de navegação (leitores de tela pulam direto para ele) -->
+        <nav aria-label="Menu principal">
+            <a href="../empresa/lista.html" aria-current="page">Empresas</a>
+            <a href="../cooperativa/lista.html">Cooperativas</a>
+            <a href="../area/lista.html">Áreas</a>
+            <a href="../ocorrencia/lista.html">Ocorrências</a>
+            <a href="../coleta/lista.html">Coletas</a>
+            <a href="../usuario/lista.html">Usuários</a>
+        </nav>
+
+        <span class="usuario-logado">Nome do usuário</span>
+
+        <!-- Sair é uma ação, então usa <button> (e não <div> com clique) -->
+        <form class="form-sair" method="post" action="../logout">
+            <button type="submit" class="btn-sair">Sair</button>
+        </form>
+    </header>
+    <!-- MENU: fim -->
+
+    <!-- main = marco do conteúdo principal -->
+    <main class="container" id="conteudo">
+        <h2>Empresa</h2>
+        <a class="btn" href="../cadastrar.html">+ Nova empresa</a>
+
+        <!-- tabela-responsiva: ganha rolagem lateral no celular -->
+        <div class="tabela-responsiva">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CNPJ</th>
+                        <th>Endereço</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- LINHAS DE EXEMPLO: o back mantém uma e repete com c:forEach -->
+                    <tr>
+                        <td>EcoPack Indústria de Embalagens</td>
+                        <td>12345678000190</td>
+                        <td>Rua das Flores, 120 - Barra Funda, São Paulo</td>
+                        <td class="acoes">
+                            <a href="formulario.html?id=1">Editar</a>
+                            <form method="post" action="../empresa">
+                                <input type="hidden" name="action" value="delete">
+                                <input type="hidden" name="id" value="1">
+                                <button type="submit" class="btn-perigo">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercado Boa Compra</td>
+                        <td>98765432000110</td>
+                        <td>Av. Central, 800 - Santana, São Paulo</td>
+                        <td class="acoes">
+                            <a href="formulario.html?id=2">Editar</a>
+                            <form method="post" action="../empresa">
+                                <input type="hidden" name="action" value="delete">
+                                <input type="hidden" name="id" value="2">
+                                <button type="submit" class="btn-perigo">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+</html>

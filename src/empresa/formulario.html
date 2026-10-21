@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa - Volta</title>
+    <link rel="icon" href="../assets/img/content/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <a class="pular-para-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <header>
+        <img class="logo-header" src="../assets/img/content/Logo_VOLTA_branco.png" alt="Volta">
+
+        <nav aria-label="Menu principal">
+            <a href="../empresa/lista.html" aria-current="page">Empresas</a>
+            <a href="../cooperativa/lista.html">Cooperativas</a>
+            <a href="../area/lista.html">Áreas</a>
+            <a href="../ocorrencia/lista.html">Ocorrências</a>
+            <a href="../coleta/lista.html">Coletas</a>
+            <a href="../usuario/lista.html">Usuários</a>
+        </nav>
+
+        <span class="usuario-logado">Nome do usuário</span>
+
+        <form class="form-sair" method="post" action="../logout">
+            <button type="submit" class="btn-sair">Sair</button>
+        </form>
+    </header>
+
+    <main class="container" id="conteudo">
+        <h2>Editar empresa</h2>
+        <form method="post" action="../empresa">
+            <input type="hidden" name="action" value="update">
+            <input type="hidden" name="id" value="1">
+
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" value="EcoPack Indústria de Embalagens" required>
+            <label for="cnpj">CNPJ</label>
+            <input type="text" id="cnpj" name="cnpj" value="12345678000190" inputmode="numeric" maxlength="18" required>
+            <label for="address">Endereço</label>
+            <input type="text" id="address" name="address" value="Rua das Flores, 120 - Barra Funda, São Paulo" required>
+
+            <div class="botoes">
+                <button type="submit">Salvar</button>
+                <a class="btn btn-secundario" href="lista.html">Cancelar</a>
+            </div>
+        </form>
+    </main>
+
+</body>
+</html>
