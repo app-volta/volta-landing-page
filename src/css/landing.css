@@ -65,6 +65,7 @@ p {
   --verde-principal: #1ba463;
   --verde-escuro: #063300;
   --verde-destaque: #5da753;
+  --erro: #E8556C;
 
   --verde-claro: color-mix(in srgb, var(--verde-medio) 30%, white);
   --verde-suave: color-mix(in srgb, var(--verde-medio) 15%, white);
@@ -89,7 +90,7 @@ p {
   height: fit-content;
   padding: 0 40px;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.96);
+  background: white;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -28,6 +28,7 @@ body {
     --verde-principal: #1BA463;
     --verde-escuro: #063300;
     --verde-destaque: #5DA753;
+    --erro: #E8556C;
     
     --verde-claro: color-mix(in srgb, var(--verde-medio) 30%, white);
     --verde-suave: color-mix(in srgb, var(--verde-medio) 15%, white);
