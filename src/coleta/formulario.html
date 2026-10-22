@@ -1,21 +1,14 @@
 <!DOCTYPE html>
-<!-- lang="pt-BR": idioma da página (ajuda leitores de tela) -->
 <html lang="pt-BR">
 <head>
-    <!-- Faz os acentos aparecerem corretamente -->
     <meta charset="UTF-8">
-    <!-- Adapta a página à largura do celular (base da responsividade) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Texto que aparece na aba do navegador -->
     <title>Coleta - Volta</title>
-    <!-- ../ sobe uma pasta (de empresa/ para src/) antes de entrar em css/ -->
     <link rel="icon" href="../assets/img/content/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/app.css">
-    <!-- Fonte Belanosima (a mesma da landing) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Ícone do menu (o mesmo da landing) -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -23,7 +16,6 @@
 </head>
 <body>
 
-    <!-- MENU: início (o back troca este bloco por um include) -->
     <nav class="nav">
       <div class="menu">
         <input type="checkbox" id="menu-toggle" />
@@ -54,14 +46,10 @@
         </div>
       </div>
     </nav>
-    <!-- MENU: fim -->
 
-    <!-- main = conteúdo principal da página -->
     <main class="container">
-        <!-- o mesmo formulário serve para criar (action=insert) e editar (action=update): o back troca o título, o action e o id -->
         <h2>Nova coleta</h2>
         <form method="post" action="../coleta">
-            <!-- campos escondidos: dizem ao servlet o que fazer -->
             <input type="hidden" name="action" value="insert">
             <input type="hidden" name="id" value="">
 
