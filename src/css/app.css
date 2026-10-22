@@ -200,20 +200,21 @@ p {
 
 /*LISTA: titulo a esquerda, botao "Nova" a direita, filtro e tabela embaixo*/
 
-.container:has(> .btn){
+.lista{
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
 }
 
-.container:has(> .btn) > .form-inline,
-.container:has(> .btn) > .tabela-responsiva{
+.lista .form-inline,
+.lista .tabela-responsiva{
   grid-column: 1 / -1;
 }
 
-/*FORMULARIO: coluna unica de 500px centralizada no cartao*/
+/*FORMULARIO: coluna unica centralizada no cartao*/
 
-.container:not(:has(> .btn)) > *{
+.formulario h2,
+.formulario form{
   width: 100%;
   max-width: 560px;
   margin: 0 auto;
@@ -304,7 +305,8 @@ tbody tr:hover{
   background-color: var(--verde-gelo);
 }
 
-.acoes > *{
+.acoes a,
+.acoes form{
   display: inline-block;
   vertical-align: middle;
   margin-right: 8px;
@@ -370,9 +372,7 @@ button:hover,
 
 /*FORMULARIO*/
 
-.container > form:not(.form-inline){
-  width: 100%;
-  max-width: 560px;
+.formulario form{
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -383,17 +383,17 @@ button:hover,
   box-shadow: 0 4px 16px color-mix(in srgb, var(--verde-escuro) 8%, transparent);
 }
 
-.container > form > label{
+.formulario label{
   margin-top: 10px;
   color: var(--verde-escuro);
 }
 
-.container > form > label:first-of-type{
+.formulario label:first-of-type{
   margin-top: 0;
 }
 
-.container > form:not(.form-inline) input:not([type="checkbox"]):not([type="radio"]),
-.container > form:not(.form-inline) select{
+.formulario input:not([type="checkbox"]):not([type="radio"]),
+.formulario select{
   width: 100%;
 }
 
@@ -433,6 +433,7 @@ td select{
 }
 
 .checkbox-list label{
+  margin-top: 0;
   display: flex;
   align-items: center;
   gap: 6px;
