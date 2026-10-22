@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- lang="pt-BR": idioma da página (ajuda leitores de tela) -->
+<html lang="pt-BR">
+<head>
+    <!-- Faz os acentos aparecerem corretamente -->
+    <meta charset="UTF-8">
+    <!-- Adapta a página à largura do celular (base da responsividade) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Texto que aparece na aba do navegador -->
+    <title>Áreas - Volta</title>
+    <!-- ../ sobe uma pasta (de empresa/ para src/) antes de entrar em css/ -->
+    <link rel="icon" href="../assets/img/content/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/app.css">
+    <!-- Fonte Belanosima (a mesma da landing) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Ícone do menu (o mesmo da landing) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+</head>
+<body>
+
+    <!-- MENU: início (o back troca este bloco por um include) -->
+    <nav class="nav">
+      <div class="menu">
+        <input type="checkbox" id="menu-toggle" />
+
+        <div class="nav-logo">
+          <a href="../index.html">
+            <img src="../assets/img/content/Logo_VOLTA_branco.png" alt="VOLTA Logo" />
+          </a>
+
+          <label
+            for="menu-toggle"
+            class="material-symbols-outlined"
+            >menu</label
+          >
+        </div>
+
+        <div class="nav-links">
+            <a class="link-pagina" href="../empresa/lista.html">Empresas</a>
+            <a class="link-pagina" href="../cooperativa/lista.html">Cooperativas</a>
+            <a class="link-pagina" href="../area/lista.html">Áreas</a>
+            <a class="link-pagina" href="../ocorrencia/lista.html">Ocorrências</a>
+            <a class="link-pagina" href="../coleta/lista.html">Coletas</a>
+            <a class="link-pagina" href="../usuario/lista.html">Usuários</a>
+          <span class="usuario-logado">Nome do usuário</span>
+          <form class="form-sair" method="post" action="../logout">
+            <button type="submit" class="btn-sair">Sair</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- MENU: fim -->
+
+    <!-- main = conteúdo principal da página -->
+    <main class="container">
+        <h2>Áreas cadastradas</h2>
+        <a class="btn" href="formulario.html">+ Nova área</a>
+
+        <form class="form-inline" method="get" action="../area">
+            <input type="hidden" name="action" value="list">
+            <select name="companyId">
+                <option value="">Todas as empresas</option>
+                <option value="1">EcoPack Indústria de Embalagens</option>
+                <option value="2">Mercado Boa Compra</option>
+            </select>
+            <button type="submit">Filtrar</button>
+        </form>
+
+        <!-- tabela-responsiva: ganha rolagem lateral no celular -->
+        <div class="tabela-responsiva">
+            <table>
+                <thead>
+                    <tr>
+                    <th>Empresa</th>
+                    <th>Setor</th>
+                    <th>Descrição do local</th>
+                    <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- LINHAS DE EXEMPLO: o back mantém uma e repete com c:forEach -->
+                    <tr>
+                        <td>EcoPack Indústria de Embalagens</td>
+                        <td>Produção</td>
+                        <td>Galpão principal, linha de extrusão</td>
+                        <td class="acoes">
+                            <a class="btn-editar" href="formulario.html?id=1">Editar</a>
+                            <form method="post" action="../area">
+                                <input type="hidden" name="action" value="delete">
+                                <input type="hidden" name="id" value="1">
+                                <button type="submit" class="btn-perigo">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mercado Boa Compra</td>
+                        <td>Estoque</td>
+                        <td>Depósito dos fundos</td>
+                        <td class="acoes">
+                            <a class="btn-editar" href="formulario.html?id=2">Editar</a>
+                            <form method="post" action="../area">
+                                <input type="hidden" name="action" value="delete">
+                                <input type="hidden" name="id" value="2">
+                                <button type="submit" class="btn-perigo">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+</html>
