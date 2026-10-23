@@ -14,6 +14,7 @@
     />
 
     <!--CSS-->
+    <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/landing.css" />
     <!--JS-->
     <script src="./js/main.js" defer></script>
@@ -448,12 +449,13 @@
             empresas e cooperativas durante o processo de coleta e triagem.
             Trazendo de volta,lucro com mais facilidade.
           </p>
-          <p style="color: #5da753">
+          <p class="objetivo-chamada">
             Tudo que VAI,
             <img src="assets/img/content/Logo_VOLTA.png" alt="Logo Volta" />
           </p>
         </div>
         <img
+          class="objetivo-imagem"
           src="assets/img/content/nosso_objetivo.png"
           alt="Ilustração do objetivo do VOLTA"
         />
@@ -493,7 +495,7 @@
       <div class="mascote-conteudo">
         <img src="assets/img/content/voltinha.png" alt="Voltinha" />
         <div class="mascote-texto">
-          <p>
+          <p class="mascote-descricao">
             Voltinha é o mascote do VOLTA.E também é o seu assistente virtual da
             plataforma! Ele te ajuda com o que você precisar.
           </p>
@@ -626,6 +628,10 @@
     </div>
 
     <footer id="footer">
+      <svg id="footer-shape" aria-hidden="true" viewBox="0 0 1441 228" fill="none" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+<path d="M1440.5 227.45H1250.75H1148.72C1138.23 196.908 1137.75 174.637 1204.02 161.948C1276.91 147.992 1337.99 201.044 1337.99 71.7527C1337.99 33.5608 1366.12 -16.9326 1440.5 5.56461V227.45Z" fill="#17804A"/>
+<path d="M139.5 226.949C139.5 208.593 135.892 190.417 128.881 173.459C121.871 156.5 111.595 141.092 98.6414 128.112C85.6876 115.133 70.3092 104.837 53.3843 97.8122C36.4594 90.7878 18.3194 87.1724 0 87.1724V226.949H139.5Z" fill="#17804A"/>
+</svg>
       <div id="footer-container">
         <div id="footer-logo">
           <img src="assets/img/content/Logo_VOLTA_branco.png" alt="Volta" />
@@ -642,14 +648,14 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="fa-brands fa-instagram" style="font-size: 24px"></i>
+            <i class="fa-brands fa-instagram icone-rodape"></i>
           </a>
           <a
             href="https://github.com/app-volta"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="fa-brands fa-github" style="font-size: 24px"></i>
+            <i class="fa-brands fa-github icone-rodape"></i>
           </a>
         </div>
 
@@ -659,6 +665,11 @@
           <a href="#cooperativas">Cooperativas</a>
           <a href="#empresas">Como Funciona</a>
           <a href="#equipe">Nossa equipe</a>
+        </div>
+
+        <div id="footer-restrita">
+          <h3>Área restrita</h3>
+          <a href="login-crud.html">Acessar o painel</a>
         </div>
       </div>
       <br />

@@ -1,18 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Belanosima", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  color: black;
+  color: var(--preto);
   overflow-x: hidden;
 }
 
@@ -53,25 +44,6 @@ p {
 }
 
 /* ===========================
-   Cores
-=========================== */
-
-:root {
-  --verde-medio: #3b8952;
-  --verde-floresta: #0b4828;
-  --verde-petroleo: #0f684b;
-  --verde-gelo: #f5fcf4;
-  --verde-esbranquicado: #d8ebe0;
-  --verde-principal: #1ba463;
-  --verde-escuro: #063300;
-  --verde-destaque: #5da753;
-  --erro: #E8556C;
-
-  --verde-claro: color-mix(in srgb, var(--verde-medio) 30%, white);
-  --verde-suave: color-mix(in srgb, var(--verde-medio) 15%, white);
-}
-
-/* ===========================
    Barra de Navegação
 =========================== */
 
@@ -90,7 +62,7 @@ p {
   height: fit-content;
   padding: 0 40px;
   box-sizing: border-box;
-  background: white;
+  background: var(--branco);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -147,13 +119,13 @@ p {
 
 #link-login {
   padding: 10px 16px;
-  color: white;
+  color: var(--branco);
   background: var(--verde-principal);
   border-radius: 3px;
 }
 
 #link-login:hover {
-  color: white;
+  color: var(--branco);
   background: var(--verde-escuro);
 }
 
@@ -224,7 +196,7 @@ p {
 =========================== */
 
 #sobre-nos {
-  background: white;
+  background: var(--branco);
   padding: 60px 0;
   margin-top: 60px;
   margin-bottom: 500px;
@@ -242,7 +214,6 @@ p {
   position: relative;
 }
 
-/* Coluna da esquerda: título, conteúdo e palavras-chave */
 .sobre-item .container {
   width: 45%;
   z-index: 1;
@@ -256,13 +227,13 @@ p {
 
 .sobre-item-content p {
   line-height: 1.75;
-  color: black;
+  color: var(--preto);
   text-align: left;
 }
 
 .palavras-chaves{
   background-color: var(--verde-principal);
-  color: white;
+  color: var(--branco);
   border-radius: 21.54px;
   width: 40%;
   padding: 5px;
@@ -275,8 +246,6 @@ p {
   flex-direction: column;
   gap: 8px;
 }
-
-/* Coluna da direita: SVG de fundo e as duas imagens */
 .sobre-visual {
   position: relative;
   width: 50%;
@@ -298,7 +267,6 @@ p {
   height: 100%;
 }
 
-/* Imagem maior, atrás, dentro da área do SVG */
 .sobre-img-fundo {
   position: absolute;
   top: 10px;
@@ -309,7 +277,6 @@ p {
   z-index: 1;
 }
 
-/* Imagem menor, na frente, um pouco para a esquerda e para baixo */
 .sobre-img-frente {
   position: absolute;
   top: 110px;
@@ -363,7 +330,7 @@ p {
 }
 
 #cooperativas h2 {
-  color: white;
+  color: var(--branco);
   display: block;
   margin-bottom: 32px;
   text-align: center;
@@ -408,7 +375,7 @@ p {
 }
 
 #cooperativas .slider-contador {
-  color: white;
+  color: var(--branco);
 }
 
 /* ===========================
@@ -422,7 +389,7 @@ p {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  background-color: #ffffff;
+  background-color: var(--branco);
   border: 1px solid var(--verde-destaque);
   border-radius: 26px;
   padding: 24px;
@@ -446,10 +413,9 @@ p {
 
 .btn-avancar-voltar:hover {
   background-color: var(--verde-principal);
-  color: #ffffff;
+  color: var(--branco);
 }
 
-/* Contorno quando navega pelo teclado (Tab) */
 .btn-avancar-voltar:focus-visible,
 .bolinha:focus-visible {
   outline: 3px solid var(--verde-claro);
@@ -461,7 +427,6 @@ p {
   width: 100%;
 }
 
-/* Título em cima, texto embaixo */
 .slider-track {
   flex: 1;
   width: 100%;
@@ -495,7 +460,7 @@ p {
   border-radius: 50%;
 
   background-color: var(--verde-principal);
-  color: #ffffff;
+  color: var(--branco);
 
   display: grid;
   place-items: center;
@@ -506,12 +471,11 @@ p {
    Caixas verdes de texto
 =========================== */
 
-/* Empresa: uma caixa ocupando a largura toda */
 .card-empresa {
   width: 100%;
   min-height: 140px;
   background-color: var(--verde-principal);
-  color: #ffffff;
+  color: var(--branco);
   border-radius: 18px;
 
   display: flex;
@@ -525,7 +489,6 @@ p {
   line-height: 1.5;
 }
 
-/* Cooperativa: três caixas lado a lado */
 .blocos-coop {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -535,7 +498,7 @@ p {
 .card-coop {
   min-height: 180px;
   background-color: var(--verde-principal);
-  color: #ffffff;
+  color: var(--branco);
   border-radius: 18px;
 
   display: flex;
@@ -574,13 +537,12 @@ p {
   transform: scale(1.4);
 }
 
-/* Na cooperativa o fundo é escuro: bolinhas brancas */
 #cooperativas .bolinha {
-  background-color: color-mix(in srgb, white 40%, transparent);
+  background-color: color-mix(in srgb, var(--branco) 40%, transparent);
 }
 
 #cooperativas .bolinha[aria-current="true"] {
-  background-color: white;
+  background-color: var(--branco);
 }
 
 /* ===========================
@@ -601,7 +563,7 @@ p {
   min-height: 190px;
   padding: 28px 24px;
 
-  background: white;
+  background: var(--branco);
   border: 1px solid var(--verde-claro);
   border-radius: 18px;
   box-shadow: 0 8px 24px
@@ -633,7 +595,7 @@ p {
 
 .topico-cooperativa:hover h3,
 .topico-cooperativa:hover p {
-  color: white;
+  color: var(--branco);
 }
 
 /* ===========================
@@ -664,7 +626,7 @@ p {
   display: flex;
   align-items: center;
   position: relative;
-  background: white;
+  background: var(--branco);
 }
 
 .hero-shape {
@@ -753,10 +715,18 @@ p {
 }
 
 #objetivo-conteudo p {
-  color: black;
+  color: var(--preto);
   height: auto;
   line-height: 1.75;
   text-align: left;
+}
+
+#objetivo-conteudo .objetivo-chamada {
+  color: var(--verde-destaque);
+}
+
+#footer-social .icone-rodape {
+  font-size: 24px;
 }
 
 
@@ -770,13 +740,13 @@ p {
   align-items: center;
 }
 
-#objetivo-texto > h2 {
+#objetivo-texto h2 {
   grid-column: 1;
   grid-row: 1;
   margin-bottom: 24px;
 }
 
-#objetivo-texto > #objetivo-conteudo {
+#objetivo-texto #objetivo-conteudo {
   grid-column: 1;
   grid-row: 2;
   margin: 0;
@@ -784,7 +754,7 @@ p {
   gap: 40px;
 }
 
-#objetivo-texto > img {
+.objetivo-imagem {
   grid-column: 2;
   grid-row: 1 / span 2;
   width: 100%;
@@ -803,12 +773,12 @@ p {
   position: relative;
   overflow: hidden;
   padding: 140px 8% 96px;
-  color: white;
+  color: var(--branco);
 }
 
-#voltinha > h2 {
+#voltinha h2 {
   position: relative;
-  color: white;
+  color: var(--branco);
   margin-bottom: 48px;
   text-align: left;
 }
@@ -830,17 +800,17 @@ p {
   column-gap: 72px;
 }
 
-.mascote-conteudo > img {
+.mascote-conteudo img {
   width: 100%;
   height: auto;
 }
 
 .mascote-texto {
   position: relative;
-  color: white;
+  color: var(--branco);
 }
 
-.mascote-texto > p {
+.mascote-descricao {
   font-size: 1.25rem;
   line-height: 1.7;
   margin-bottom: 32px;
@@ -853,33 +823,13 @@ p {
 }
 
 .mascote-palavras-chaves p {
-  background-color: white;
+  background-color: var(--branco);
   color: var(--verde-floresta);
   border-radius: 30px;
   padding: 10px 22px;
   margin: 0;
   font-size: 1.05rem;
   font-weight: 600;
-}
-
-@media screen and (max-width: 768px) {
-  #voltinha {
-    padding: 100px 24px 72px;
-  }
-
-  .mascote-conteudo {
-    grid-template-columns: 1fr;
-    row-gap: 32px;
-  }
-
-  .mascote-conteudo > img {
-    max-width: 240px;
-    margin: 0 auto;
-  }
-
-  .mascote-texto > p {
-    font-size: 1.125rem;
-  }
 }
 
 /* ===========================
@@ -889,7 +839,7 @@ p {
 #equipe {
   padding: 80px 0px;
 
-  background: white;
+  background: var(--branco);
   border-top: none;
   text-align: center;
   overflow: hidden;
@@ -909,7 +859,7 @@ p {
 }
 
 #equipe .nome-equipe {
-  color: black;
+  color: var(--preto);
   font-size: 1.5rem;
 }
 
@@ -952,9 +902,29 @@ p {
 =========================== */
 
 footer {
+  position: relative;
+  overflow: hidden;
   padding: 58px 24px 25px;
-  color: white;
-  background: var(--verde-principal);
+  color: var(--branco);
+  background: var(--verde-escuro);
+}
+
+#footer-shape {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#footer-container,
+footer br,
+footer hr,
+.footer-copy {
+  position: relative;
+  z-index: 1;
 }
 
 #footer-container {
@@ -985,6 +955,7 @@ footer {
 
 #footer-social,
 #footer-links,
+#footer-restrita,
 #footer-contato {
   display: flex;
   flex-direction: column;
@@ -1003,7 +974,7 @@ footer a {
 }
 
 footer a:hover {
-  color: white;
+  color: var(--branco);
   text-decoration: none;
 }
 
@@ -1020,7 +991,7 @@ footer hr {
   max-width: 1120px;
   margin: 0 auto;
   border: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-top: 1px solid color-mix(in srgb, var(--branco) 18%, transparent);
 }
 
 /* ===========================
@@ -1063,7 +1034,7 @@ footer hr {
 
   .nav-links a:hover {
     background-color: var(--verde-principal);
-    color: white;
+    color: var(--branco);
     top: 0px;
   }
 
@@ -1087,6 +1058,25 @@ footer hr {
   #footer-container {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+  }
+  /* ---------- Voltinha ---------- */
+
+  #voltinha {
+    padding: 100px 24px 72px;
+  }
+
+  .mascote-conteudo {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+
+  .mascote-conteudo img {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .mascote-descricao {
+    font-size: 1.125rem;
   }
 }
 
@@ -1232,7 +1222,7 @@ footer hr {
   }
 
   #empresas {
-    background: white;
+    background: var(--branco);
   }
 
   #cooperativas {
@@ -1340,6 +1330,7 @@ footer hr {
 
   #footer-social,
   #footer-links,
+  #footer-restrita,
   #footer-contato {
     align-items: center;
   }
