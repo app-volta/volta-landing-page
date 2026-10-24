@@ -62,7 +62,7 @@ p {
   height: fit-content;
   padding: 0 40px;
   box-sizing: border-box;
-  background: var(--branco);
+  background-color: var(--branco);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -120,13 +120,13 @@ p {
 #link-login {
   padding: 10px 16px;
   color: var(--branco);
-  background: var(--verde-principal);
+  background-color: var(--verde-principal);
   border-radius: 3px;
 }
 
 #link-login:hover {
   color: var(--branco);
-  background: var(--verde-escuro);
+  background-color: var(--verde-escuro);
 }
 
 /* ===========================
@@ -196,7 +196,7 @@ p {
 =========================== */
 
 #sobre-nos {
-  background: var(--branco);
+  background-color: var(--branco);
   padding: 60px 0;
   margin-top: 60px;
   margin-bottom: 500px;
@@ -235,9 +235,11 @@ p {
   background-color: var(--verde-principal);
   color: var(--branco);
   border-radius: 21.54px;
-  width: 40%;
+  width: 200px;
   padding: 5px;
   text-align: center;
+  position: relative;
+  top: -100px;
 }
 
 .sobre-palavras {
@@ -285,6 +287,17 @@ p {
   height: auto;
   border-radius: 18px;
   z-index: 2;
+}
+
+.btn-comecar{
+  background-color: var(--verde-principal);
+  color: var(--branco);
+  border: none;
+  border-radius: 3px;
+  width: 50%;
+  height: 45px;
+  margin-top: 5px;
+
 }
 
 /* ===========================
@@ -436,7 +449,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
 }
 
 /* ===========================
@@ -529,7 +542,7 @@ p {
 
   background-color: var(--verde-floresta);
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.3s;
 }
 
 .bolinha[aria-current="true"] {
@@ -563,19 +576,19 @@ p {
   min-height: 190px;
   padding: 28px 24px;
 
-  background: var(--branco);
+  background-color: var(--branco);
   border: 1px solid var(--verde-claro);
   border-radius: 18px;
   box-shadow: 0 8px 24px
     color-mix(in srgb, var(--verde-floresta) 8%, transparent);
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .topico-cooperativa:hover {
   transform: translateY(-6px);
   box-shadow: 0 15px 32px
     color-mix(in srgb, var(--verde-floresta) 15%, transparent);
-  background: var(--verde-principal);
+  background-color: var(--verde-principal);
   border-color: var(--verde-principal);
 }
 
@@ -626,7 +639,7 @@ p {
   display: flex;
   align-items: center;
   position: relative;
-  background: var(--branco);
+  background-color: var(--branco);
 }
 
 .hero-shape {
@@ -726,7 +739,7 @@ p {
 }
 
 #footer-social .icone-rodape {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 
@@ -837,9 +850,9 @@ p {
 =========================== */
 
 #equipe {
-  padding: 80px 0px;
+  padding: 80px 0;
 
-  background: var(--branco);
+  background-color: var(--branco);
   border-top: none;
   text-align: center;
   overflow: hidden;
@@ -906,7 +919,7 @@ footer {
   overflow: hidden;
   padding: 58px 24px 25px;
   color: var(--branco);
-  background: var(--verde-escuro);
+  background-color: var(--verde-escuro);
 }
 
 #footer-shape {
@@ -970,7 +983,7 @@ footer h3 {
 footer a {
   color: var(--verde-suave);
   text-decoration: none;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 footer a:hover {
@@ -1022,7 +1035,7 @@ footer hr {
     flex-direction: column;
     max-height: 0;
     overflow: hidden;
-    transition: 0.25s;
+    transition: 0.3s;
   }
 
   .menu .nav-links a {
@@ -1035,7 +1048,7 @@ footer hr {
   .nav-links a:hover {
     background-color: var(--verde-principal);
     color: var(--branco);
-    top: 0px;
+    top: 0;
   }
 
   #menu-toggle:checked ~ .nav-links {
@@ -1222,7 +1235,7 @@ footer hr {
   }
 
   #empresas {
-    background: var(--branco);
+    background-color: var(--branco);
   }
 
   #cooperativas {
@@ -1298,7 +1311,7 @@ footer hr {
     margin-left: 0;
     padding: 0 0 32px;
     text-align: center;
-    top: 0px;
+    top: 0;
   }
 
   .hero-content p {
