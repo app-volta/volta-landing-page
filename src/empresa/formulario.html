@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa - Volta</title>
     <link rel="icon" href="../assets/img/content/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,12 +15,6 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
 </head>
 <body>
 
@@ -47,7 +42,7 @@
             <a class="link-pagina" href="../coleta/lista.html">Coletas</a>
             <a class="link-pagina" href="../usuario/lista.html">Usuários</a>
           <span class="usuario-logado">Nome do usuário</span>
-          <form class="form-sair" method="post" action="../logout">
+          <form class="form-sair" method="get" action="../login.html">
             <button type="submit" class="btn-sair">Sair</button>
           </form>
         </div>
@@ -55,7 +50,7 @@
     </nav>
 
     <main class="container formulario">
-        <h2>Editar empresa</h2>
+        <h1>Editar empresa</h1>
         <form method="post" action="../empresa">
             <input type="hidden" name="action" value="update">
             <input type="hidden" name="id" value="1">

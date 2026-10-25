@@ -151,7 +151,7 @@ p {
   flex-direction: column;
 }
 
-.container h2{
+.container h1{
   font-size: 1.875rem;
   color: var(--verde-escuro);
 }
@@ -167,7 +167,7 @@ p {
   grid-column: 1 / -1;
 }
 
-.formulario h2,
+.formulario h1,
 .formulario form{
   width: 100%;
   max-width: 560px;
@@ -451,7 +451,7 @@ input[type="checkbox"]{
     padding: 0 12px;
   }
 
-  .container h2{
+  .container h1{
     font-size: 1.75rem;
   }
 }
