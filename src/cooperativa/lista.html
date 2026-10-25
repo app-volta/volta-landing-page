@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooperativas - Volta</title>
     <link rel="icon" href="../assets/img/content/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +41,7 @@
             <a class="link-pagina" href="../coleta/lista.html">Coletas</a>
             <a class="link-pagina" href="../usuario/lista.html">Usuários</a>
           <span class="usuario-logado">Nome do usuário</span>
-          <form class="form-sair" method="post" action="../logout">
+          <form class="form-sair" method="get" action="../login.html">
             <button type="submit" class="btn-sair">Sair</button>
           </form>
         </div>
@@ -63,6 +64,20 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>Cooperativa Recicla Zona Leste</td>
+                        <td>11222333000144</td>
+                        <td>4.5</td>
+                        <td>5000</td>
+                        <td class="acoes">
+                            <a class="btn-editar" href="formulario.html?id=1">Editar</a>
+                            <form method="post" action="../cooperativa">
+                                <input type="hidden" name="action" value="delete">
+                                <input type="hidden" name="id" value="1">
+                                <button type="submit" class="btn-perigo">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

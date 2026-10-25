@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooperativa - Volta</title>
     <link rel="icon" href="../assets/img/content/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +41,7 @@
             <a class="link-pagina" href="../coleta/lista.html">Coletas</a>
             <a class="link-pagina" href="../usuario/lista.html">Usuários</a>
           <span class="usuario-logado">Nome do usuário</span>
-          <form class="form-sair" method="post" action="../logout">
+          <form class="form-sair" method="get" action="../login.html">
             <button type="submit" class="btn-sair">Sair</button>
           </form>
         </div>
@@ -54,19 +55,19 @@
             <input type="hidden" name="id" value="1">
 
             <label for="name">Nome</label>
-            <input type="text" id="name" name="name" value="Cooperativa Recicla Zona Leste" required>
+            <input type="text" id="name" name="name" required>
             <label for="cnpj">CNPJ</label>
-            <input type="text" id="cnpj" name="cnpj" value="11222333000144" inputmode="numeric" maxlength="18" required>
+            <input type="text" id="cnpj" name="cnpj" inputmode="numeric" maxlength="18" required>
             <label for="cep">CEP</label>
-            <input type="text" id="cep" name="cep" value="03010-000" inputmode="numeric" maxlength="9" required>
+            <input type="text" id="cep" name="cep" inputmode="numeric" maxlength="9" required>
             <label for="openingTime">Horário de abertura</label>
-            <input type="time" id="openingTime" name="openingTime" value="08:00">
+            <input type="time" id="openingTime" name="openingTime">
             <label for="monthlyCapacity">Capacidade mensal</label>
-            <input type="number" id="monthlyCapacity" name="monthlyCapacity" value="5000">
+            <input type="number" id="monthlyCapacity" name="monthlyCapacity">
             <fieldset class="checkbox-list">
                 <legend>Tipos de resíduo aceitos</legend>
-                <label><input type="checkbox" name="wasteTypeIds" value="1" checked> Plástico PET</label>
-                <label><input type="checkbox" name="wasteTypeIds" value="2" checked> Plástico PEAD</label>
+                <label><input type="checkbox" name="wasteTypeIds" value="1"> Plástico PET</label>
+                <label><input type="checkbox" name="wasteTypeIds" value="2"> Plástico PEAD</label>
                 <label><input type="checkbox" name="wasteTypeIds" value="3"> Plástico PP</label>
                 <label><input type="checkbox" name="wasteTypeIds" value="4"> Plástico PVC</label>
             </fieldset>
