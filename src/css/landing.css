@@ -199,7 +199,6 @@ p {
   background-color: var(--branco);
   padding: 60px 0;
   margin-top: 60px;
-  margin-bottom: 500px;
 }
 
 .sobre-item {
@@ -318,56 +317,17 @@ p {
   width: 50%;
   height: 45px;
   margin-top: 5px;
-
-}
-
-/* ===========================
-   Empresas
-=========================== */
-
-#empresas {
-  padding: 96px 24px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: 0.3s;
 
-  position: relative;
-  top: -40px;
-  z-index: 1;
 }
 
-#empresas h2 {
-  color: var(--verde-medio);
-  display: block;
-  margin-bottom: 32px;
-  text-align: center;
-}
-
-/* ===========================
-   Cooperativas
-=========================== */
-
-#cooperativas {
-  padding: 96px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  border-top: none;
-
-  position: relative;
-  top: -40px;
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#cooperativas h2 {
-  color: var(--branco);
-  display: block;
-  margin-bottom: 32px;
-  text-align: center;
+.btn-comecar:hover{
+  background-color: var(--verde-escuro);
 }
 
 /* ===========================
@@ -377,206 +337,98 @@ p {
 .como-funciona-hero {
   position: relative;
   max-width: 100%;
-  height: 50%;
-  bottom: 500px;
-}
-
-.como-funciona-shape {
-  position: absolute;
-  top: 100px;
-  right: 0;
-  min-width: 90%;
-}
-
-.card {
-  position: relative;
-  bottom: -300px;
-}
-
-/* ===========================
-   Contador "1 de 7"
-=========================== */
-
-.slider-contador {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto 8px;
-  padding-right: 24px;
-
-  text-align: right;
-  font-weight: 500;
-  color: var(--verde-principal);
-}
-
-#cooperativas .slider-contador {
-  color: var(--branco);
-}
-
-/* ===========================
-   Slider (caixa branca)
-=========================== */
-
-.slider {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
   background-color: var(--branco);
-  border: 1px solid var(--verde-destaque);
-  border-radius: 26px;
-  padding: 24px;
 }
 
-.btn-avancar-voltar {
-  background-color: transparent;
-  color: var(--verde-floresta);
-  padding: 5px;
-  border: none;
-  box-shadow: none;
-  border-radius: 50%;
-
-  width: 60px;
-  height: 60px;
-  flex-shrink: 0;
-
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-avancar-voltar:hover {
-  background-color: var(--verde-principal);
-  color: var(--branco);
-}
-
-.btn-avancar-voltar:focus-visible,
-.bolinha:focus-visible {
-  outline: 3px solid var(--verde-claro);
-  outline-offset: 2px;
-}
-
-.slider-viewport {
-  overflow: hidden;
+#empresas,
+#cooperativas {
   width: 100%;
-}
-
-.slider-track {
-  flex: 1;
-  width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  transition: transform 0.3s ease;
+  padding: 64px 24px;
 }
 
-/* ===========================
-   Título com ícone
-=========================== */
-
-.slider-titulo {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-
-  color: var(--verde-floresta);
-  font-size: 2rem;
+#empresas h2,
+#cooperativas h2 {
+  color: var(--verde-medio);
   text-align: left;
+  margin-bottom: 8px;
 }
 
-.slider-icone {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-  border-radius: 50%;
+.subtitulo {
+  color: var(--cinza-texto);
+  margin-bottom: 40px;
+}
 
-  background-color: var(--verde-principal);
-  color: var(--branco);
+.passos {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
 
+.passo {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
   display: grid;
-  place-items: center;
-  font-size: 1rem;
-}
-
-/* ===========================
-   Caixas verdes de texto
-=========================== */
-
-.card-empresa {
-  width: 100%;
-  min-height: 140px;
-  background-color: var(--verde-principal);
-  color: var(--branco);
-  border-radius: 18px;
-
-  display: flex;
+  grid-template-columns: auto 1fr;
+  align-content: start;
   align-items: center;
-  padding: 24px 28px;
+  column-gap: 12px;
+  row-gap: 12px;
+  padding: 0 24px;
 }
 
-.card-empresa p {
-  text-align: left;
-  font-size: 1.15rem;
-  line-height: 1.5;
+.passo + .passo {
+  border-left: 1px solid var(--verde-esbranquicado);
 }
 
-.blocos-coop {
+.passo:first-child {
+  padding-left: 0;
+}
+
+.passo i {
+  color: var(--verde-destaque);
+  font-size: 1.5rem;
+}
+
+.passo h3 {
+  color: var(--verde-floresta);
+}
+
+.passo p {
+  grid-column: 1 / -1;
+  color: var(--cinza-texto);
+}
+
+.cartoes-coop {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 24px;
+  max-width: 700px;
+  margin-top: 32px;
 }
 
-.card-coop {
-  min-height: 180px;
-  background-color: var(--verde-principal);
-  color: var(--branco);
-  border-radius: 18px;
-
-  display: flex;
-  align-items: center;
+.cartao-coop {
+  background-color: var(--verde-suave);
+  border-radius: 28px;
   padding: 24px;
-
-  font-size: 1.05rem;
-  line-height: 1.5;
-}
-
-/* ===========================
-   Bolinhas
-=========================== */
-
-.slider-bolinhas {
+  min-height: 234px;
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 18px;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.bolinha {
-  width: 12px;
-  height: 12px;
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-
-  background-color: var(--verde-floresta);
-  cursor: pointer;
-  transition: transform 0.3s;
+.cartao-coop i {
+  color: var(--verde-destaque);
+  font-size: 1.5rem;
 }
 
-.bolinha[aria-current="true"] {
-  background-color: var(--verde-claro);
-  transform: scale(1.4);
+.cartao-coop h3 {
+  color: var(--verde-floresta);
 }
 
-#cooperativas .bolinha {
-  background-color: color-mix(in srgb, var(--branco) 40%, transparent);
-}
-
-#cooperativas .bolinha[aria-current="true"] {
-  background-color: var(--branco);
+.cartao-coop p {
+  color: var(--cinza-texto);
 }
 
 /* ===========================
@@ -761,6 +613,12 @@ p {
 
 #footer-social .icone-rodape {
   font-size: 1.5rem;
+}
+
+.footer-redes {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 
@@ -1134,7 +992,7 @@ footer hr {
   }
 
   .btn-comecar{
-    display: block;
+    display: flex;
     margin: 5px auto 0;
   }
 
@@ -1260,88 +1118,23 @@ footer hr {
   }
 
   /* ---------- Como funciona ---------- */
-  #sobre-nos {
-    margin-bottom: 0;
-  }
-
-  .como-funciona-hero {
-    bottom: 0;
-    height: auto;
-  }
-
-  .como-funciona-shape {
-    display: none;
-  }
-
-  .card {
-    bottom: 0;
-  }
-
   #empresas,
   #cooperativas {
-    top: 0;
     padding: 48px 16px;
   }
 
-  #empresas {
-    background-color: var(--branco);
+  .passo {
+    flex-basis: 260px;
+    padding: 0 16px;
   }
 
-  #cooperativas {
-    background: linear-gradient(
-      180deg,
-      var(--verde-medio),
-      var(--verde-escuro)
-    );
-  }
-
-  #empresas h2,
-  #cooperativas h2 {
-    margin-bottom: 20px;
-  }
-
-  .slider {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    padding: 16px;
-  }
-
-  .slider-track {
-    order: 1;
-    flex: 0 0 100%;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .slider-titulo {
-    font-size: 1.4rem;
-  }
-
-  .card-empresa,
-  .card-coop {
-    flex: none;
-    width: 100%;
-    max-width: none;
-    height: auto;
-    min-height: 140px;
-    padding: 20px;
-  }
-
-  .card-empresa p,
-  .card-coop {
-    font-size: 1rem;
-  }
-
-  /* As três caixas da cooperativa ficam uma embaixo da outra */
-  .blocos-coop {
+  .cartoes-coop {
     grid-template-columns: 1fr;
+    max-width: none;
   }
 
-  .btn-avancar-voltar {
-    order: 2;
-    width: 48px;
-    height: 48px;
+  .cartao-coop {
+    min-height: 0;
   }
 
   /* ---------- Dashboard ---------- */

@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/landing.css" />
     <!--JS-->
-    <script src="./js/main.js" defer></script>
 
     <!--Icone menu-->
     <link
@@ -270,124 +269,62 @@
     </div>
 
     <section class="como-funciona-hero">
-      <svg
-        class="como-funciona-shape"
-        viewBox="0 0 1439 1487"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M937.489 581.639C869.073 366.285 585.794 -119.087 0 26.9269V720.652C145.478 646.645 453 793.927 508.337 1073.19C563.675 1352.44 986.093 1648.64 1439 1382.22V653.146C1317.64 724.486 1047.44 810.061 937.489 581.639Z"
-          fill="url(#paint0_linear_1070_824)"
-        />
-        <defs>
-          <linearGradient
-            id="paint0_linear_1070_824"
-            x1="6.77595e-07"
-            y1="42.427"
-            x2="1664"
-            y2="1623.43"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#3B8952" />
-            <stop offset="1" stop-color="#063300" />
-          </linearGradient>
-        </defs>
-      </svg>
-      <div id="empresas" class="card">
+      <div id="empresas">
         <h2 id="como-funciona-titulo">Como Funciona</h2>
-
-        <!-- Contador "1 de 7" -->
-        <p class="slider-contador" aria-live="polite">
-          <span id="slider-atual-empresa">1</span> de
-          <span id="slider-total-empresa"></span>
-        </p>
-
-        <div class="slider">
-          <button
-            id="btn-voltar"
-            class="btn-avancar-voltar"
-            aria-label="Passo anterior"
-          >
-            <i class="fa-solid fa-left-long" aria-hidden="true"></i>
-          </button>
-
-          <div class="slider-track">
-            <h3 class="slider-titulo">
-              <span class="slider-icone" aria-hidden="true">
-                <i
-                  id="slider-icone-empresa"
-                  class="fa-solid fa-right-to-bracket"
-                ></i>
-              </span>
-              <span id="slider-titulo-empresa"></span>
-            </h3>
-
-            <div class="card-empresa">
-              <p id="bloco-um"></p>
-            </div>
-          </div>
-
-          <button
-            id="btn-avancar"
-            class="btn-avancar-voltar"
-            aria-label="Próximo passo"
-          >
-            <i class="fa-solid fa-right-long" aria-hidden="true"></i>
-          </button>
+        <p class="subtitulo">Explore como a plataforma funciona.</p>
+        <div class="passos">
+          <article class="passo">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            <h3>Cadastro</h3>
+            <p>A empresa se cadastra, e está pronta para começar na plataforma.</p>
+          </article>
+          <article class="passo">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <h3>Mapa</h3>
+            <p>A empresa tem acesso a um mapa com cooperativas da região ou, pesquisar por nome.</p>
+          </article>
+          <article class="passo">
+            <i class="fa-solid fa-id-badge"></i>
+            <h3>Análise</h3>
+            <p>A empresa pode analisar as cooperativas, para que depois escolham a cooperativa ideal.</p>
+          </article>
+          <article class="passo">
+            <i class="fa-solid fa-comments"></i>
+            <h3>Contato</h3>
+            <p>A empresa pode entrar em contato com a cooperativa após escolhê-la. E depois, agendar uma coleta.</p>
+          </article>
+          <article class="passo">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <h3>Registro</h3>
+            <p>A empresa pode registrar os resíduos a serem coletados por meio de foto, uma descrição e localização do resíduo.</p>
+          </article>
+          <article class="passo">
+            <i class="fa-solid fa-calendar-check"></i>
+            <h3>Agendamento</h3>
+            <p>A empresa confirma com a cooperativa a data da coleta, para que possa ser feito o agendamento.</p>
+          </article>
         </div>
-
-        <!-- Bolinhas: o JS cria uma para cada passo -->
-        <div id="slider-bolinhas-empresa" class="slider-bolinhas"></div>
       </div>
 
-      <div id="cooperativas" class="card">
+      <div id="cooperativas">
         <h2>Para cooperativas</h2>
-
-        <!-- Contador "1 de 4" -->
-        <p class="slider-contador" aria-live="polite">
-          <span id="slider-atual-coop">1</span> de
-          <span id="slider-total-coop"></span>
-        </p>
-
-        <div class="slider">
-          <button
-            id="btn-voltar-coop"
-            class="btn-avancar-voltar"
-            aria-label="Passo anterior"
-          >
-            <i class="fa-solid fa-left-long" aria-hidden="true"></i>
-          </button>
-
-          <div class="slider-track">
-            <h3 class="slider-titulo">
-              <span class="slider-icone" aria-hidden="true">
-                <i
-                  id="slider-icone-coop"
-                  class="fa-solid fa-right-to-bracket"
-                ></i>
-              </span>
-              <span id="slider-titulo-coop"></span>
-            </h3>
-
-            <div class="blocos-coop">
-              <div class="card-coop"><p id="bloco-um-coop"></p></div>
-              <div class="card-coop"><p id="bloco-dois-coop"></p></div>
-              <div class="card-coop"><p id="bloco-tres-coop"></p></div>
-            </div>
-          </div>
-
-          <button
-            id="btn-avancar-coop"
-            class="btn-avancar-voltar"
-            aria-label="Próximo passo"
-          >
-            <i class="fa-solid fa-right-long" aria-hidden="true"></i>
-          </button>
+        <div class="cartoes-coop">
+          <article class="cartao-coop">
+            <i class="fa-solid fa-comments"></i>
+            <h3>Contato</h3>
+            <p>A cooperativa espera até que uma empresa a contate.</p>
+          </article>
+          <article class="cartao-coop">
+            <i class="fa-solid fa-user"></i>
+            <h3>Parceria</h3>
+            <p>Tem acesso ao suporte de novos parceiros.</p>
+          </article>
+          <article class="cartao-coop">
+            <i class="fa-solid fa-circle-dollar-to-slot"></i>
+            <h3>Retorno</h3>
+            <p>Transforme resíduos, em receita de um jeito mais fácil.</p>
+          </article>
         </div>
-
-        <!-- Bolinhas: o JS cria uma para cada passo -->
-        <div id="slider-bolinhas-coop" class="slider-bolinhas"></div>
       </div>
     </section>
 
@@ -660,20 +597,10 @@
 
         <div id="footer-social">
           <h3>Visite nossas redes sociais</h3>
-          <a
-            href="https://www.instagram.com/volta.gestao_reciclaveis/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fa-brands fa-instagram icone-rodape"></i>
-          </a>
-          <a
-            href="https://github.com/app-volta"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fa-brands fa-github icone-rodape"></i>
-          </a>
+          <div class="footer-redes">
+            <a href="https://www.instagram.com/volta_.oficial/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram icone-rodape"></i></a>
+            <a href="https://github.com/app-volta" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github icone-rodape"></i></a>
+          </div>
         </div>
 
         <div id="footer-links">
