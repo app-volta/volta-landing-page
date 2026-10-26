@@ -161,20 +161,3 @@ button {
 button:hover {
   background-color: var(--verde-floresta);
 }
-
-.escuro .content{
-  background: linear-gradient(180deg, var(--verde-floresta), var(--verde-escuro));
-  color: var(--branco);
-}
-
-.escuro a{
-  color: var(--verde-suave);
-}
-
-.escuro a:hover{
-  color: var(--branco);
-}
-
-.escuro button:hover{
-  background-color: var(--verde-petroleo);
-}
