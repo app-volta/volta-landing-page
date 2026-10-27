@@ -254,23 +254,24 @@ p {
 }
 
 .chave-mapa{
-  top: 40px;
-  --traco: 80px;
+  top: 8px;
+  --traco: max(0px, calc(100cqw - 359px));
 }
 
 .chave-chat{
   top: 170px;
-  --traco: 90px;
+  --traco: max(0px, calc(100cqw - 469px));
 }
 
 .chave-foto{
-  top: 306px;
-  --traco: 165px;
+  top: 287px;
+  --traco: max(0px, calc(100cqw - 272px));
 }
 
 
 .sobre-visual {
   position: relative;
+  container-type: inline-size;
   width: 50%;
   height: 520px;
 }
@@ -292,22 +293,22 @@ p {
 
 .sobre-img-fundo {
   position: absolute;
-  top: 8px;
-  right: 210px;
-  width: 225px;
-  height: auto;
-  border-radius: 18px;
-  z-index: 1;
-}
-
-.sobre-img-frente {
-  position: absolute;
-  top: 83px;
-  right: 352px;
+  top: 80px;
+  left: 140px;
   width: 195px;
   height: auto;
   border-radius: 18px;
   z-index: 2;
+}
+
+.sobre-img-frente {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 225px;
+  height: auto;
+  border-radius: 18px;
+  z-index: 1;
 }
 
 .btn-comecar{
@@ -1030,15 +1031,16 @@ footer hr {
   }
 
   .sobre-img-fundo {
-    width: 220px;
-    top: 0;
-    right: 20px;
+    width: 170px;
+    top: 170px;
+    left: auto;
+    right: 40px;
   }
 
   .sobre-img-frente {
-    width: 170px;
-    top: 170px;
-    right: 120px;
+    width: 220px;
+    top: 0;
+    left: 20px;
   }
 
   /* ---------- Objetivo ---------- */
