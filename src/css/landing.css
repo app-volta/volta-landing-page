@@ -1040,6 +1040,8 @@ p {
   bottom: -20px;
 }
 
+
+
 #objetivo-conteudo p {
   color: var(--preto);
   height: auto;
@@ -1093,9 +1095,24 @@ p {
   bottom: 0;
 }
 
-.objetivo-imagem {
+.objetivo-visual {
   grid-column: 2;
   grid-row: 1 / span 2;
+  position: relative;
+}
+
+.objetivo-shape {
+  position: absolute;
+  width: 104.3%;
+  height: auto;
+  left: -3.7%;
+  top: 22%;
+  z-index: 0;
+}
+
+.objetivo-imagem {
+  display: block;
+  z-index: 1;
   width: 100%;
   height: auto;
   max-height: 520px;
