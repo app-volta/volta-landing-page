@@ -21,15 +21,7 @@ body {
 .lado-imagem{
   flex: 1;
   position: relative;
-  background: url("../assets/img/backgrounds/fundo_intro.jpg") center / cover no-repeat;
-}
-
-/* Película verde por cima da foto */
-.lado-imagem::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: color-mix(in srgb, var(--verde-floresta) 75%, transparent);
+  background: url("../assets/img/backgrounds/fundo_login.jpg") center / cover no-repeat;
 }
 
 .content{

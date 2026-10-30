@@ -4,6 +4,7 @@ html {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 
@@ -136,7 +137,7 @@ p {
 #link-login {
   padding: 10px 16px;
   color: var(--branco);
-  background-color: var(--verde-principal);
+  background-color: var(--verde-petroleo);
   border-radius: 3px;
   text-decoration: none;
 
@@ -288,7 +289,7 @@ p {
 }
 
 .texto-hero-inicio {
-  color: var(--verde-destaque);
+  color: var(--verde-petroleo);
   max-width: 520px;
 }
 
@@ -385,11 +386,11 @@ p {
   transform: translateY(-50%);
   height: 2px;
   width: var(--traco);
-  background-color: var(--verde-principal);
+  background-color: var(--verde-petroleo);
 }
 
 .palavras-chaves{
-  background-color: var(--verde-principal);
+  background-color: var(--verde-petroleo);
   color: var(--branco);
   border: none;
   font-family: inherit;
@@ -526,7 +527,7 @@ p {
 #detalhe-titulo {
   align-self: flex-start;
   margin: 0;
-  background-color: var(--verde-principal);
+  background-color: var(--verde-petroleo);
   color: var(--branco);
   border-radius: 21.54px;
   padding: 6px 18px;
@@ -542,7 +543,7 @@ p {
 }
 
 .btn-comecar{
-  background-color: var(--verde-principal);
+  background-color: var(--verde-petroleo);
   color: var(--branco);
   border: none;
   border-radius: 10px;
@@ -1050,7 +1051,7 @@ p {
 }
 
 #objetivo-conteudo .objetivo-chamada {
-  color: var(--verde-destaque);
+  color: var(--verde-medio);
 }
 
 #objetivo-texto {
@@ -1287,7 +1288,7 @@ p {
 }
 
 #equipe p {
-  color: var(--verde-medio);
+  color: var(--verde-petroleo);
 }
 
 #equipe .nome-equipe {
@@ -1333,6 +1334,10 @@ p {
   .equipe-membros {
     animation: none;
   }
+}
+
+#foto-equipe {
+  border-radius: 30px;
 }
 
 @media screen and (max-width: 768px){
