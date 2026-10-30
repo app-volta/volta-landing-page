@@ -1335,6 +1335,12 @@ p {
   }
 }
 
+@media screen and (max-width: 768px){
+  #foto-equipe {
+    display: none;
+  }
+}
+
 /* ===========================
    Rodapé
 =========================== */
