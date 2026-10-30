@@ -1377,7 +1377,7 @@ footer hr,
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
   gap: 40px;
   align-items: start;
 }
@@ -1430,6 +1430,17 @@ footer a {
 footer a:hover {
   color: var(--branco);
   text-decoration: none;
+}
+
+#footer-contato a {
+  width: fit-content;
+  color: var(--branco);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+#footer-contato a:hover {
+  color: var(--verde-suave);
 }
 
 .footer-copy {
