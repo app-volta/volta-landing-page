@@ -39,10 +39,10 @@ Requisitos da disciplina e onde cada um está neste repositório.
 
 | Requisito | Descrição | Onde está |
 | --- | --- | --- |
-| M1 | Landing page com informações do projeto | [src/index.html](src/index.html), [src/css/landing.css](src/css/landing.css) e [src/js/landing.js](src/js/landing.js) |
-| M2 | Telas web do CRUD: cadastro, consulta/listagem, edição e exclusão | Pastas `empresa`, `cooperativa`, `area`, `ocorrencia`, `coleta` e `usuario` em [src](src), cada uma com `lista.html` e `formulario.html` |
+| M1 | Landing page com informações do projeto | [docs/index.html](docs/index.html), [docs/css/landing.css](docs/css/landing.css) e [docs/js/landing.js](docs/js/landing.js) |
+| M2 | Telas web do CRUD: cadastro, consulta/listagem, edição e exclusão | Pastas `empresa`, `cooperativa`, `area`, `ocorrencia`, `coleta` e `usuario` em [docs](docs), cada uma com `lista.html` e `formulario.html` |
 | M3 | Entrega pelo GitHub e publicação em hospedagem estática | Este repositório. Link do site publicado: a ser adicionado após a publicação no GitHub Pages |
-| E1 | Responsivo e fiel ao padrão visual e ao protótipo do Figma | Media queries em [src/css/landing.css](src/css/landing.css) e [src/css/app.css](src/css/app.css); paleta e fonte em [src/css/base.css](src/css/base.css) |
+| E1 | Responsivo e fiel ao padrão visual e ao protótipo do Figma | Media queries em [docs/css/landing.css](docs/css/landing.css) e [docs/css/app.css](docs/css/app.css); paleta e fonte em [docs/css/base.css](docs/css/base.css) |
 
 **Observação sobre o CRUD.** As telas são feitas apenas com HTML e CSS. Os dados exibidos nas listas são exemplos escritos no próprio HTML. Os formulários enviam os dados por `POST` para servlets (por exemplo, `../empresa`), que fazem parte do back-end Java e não existem no site estático. A integração é feita convertendo as páginas para JSP.
 
@@ -50,16 +50,16 @@ Requisitos da disciplina e onde cada um está neste repositório.
 
 | Página | Arquivo |
 | --- | --- |
-| Landing page | [src/index.html](src/index.html) |
-| Login | [src/login.html](src/login.html) |
-| Cadastro | [src/cadastrar.html](src/cadastrar.html) |
-| Esqueci minha senha | [src/esqueci-senha.html](src/esqueci-senha.html) |
-| Empresas | [src/empresa](src/empresa) |
-| Cooperativas | [src/cooperativa](src/cooperativa) |
-| Áreas | [src/area](src/area) |
-| Ocorrências | [src/ocorrencia](src/ocorrencia) |
-| Coletas | [src/coleta](src/coleta) |
-| Usuários | [src/usuario](src/usuario) |
+| Landing page | [docs/index.html](docs/index.html) |
+| Login | [docs/login.html](docs/login.html) |
+| Cadastro | [docs/cadastrar.html](docs/cadastrar.html) |
+| Esqueci minha senha | [docs/esqueci-senha.html](docs/esqueci-senha.html) |
+| Empresas | [docs/empresa](docs/empresa) |
+| Cooperativas | [docs/cooperativa](docs/cooperativa) |
+| Áreas | [docs/area](docs/area) |
+| Ocorrências | [docs/ocorrencia](docs/ocorrencia) |
+| Coletas | [docs/coleta](docs/coleta) |
+| Usuários | [docs/usuario](docs/usuario) |
 
 **Seções da landing page:** Início, O que é o VOLTA, Como funciona (empresas e cooperativas), Dashboards, Nosso objetivo, Voltinha (mascote), Nossa equipe e rodapé.
 
@@ -77,7 +77,7 @@ Requisitos da disciplina e onde cada um está neste repositório.
 volta-landing-page/
 ├── LICENSE
 ├── README.md
-└── src/
+└── docs/
     ├── index.html
     ├── login.html
     ├── cadastrar.html
@@ -107,20 +107,20 @@ Não é necessário instalar nada.
    git clone https://github.com/app-volta/volta-landing-page.git
    ```
 
-2. Abra `src/index.html` no navegador.
+2. Abra `docs/index.html` no navegador.
 
-Para evitar problemas de caminhos relativos, abra os arquivos sempre a partir da pasta `src`. Se preferir um servidor local, na pasta `src` rode, por exemplo, `python -m http.server 8000` e acesse `http://localhost:8000`.
+Para evitar problemas de caminhos relativos, abra os arquivos sempre a partir da pasta `docs`. Se preferir um servidor local, na pasta `docs` rode, por exemplo, `python -m http.server 8000` e acesse `http://localhost:8000`.
 
 ## Publicação
 
-O site é publicado com GitHub Pages a partir da pasta `src`.
+O site é publicado com GitHub Pages a partir da pasta `docs`.
 
 Link do site publicado: a ser adicionado.
 
 ## Identidade visual
 
 - Transmite sustentabilidade, conexão, organização, confiança e profissionalismo.
-- Somente tons de verde, definidos como variáveis em [src/css/base.css](src/css/base.css).
+- Somente tons de verde, definidos como variáveis em [docs/css/base.css](docs/css/base.css).
 - Fonte: Belanosima.
 - Logo: letra V com símbolo circular de retorno e reciclagem.
 - Mascote: Voltinha, uma seta verde com carinha.
